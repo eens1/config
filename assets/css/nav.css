@@ -36,13 +36,13 @@
   top: 100%;
   left: 0;
   background-color: #333;
-  padding: 0.5rem 1rem;
+  padding: 0px;
   list-style: none;
   z-index: 1000;
 }
 
 .dropdown-menu li {
-  padding: 0.5rem 0;
+  padding: 0px;
 }
 
 .dropdown-menu a {
