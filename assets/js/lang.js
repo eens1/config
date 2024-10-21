@@ -1,5 +1,5 @@
 
-  const languages = {
+const languages = {
         'en': 'English',
         'fr': 'Français',
         'it': 'Italiano'
