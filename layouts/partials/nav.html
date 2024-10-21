@@ -25,13 +25,12 @@
 
 <li>
 <div class="dropdown">
-   <button class="dropdown-toggle" onclick="toggleDropdown()"><i class="fas fa-globe"></i></button>
-   <div class="dropdown-menu" id="languageDropdown">
-   <a class="dropdown-item" href="#">JavaScript</a>
-   <a class="dropdown-item" href="#">Python</a>
-   <a class="dropdown-item" href="#">Java</a>
-   <a class="dropdown-item" href="#">C++</a>
-   </div>
+    <button class="dropdown-toggle" id="currentLanguage" onclick="toggleDropdown()">Select Language</button>
+    <div class="dropdown-menu" id="languageDropdown">
+        <a class="dropdown-item" href="#" onclick="selectLanguage('English')">English</a>
+        <a class="dropdown-item" href="#" onclick="selectLanguage('French')">French</a>
+        <a class="dropdown-item" href="#" onclick="selectLanguage('Italian')">Italian</a>
+    </div>
 </div>
 </li>
 </ul>

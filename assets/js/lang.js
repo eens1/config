@@ -1,6 +1,11 @@
 
-  function toggleDropdown() {
+function toggleDropdown() {
         document.getElementById('languageDropdown').classList.toggle('show');
+    }
+
+    function selectLanguage(language) {
+        document.getElementById('currentLanguage').textContent = language; // Update button text
+        toggleDropdown(); // Close dropdown after selection
     }
 
     // Close the dropdown if the user clicks outside of it
