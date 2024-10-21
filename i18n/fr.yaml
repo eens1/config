@@ -3,5 +3,5 @@ readMore: "Lire la suite"
 home: "Accueil"
 comments: "Commentaires"
 showComments: "Afficher les commentaires"
-footerRef: 'Les références dans les notes de bas de page sont généralement données sous forme condensée. Les références complètes se trouvent <a href="/fr/references">ICI</a>.'
+footerRef: "Les références dans les notes de bas de page sont généralement données sous forme condensée. Les références complètes se trouvent <a href='/fr/references'>ICI</a>."
 
