@@ -1,0 +1,14 @@
+
+{{ define "main" }}
+
+<!--
+{{ partial "latestblog.html" . }}
+-->
+
+<div class="content">
+<article>
+{{ .Content }}
+</article>
+</div>
+{{ partial "listposts.html" . }}
+{{ end }}

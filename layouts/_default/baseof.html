@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+{{ block "head" . }}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ .Site.Title }}</title>
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ range readDir "assets/css" }}
+{{ if eq (path.Ext .Name) ".css" }}
+{{ $style := resources.Get (printf "css/%s" .Name) }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+{{ end }}
+
+{{ range readDir "assets/js" }}
+{{ if eq (path.Ext .Name) ".js" }}
+{{ $script := resources.Get (printf "js/%s" .Name) }}
+<script src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}
+{{ end }}
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+{{ end }}
+</head>
+
+<body>
+
+<header>
+{{ $headerPartial := printf "partials/%s/header.html" .Section }}
+{{ if templates.Exists $headerPartial }}
+	{{ partial $headerPartial . }}
+{{ else }}
+	{{ partial "header.html" . }}
+{{ end }}
+</header>
+
+<main>
+{{ $navPartial := printf "partials/%s/nav.html" .Section }}
+{{ if templates.Exists $navPartial }}
+	{{ partial $navPartial . }}
+{{ else }}
+	{{ partial "nav.html" . }}
+{{ end }}
+
+{{ block "main" . }}
+<!-- This will be replaced by content from other templates -->
+{{ end }}
+</main>
+
+<footer>
+{{ $footerPartial := printf "partials/%s/footer.html" .Lang }}
+{{ if templates.Exists $footerPartial }}
+	{{ partial $footerPartial . }}
+{{ else }}
+	{{ partial "footer.html" . }}
+{{ end }}
+</footer>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

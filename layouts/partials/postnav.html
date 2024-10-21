@@ -1,0 +1,22 @@
+<nav class="breadcrumb">
+<ol>
+
+{{ $url := .RelPermalink }}
+{{ $urlParts := split $url "/" }}
+
+{{ range $index, $element := $urlParts }}
+   {{ if ne $element "" }}
+      <a href="{{ delimit (first (add $index 1) $urlParts) "/" }}/">
+      <li>
+      {{ if eq $element $.Site.Language.Lang }}
+         {{ i18n "home" }}
+      {{ else }}
+         {{ humanize $element }}
+      {{ end }}
+      </a>
+      </li>
+   {{ end }}
+{{ end }}
+
+</ol>
+</nav>

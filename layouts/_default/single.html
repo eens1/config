@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ partial "postnav.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+<div class="content">
+<article>
+{{ .Content }}
+</article>
+</div>
+
+{{ end }}

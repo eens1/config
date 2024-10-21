@@ -1,0 +1,30 @@
+{{ $pages := .Pages }}
+{{ $sortedPages := sort $pages "File.Path" }}
+
+{{ $customSort := slice }}
+{{ range $sortedPages }}
+  {{ $filename := .File.LogicalName }}
+  {{ $parentDir := path.Base .File.Dir }}
+  
+  {{ if eq $filename "_index.md" }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "permalink" .Permalink) }}
+  {{ else }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "permalink" .Permalink) }}
+  {{ end }}
+{{ end }}
+
+{{ $sortedCustom := sort $customSort "sortKey" }}
+
+
+<ul>
+{{ range $sortedCustom }}
+{{ $page := .page }}
+   <div class="post-item">
+   <li>
+   <a href="{{ .permalink }}">{{ $page.Title }}</a>
+   </li>
+   <div>{{ $page.Params.Summary }}</div>
+   </div>
+{{ end }}
+</ul>
+

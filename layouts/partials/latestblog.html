@@ -1,0 +1,13 @@
+{{ $currentLang := .Site.Language.Lang }}
+{{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+{{ $latestPosts := first 5 (where $blogPosts "Lang" $currentLang) }}
+
+<ul>
+{{ range $latestPosts }}
+<li>
+{{ $dateFormat := .Site.Params.dateFormat | default ":date_long" }}
+<time>{{ .Date | time.Format $dateFormat }}</time> - 
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</li>
+{{ end }}
+</ul>
