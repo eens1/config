@@ -8,7 +8,7 @@ padding: 0px;
 }
 
         .dropdown-toggle {
-            background-color: #1e1e1e;
+            background-color: transparent;
             color: #ffffff;
             border: none;
             cursor: pointer;
