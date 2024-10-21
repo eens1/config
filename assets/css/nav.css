@@ -43,13 +43,15 @@
 
 .dropdown-menu li {
   padding: 0px;
+   margin: 0px;
 }
 
 .dropdown-menu a {
   color: #ddd;
   text-decoration: none;
   display: block;
-  padding: 0.5rem 1rem;
+   margin: 0px;
+  padding-left: 20px;
 }
 
 
