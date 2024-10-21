@@ -11,22 +11,24 @@
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-{{ range readDir "assets/css" }}
-{{ if eq (path.Ext .Name) ".css" }}
-{{ $style := resources.Get (printf "css/%s" .Name) }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-{{ end }}
-{{ end }}
-
-{{ range readDir "assets/js" }}
-{{ if eq (path.Ext .Name) ".js" }}
-{{ $script := resources.Get (printf "js/%s" .Name) }}
-<script src="{{ $script.RelPermalink }}" defer></script>
-{{ end }}
+<!-- Loading CSS Files -->
+{{ $cssDir := resources.Get "css" | default (resources.Get "github.com/eens1/config/css") }}
+{{ if $cssDir }}
+  {{ range $cssDir.Match "*.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
 {{ end }}
 
+<!-- Loading JS Files -->
+{{ $jsDir := resources.Get "js" | default (resources.Get "github.com/eens1/config/js") }}
+{{ if $jsDir }}
+  {{ range $jsDir.Match "*.js" }}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{ end }}
+{{ end }}
+
+<!-- External Libraries -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 {{ end }}
