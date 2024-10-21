@@ -1,4 +1,5 @@
- const languages = {
+
+   const languages = {
         'en': 'English',
         'fr': 'Français',
         'it': 'Italiano'
@@ -15,7 +16,7 @@
 
     function updateLanguageDisplay() {
         const currentLang = getCurrentLanguage();
-        document.getElementById('currentLanguage').textContent = languages[currentLang] || 'Select Language';
+        document.getElementById('currentLanguage').textContent = languages[currentLang] || currentLang;
     }
 
     function toggleDropdown() {
