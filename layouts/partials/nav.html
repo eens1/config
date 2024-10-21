@@ -1,46 +1,42 @@
 <nav class="navbar">
-<div class="logo">
-<a href="https://eens.netlify.app">
-<img src="/images/logo.svg" alt="Extra Ecclesia Nulla Salus">
-</a>
+  <div class="logo">
+    <a href="https://eens.netlify.app">
+      <img src="/images/logo.svg" alt="Extra Ecclesia Nulla Salus">
+    </a>
+  </div>
 
-</div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
 
-<div class="hamburger">
-<div class="line"></div>
-<div class="line"></div>
-<div class="line"></div>
-</div>
-
-<ul class="nav-links">
-{{ $currentPage := . }}
-{{ range .Site.Menus.main }}
-<li>
-<a href="{{ .URL }}">
-{{ with .Pre }}{{ . | safeHTML }}{{ end }}
-{{ .Name }}
-</a>
-</li>
-{{ end }}
-</ul>
-
-  <ul>
+  <ul class="nav-links">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-      {{ if .HasChildren }}
+      {{ if not .HasChildren }} <!-- If there are no submenus -->
+        <li>
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+            {{ with .Pre }}{{ . | safeHTML }}{{ end }}
+            {{ .Name }}
+          </a>
+        </li>
+      {{ else }} <!-- If there are submenus -->
         <li class="dropdown">
-          <a href="#">{{ .Name }}</a>
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+            {{ .Name }}
+          </a>
           <ul class="dropdown-menu">
             {{ range .Children }}
-              <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+              <li>
+                <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+                  {{ .Name }}
+                </a>
+              </li>
             {{ end }}
           </ul>
         </li>
-      {{ else }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
     {{ end }}
   </ul>
-
 </nav>
-
