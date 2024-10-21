@@ -1,3 +1,3 @@
-module github.com/eens/config
+module github.com/eens1/config
 
 go 1.19
