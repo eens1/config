@@ -9,8 +9,6 @@ padding: 0px;
 
         .dropdown-toggle {
             background-color: transparent;
-            color: #ffffff;
-            border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -37,7 +35,7 @@ padding: 0px;
         }
 
         .dropdown-item {
-            color: #ffffff;
+  color: #ddd;
             padding: 10px 15px;
             text-decoration: none;
             display: block;
