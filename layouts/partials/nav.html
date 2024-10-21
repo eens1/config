@@ -24,7 +24,8 @@
 {{ end }}
 
 <li>
-<select>
+
+<select id="redirectSelect" onchange="if (this.value) window.location.href=this.value;">
 <option value=""><i class="fas fa-globe"></i></option>
 <option value="https://eens-en.netlify.app">English</option>
 <option value="https://eens-fr.netlify.app">Français</option>
