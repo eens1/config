@@ -1,6 +1,16 @@
 baseURL: https://eens.netlify.app
+title: "Extra Ecclesia Nulla Salus"
+
 defaultContentLanguage: en
-defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false 
+paginate: 20
+paginatePath: "page"
+ignoreFiles:
+  - "(?i)/\\.hide/$"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 languages:
   en:
@@ -10,7 +20,6 @@ languages:
     title: My Site in English
     params:
       description: This is my site in English
-
   fr:
     languageCode: fr-FR
     languageName: Français
