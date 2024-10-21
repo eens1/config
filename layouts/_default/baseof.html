@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -11,20 +12,16 @@
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-<!-- Loading CSS Files -->
-{{ $cssDir := resources.Get "css" | default (resources.Get "github.com/eens1/config/css") }}
-{{ if $cssDir }}
-  {{ range $cssDir.Match "*.css" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
+<!-- Correct CSS loading -->
+{{ $cssFiles := (resources.Match "css/*.css") | default (resources.Match "github.com/eens1/config/css/*.css") }}
+{{ range $cssFiles }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end }}
 
-<!-- Loading JS Files -->
-{{ $jsDir := resources.Get "js" | default (resources.Get "github.com/eens1/config/js") }}
-{{ if $jsDir }}
-  {{ range $jsDir.Match "*.js" }}
-    <script src="{{ .RelPermalink }}" defer></script>
-  {{ end }}
+<!-- Correct JS loading -->
+{{ $jsFiles := (resources.Match "js/*.js") | default (resources.Match "github.com/eens1/config/js/*.js") }}
+{{ range $jsFiles }}
+  <script src="{{ .RelPermalink }}" defer></script>
 {{ end }}
 
 <!-- External Libraries -->
