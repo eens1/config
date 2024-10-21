@@ -1,11 +1,25 @@
+ const languages = {
+        'en': 'English',
+        'fr': 'Français',
+        'it': 'Italiano'
+    };
 
-function toggleDropdown() {
-        document.getElementById('languageDropdown').classList.toggle('show');
+    function getCurrentLanguage() {
+        return document.documentElement.lang;
     }
 
-    function selectLanguage(language) {
-        document.getElementById('currentLanguage').textContent = language; // Update button text
-        toggleDropdown(); // Close dropdown after selection
+    function setCurrentLanguage(lang) {
+        document.documentElement.lang = lang;
+        updateLanguageDisplay();
+    }
+
+    function updateLanguageDisplay() {
+        const currentLang = getCurrentLanguage();
+        document.getElementById('currentLanguage').textContent = languages[currentLang] || 'Select Language';
+    }
+
+    function toggleDropdown() {
+        document.getElementById('languageDropdown').classList.toggle('show');
     }
 
     // Close the dropdown if the user clicks outside of it
@@ -20,3 +34,15 @@ function toggleDropdown() {
             }
         }
     }
+
+    // Set up click handlers for language selection
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            setCurrentLanguage(this.getAttribute('data-lang'));
+            toggleDropdown();
+        });
+    });
+
+    // Initialize the display
+    updateLanguageDisplay();
