@@ -1,119 +1,42 @@
-/* Existing styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
 
-.nav-links {
-  display: flex;
+.menu {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-links li {
-  margin-left: 1rem;
-  position: relative; /* Required for dropdown positioning */
+.menu-item {
+  display: inline-block;
+  position: relative;
 }
 
-.nav-links a {
-  color: #ddd;
+.menu-item a {
+  display: block;
+  padding: 10px 15px;
   text-decoration: none;
 }
 
-.nav-links a.active {
-  font-weight: bold;
-}
-
-/* Dropdown menu styles */
-.dropdown:hover .dropdown-menu {
-  display: block; /* Show the submenu on hover */
-}
-
-.dropdown-menu {
+.has-dropdown .submenu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgb(30,30,30);
-  padding: 10px 20px 10px 20px;
-  margin: 0px;
-  list-style: none;
-  z-index: 1000;
-}
-
-.dropdown-menu li {
-  padding: 0px;
-   margin: 0px;
-}
-
-.dropdown-menu a {
-  color: #ddd;
-  text-decoration: none;
-  display: block;
-   margin: 0px;
-  padding: 0px;
-}
-
-
-/* Hamburger menu styles */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  width: 45px;
-  height: 5px;
   background-color: #fff;
-  margin: 5px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-width: 150px;
 }
 
-.emoji {
-  font-size: 50px;
-  vertical-align: middle;
+.has-dropdown:hover .submenu {
+  display: block;
 }
 
-@media (max-width: 800px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgb(40,40,40);
-    padding: 30px 0px 0px 0px;
-  }
-   .dropdown-menu {
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    background-color: rgb(40,40,40);
-   }
-  .nav-links li {
-    padding-bottom: 10px;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  /* Handle dropdown for mobile */
-  .dropdown-menu {
-    position: static;
-    display: none;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-links.active .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-  }
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
 }
