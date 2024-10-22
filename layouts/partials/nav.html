@@ -11,27 +11,32 @@
     <div class="line"></div>
   </div>
 
-
-  <ul class="menu">
+  <ul class="nav-links">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-      <li class="menu-item {{ if .HasChildren }}has-dropdown{{ end }}">
-        <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          {{ if .Pre }}{{ .Pre | safeHTML }}{{ end }}
-          {{ .Name }}
-        </a>
-        {{ if .HasChildren }}
-          <ul class="submenu">
+      {{ if not .HasChildren }} <!-- If there are no submenus -->
+        <li>
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+            {{ with .Pre }}{{ . | safeHTML }}{{ end }}
+            {{ .Name }}
+          </a>
+        </li>
+      {{ else }} <!-- If there are submenus -->
+        <li class="dropdown">
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+            {{ .Name }}
+          </a>
+          <ul class="dropdown-menu">
             {{ range .Children }}
               <li>
-                <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
                   {{ .Name }}
                 </a>
               </li>
             {{ end }}
           </ul>
-        {{ end }}
-      </li>
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
 </nav>
