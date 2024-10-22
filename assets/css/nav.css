@@ -83,9 +83,13 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: rgb(20,20,20);
+    background-color: rgb(40,40,40);
     padding: 0px;
   }
+   .dropdown-menu {
+
+    background-color: rgb(40,40,40);
+   }
   .nav-links li {
     padding-bottom: 10px;
   }
