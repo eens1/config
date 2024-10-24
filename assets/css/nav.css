@@ -9,7 +9,7 @@
 .navbar h1 {
    margin: 10px;
 }
-.navbar h1:hover {
+.navbar h1 a:hover {
    text-decoration: none;
 }
 
