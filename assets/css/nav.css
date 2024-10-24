@@ -136,31 +136,29 @@
 
 
 
+
+
+
 .logo {
     display: flex;
     align-items: center;
-    font-family: 'Arial', sans-serif;
-    color: #f0f0f0;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 8px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #e0e0e0;
+    padding: 10px;
+    border-bottom: 2px solid #444;
 }
 
 .tau {
-    font-size: 48px;
-    font-weight: bold;
-    color: #ff9900;
-    margin-right: 10px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #d4af37; /* A professional gold-like color */
+    margin-right: 15px;
 }
 
 .phrase {
-    font-size: 20px;
-    font-weight: 300;
-    color: #f0f0f0;
-    letter-spacing: 1px;
-}
-
-.logo:hover {
-    background-color: #333;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #b0b0b0;
 }
