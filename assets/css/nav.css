@@ -10,7 +10,7 @@
    margin: 10px;
 }
 .navbar h1:hover {
-   underline: none;
+   text-decoration: none;
 }
 
 .logo img {
