@@ -9,6 +9,7 @@
 .nav-links {
   display: flex;
   list-style: none;
+   padding-left: 0px;
 }
 
 .nav-links li {
