@@ -147,7 +147,7 @@
   }
 
   .dropdown-menu a {
-    padding: 10px 20px; /* Consistent padding for submenus */
+    padding: 10px 30px; /* Extra padding-left for small screens */
   }
 }
 
