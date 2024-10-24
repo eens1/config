@@ -28,6 +28,9 @@
   color: #ddd;
   text-decoration: none;
   font-size: 1.1rem;
+  padding: 10px 0; /* Uniform padding for menu items */
+  display: block;
+  width: 100%;
   transition: color 0.3s ease-in-out;
 }
 
@@ -51,19 +54,20 @@
   top: 100%;
   left: 0;
   background-color: rgb(40, 40, 40); /* Darker for dropdown */
-  padding: 10px 20px;
   list-style: none;
+  padding: 0; /* Remove unnecessary padding */
   z-index: 1000;
 }
 
 .dropdown-menu li {
-  padding: 5px 0;
+  padding: 0;
 }
 
 .dropdown-menu a {
   color: #ddd;
   text-decoration: none;
-  font-size: 1rem;
+  padding: 10px 0; /* Uniform padding for submenu items */
+  padding-left: 20px; /* Subtle indent for submenu */
   transition: color 0.3s ease-in-out;
 }
 
@@ -100,7 +104,6 @@
 
   .nav-links li {
     margin-left: 0;
-    padding-left: 20px; /* Left align with padding for a better look */
     width: 100%;
     text-align: left;
   }
@@ -111,9 +114,7 @@
   }
 
   .nav-links a {
-    padding: 10px 0;
-    display: block;
-    width: 100%;
+    padding: 10px 20px; /* Even padding for all links */
   }
 
   .hamburger {
@@ -128,7 +129,7 @@
     position: static;
     display: none;
     flex-direction: column;
-    padding-left: 30px; /* Indent submenu for hierarchy */
+    padding-left: 20px; /* Uniform padding for submenus */
   }
 
   .dropdown:hover .dropdown-menu {
