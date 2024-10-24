@@ -1,3 +1,4 @@
+
 /* General Styles */
 .navbar {
   display: flex;
@@ -17,7 +18,7 @@
   display: flex;
   list-style: none;
   margin-top: 20px;
-padding-left: 0px;
+  padding-left: 0px;
 }
 
 .nav-links li {
@@ -44,7 +45,7 @@ padding-left: 0px;
   color: #fff;
 }
 
-/* Dropdown menu styles */
+/* Refined Dropdown Menu Styles */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -54,8 +55,12 @@ padding-left: 0px;
   position: absolute;
   top: 100%;
   left: 0;
+  background-color: #222; /* Darker background for dropdown */
+  border: 1px solid #333; /* Subtle border for separation */
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   list-style: none;
-  padding: 0; /* Remove unnecessary padding */
+  padding: 10px 0; /* Refined padding */
   z-index: 1000;
 }
 
@@ -66,13 +71,15 @@ padding-left: 0px;
 .dropdown-menu a {
   color: #ddd;
   text-decoration: none;
-  padding: 7px 0; /* Uniform padding for submenu items */
-  padding-left: 20px; /* Subtle indent for submenu */
-  transition: color 0.3s ease-in-out;
+  padding: 7px 15px; /* Uniform padding for submenu items */
+  display: block;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: 1rem;
 }
 
 .dropdown-menu a:hover {
-  color: #fff;
+  background-color: #333; /* Subtle background on hover */
+  color: #fff; /* Contrast color on hover */
 }
 
 /* Hamburger Menu */
@@ -129,7 +136,8 @@ padding-left: 0px;
     position: static;
     display: none;
     flex-direction: column;
-    padding-left: 20px; /* Uniform padding for submenus */
+    padding: 0; /* Remove extra padding */
+    margin-left: 20px; /* Slight indent for submenus */
   }
 
   .dropdown:hover .dropdown-menu {
@@ -138,5 +146,15 @@ padding-left: 0px;
 
   .nav-links.active .dropdown-menu {
     display: flex;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 20px; /* Consistent padding for submenus */
+    background-color: #222; /* Background color for submenus */
+    border-bottom: 1px solid #333; /* Divider between submenu items */
+  }
+
+  .dropdown-menu a:last-child {
+    border-bottom: none; /* Remove border from the last item */
   }
 }
