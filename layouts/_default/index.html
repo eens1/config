@@ -7,44 +7,47 @@
 
 
 
-{{- $featuredPosts := .Site.Params.featuredPosts -}}
-<section class="featured-posts-section">
-  <h2>Featured Posts</h2>
-  <div class="posts-grid">
-    {{- range $featuredPosts }}
-      {{- $post := .Site.GetPage . -}} <!-- Fetch the page directly with URL -->
-      {{- if $post -}}
-        <div class="post-card">
-          {{ with $post.Params.image }}
-            <img src="{{ . | absURL }}" alt="{{ $post.Title }}">
-          {{ else }}
-            <img src="{{ "images/default-image.jpg" | absURL }}" alt="{{ $post.Title }}"> <!-- Default image fallback -->
-          {{ end }}
-          <h3><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
-        </div>
-      {{ end }}
-    {{ end }}
-  </div>
-</section>
+<div class="home">
+        <main class="homepage">
+            <!-- Featured Posts Section -->
+            <section class="featured-posts-section">
+                <h2>Featured Posts</h2>
+                <div class="posts-grid">
+                    {{- $featuredPosts := .Site.Params.featuredPosts -}}
+                    {{- range $featuredPosts }}
+                        {{- $post := .Site.GetPage . -}} <!-- Fetch the page directly with URL -->
+                        {{- if $post -}}
+                            <div class="post-card">
+                                {{ with $post.Params.image }}
+                                    <img src="{{ . | absURL }}" alt="{{ $post.Title }}">
+                                {{ else }}
+                                    <img src="{{ "images/default-image.jpg" | absURL }}" alt="{{ $post.Title }}"> <!-- Default image fallback -->
+                                {{ end }}
+                                <h3><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
+                            </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </section>
 
-
-
-<section class="latest-posts-section">
-  <h2>Latest Blog Posts</h2>
-  <div class="posts-grid">
-    {{- range first 10 (where .Site.RegularPages "Section" "blog") }}
-      <div class="post-card">
-        {{- with .Params.image }}
-          <img src="{{ . | absURL }}" alt="{{ .Title }}">
-        {{ else }}
-          <img src="{{ "/images/news.webp" | absURL }}" alt="{{ .Title }}">  <!-- Default image fallback -->
-        {{ end }}
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      </div>
-    {{ end }}
-  </div>
-</section>
-
+            <!-- Latest Blog Posts Section -->
+            <section class="latest-posts-section">
+                <h2>Latest Blog Posts</h2>
+                <div class="posts-grid">
+                    {{- range first 10 (where .Site.RegularPages "Section" "blog") }}
+                        <div class="post-card">
+                            {{ with .Params.image }}
+                                <img src="{{ . | absURL }}" alt="{{ .Title }}">
+                            {{ else }}
+                                <img src="{{ "images/default-image.jpg" | absURL }}" alt="{{ .Title }}"> <!-- Default image fallback -->
+                            {{ end }}
+                            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                        </div>
+                    {{ end }}
+                </div>
+            </section>
+        </main>
+    </div>
 
 
 
