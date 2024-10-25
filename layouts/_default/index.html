@@ -11,7 +11,6 @@
 
   <!-- Featured Posts Section -->
   <section class="blog-section featured-posts">
-    <h2>Featured Posts</h2>
     <div class="post-list">
       {{ range .Site.Params.featuredPosts }}
         {{ with $.Site.GetPage . }}
@@ -29,7 +28,7 @@
 
   <!-- Latest Blog Posts Section -->
   <section class="blog-section latest-posts">
-    <h2>Latest Posts</h2>
+    <h2>Blog</h2>
     <div class="post-list">
       {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
         <div class="post-item">
