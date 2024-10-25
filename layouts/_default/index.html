@@ -15,7 +15,7 @@
                 <div class="posts-grid">
                     {{- $featuredPosts := .Site.Params.featuredPosts -}}
                     {{- range $featuredPosts }}
-                        {{- $post := .Site.GetPage . -}} <!-- Fetch the page directly with URL -->
+                        {{- $post := .Site.GetPage (trim .) -}} <!-- Fetch the page directly with URL -->
                         {{- if $post -}}
                             <div class="post-card">
                                 {{ with $post.Params.image }}
@@ -34,7 +34,8 @@
             <section class="latest-posts-section">
                 <h2>Latest Blog Posts</h2>
                 <div class="posts-grid">
-                    {{- range first 10 (where .Site.RegularPages "Section" "blog") }}
+                    {{- $latestPosts := where .Site.RegularPages "Section" "blog" | first 10 }}
+                    {{- range $latestPosts }}
                         <div class="post-card">
                             {{ with .Params.image }}
                                 <img src="{{ . | absURL }}" alt="{{ .Title }}">
