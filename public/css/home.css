@@ -45,19 +45,3 @@
   text-align: center;
 }
 
-/* Featured Posts Styles */
-.home .post-card.featured {
-  border: 2px solid #ffd700;
-}
-
-.home .featured-label {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ffd700;
-  color: #1a1a1a;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 0.8rem;
-}

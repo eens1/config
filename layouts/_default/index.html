@@ -17,7 +17,6 @@
               {{ $image := .Params.image | default "/images/news.webp" }}
               <img src="{{ $image }}" alt="{{ .Title }}">
               <h3>{{ .Title }}</h3>
-              <span class="featured-label">Featured</span>
             </a>
           </div>
         {{ end }}
