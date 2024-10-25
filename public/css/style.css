@@ -21,7 +21,6 @@ margin-right: auto;
 }
 .banner img {
    max-width: 100%;
-  box-shadow: 0 0 20px 20px black inset;
 }
 figcaption {
 margin-top: 5px;
