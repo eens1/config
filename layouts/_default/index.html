@@ -5,6 +5,46 @@
 {{ partial "latestblog.html" . }}
 -->
 
+
+{{- $featuredPosts := .Site.Params.featuredPosts -}}
+<section class="featured-posts-section">
+  <h2>Featured Posts</h2>
+  <div class="posts-grid">
+    {{- range $featuredPosts }}
+      {{- $post := .Site.GetPage .url -}}
+      {{- if $post -}}
+        <div class="post-card">
+          {{ with $post.Params.image }}
+            <img src="{{ . | absURL }}" alt="{{ $post.Title }}">
+          {{ end }}
+          <h3><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+
+
+
+<section class="latest-posts-section">
+  <h2>Latest Blog Posts</h2>
+  <div class="posts-grid">
+    {{- range first 10 (where .Site.RegularPages "Section" "blog") }}
+      <div class="post-card">
+        {{ with .Params.image }}
+          <img src="{{ . | absURL }}" alt="{{ .Title }}">
+        {{ end }}
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+
+
+
 <div class="content">
 <article>
 {{ .Content }}
