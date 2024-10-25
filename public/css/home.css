@@ -1,47 +1,93 @@
 
 .home {
+  background-color: #1a1a1a;
   color: #ffffff;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
 }
 
-.home h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
+.blog-section {
+  margin-bottom: 3rem;
 }
 
-.home .post-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.blog-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #cccccc;
 }
 
-.home .post-card {
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.post-item {
+  flex: 0 0 calc(20% - 1rem);
+  max-width: calc(20% - 1rem);
   background-color: #2a2a2a;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  position: relative;
+  transition: transform 0.2s ease-in-out;
 }
 
-.home .post-card:hover {
-  transform: translateY(-5px);
+.post-item:hover {
+  transform: translateY(-3px);
 }
 
-.home .post-card a {
+.post-item a {
   text-decoration: none;
   color: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
-.home .post-card img {
+.post-item img {
   width: 100%;
-  height: 200px;
+  height: 100px;
   object-fit: cover;
 }
 
-.home .post-card h3 {
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin: 0;
+.post-title {
+  font-size: 0.9rem;
+  padding: 0.5rem;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* Featured Posts Styles */
+.featured-posts .post-item {
+  position: relative;
+}
+
+.featured-posts .post-item::after {
+  content: '★';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #ffd700;
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .post-item {
+    flex: 0 0 calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .post-item {
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .post-item {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
