@@ -27,20 +27,22 @@
 
 
 
+
 <section class="latest-posts-section">
   <h2>Latest Blog Posts</h2>
   <div class="posts-grid">
     {{- range first 10 (where .Site.RegularPages "Section" "blog") }}
       <div class="post-card">
-        {{ with .Params.image }}
+        {{- with .Params.image }}
           <img src="{{ . | absURL }}" alt="{{ .Title }}">
+        {{ else }}
+          <img src="{{ "/images/news.webp" | absURL }}" alt="{{ .Title }}">  <!-- Default image fallback -->
         {{ end }}
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       </div>
     {{ end }}
   </div>
 </section>
-
 
 
 
