@@ -5,24 +5,7 @@
 {{ partial "latestblog.html" . }}
 -->
 
-
 <div class="home">
-  <!-- Latest Blog Posts Section -->
-  <section class="latest-posts">
-    <h2>Latest Blog Posts</h2>
-    <div class="post-grid">
-      {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
-        <div class="post-card">
-          <a href="{{ .Permalink }}">
-            {{ $image := .Params.image | default "/images/news.webp" }}
-            <img src="{{ $image }}" alt="{{ .Title }}">
-            <h3>{{ .Title }}</h3>
-          </a>
-        </div>
-      {{ end }}
-    </div>
-  </section>
-
   <!-- Featured Posts Section -->
   <section class="featured-posts">
     <h2>Featured Posts</h2>
@@ -42,6 +25,23 @@
     </div>
   </section>
 </div>
+
+
+  <!-- Latest Blog Posts Section -->
+  <section class="latest-posts">
+    <h2>Latest Blog Posts</h2>
+    <div class="post-grid">
+      {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
+        <div class="post-card">
+          <a href="{{ .Permalink }}">
+            {{ $image := .Params.image | default "/images/news.webp" }}
+            <img src="{{ $image }}" alt="{{ .Title }}">
+            <h3>{{ .Title }}</h3>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </section>
 
 <div class="content">
 <article>
