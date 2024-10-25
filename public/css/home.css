@@ -20,6 +20,7 @@
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .post-card:hover {
@@ -42,4 +43,25 @@
   padding: 1rem;
   margin: 0;
   text-align: center;
+}
+
+/* Featured Posts Styles */
+.featured-posts {
+  margin-top: 4rem;
+}
+
+.post-card.featured {
+  border: 2px solid #ffd700;
+}
+
+.featured-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffd700;
+  color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
