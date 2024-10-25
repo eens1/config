@@ -1,9 +1,5 @@
-
 .home {
-  background-color: #1a1a1a;
   color: #ffffff;
-  padding: 2rem;
-  font-family: 'Arial', sans-serif;
 }
 
 .blog-section {
@@ -33,6 +29,7 @@
 
 .post-item:hover {
   transform: translateY(-3px);
+  text-decoration: none;
 }
 
 .post-item a {
