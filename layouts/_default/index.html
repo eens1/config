@@ -6,16 +6,19 @@
 -->
 
 
+
 {{- $featuredPosts := .Site.Params.featuredPosts -}}
 <section class="featured-posts-section">
   <h2>Featured Posts</h2>
   <div class="posts-grid">
     {{- range $featuredPosts }}
-      {{- $post := .Site.GetPage .url -}}
+      {{- $post := .Site.GetPage .url -}} <!-- Fetch post by URL -->
       {{- if $post -}}
         <div class="post-card">
           {{ with $post.Params.image }}
             <img src="{{ . | absURL }}" alt="{{ $post.Title }}">
+          {{ else }}
+            <img src="{{ "images/default-image.jpg" | absURL }}" alt="{{ $post.Title }}"> <!-- Default image fallback -->
           {{ end }}
           <h3><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
         </div>
@@ -23,7 +26,6 @@
     {{ end }}
   </div>
 </section>
-
 
 
 
