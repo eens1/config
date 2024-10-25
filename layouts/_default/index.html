@@ -15,8 +15,8 @@
                 <div class="posts-grid">
                     {{- $featuredPosts := .Site.Params.featuredPosts -}}
                     {{- range $featuredPosts }}
-                        {{- $post := .Site.GetPage (trim .) -}} <!-- Fetch the page directly with URL -->
-                        {{- if $post -}}
+                        {{- $post := .Site.GetPage (trim .) -}} <!-- Ensure no extra whitespace -->
+                        {{- if $post -}} <!-- Check if the post exists -->
                             <div class="post-card">
                                 {{ with $post.Params.image }}
                                     <img src="{{ . | absURL }}" alt="{{ $post.Title }}">
@@ -34,8 +34,7 @@
             <section class="latest-posts-section">
                 <h2>Latest Blog Posts</h2>
                 <div class="posts-grid">
-                    {{- $latestPosts := where .Site.RegularPages "Section" "blog" | first 10 }}
-                    {{- range $latestPosts }}
+                    {{- range first 10 (where .Site.RegularPages "Section" "blog") }} <!-- Fetch latest 10 posts -->
                         <div class="post-card">
                             {{ with .Params.image }}
                                 <img src="{{ . | absURL }}" alt="{{ .Title }}">
