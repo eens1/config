@@ -17,7 +17,7 @@
           <a href="{{ .Permalink }}">
             {{ $image := .Params.image | default "/images/news.webp" }}
             <img src="{{ $image }}" alt="{{ .Title }}">
-            <span class="post-title">{{ .Title }}</span>
+            <div class="post-title">{{ .Title }}</div>
           </a>
         </div>
       {{ end }}
@@ -34,7 +34,7 @@
             <a href="{{ .Permalink }}">
               {{ $image := .Params.image | default "/images/news.webp" }}
               <img src="{{ $image }}" alt="{{ .Title }}">
-              <span class="post-title">{{ .Title }}</span>
+              <div class="post-title">{{ .Title }}</div>
             </a>
           </div>
         {{ end }}
