@@ -9,6 +9,22 @@
 
 <div class="home">
 
+  <!-- Latest Blog Posts Section -->
+  <section class="blog-section latest-posts">
+    <h2>{{ i18n "news" }}</h2>
+    <div class="post-list">
+      {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
+        <div class="post-item">
+          <a href="{{ .Permalink }}">
+            {{ $image := .Params.image | default "/images/news.webp" }}
+            <img src="{{ $image }}" alt="{{ .Title }}">
+            <div class="post-title">{{ .Title }}</div>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
   <!-- Featured Posts Section -->
   <section class="blog-section featured-posts">
     <h2>{{ i18n "sections" }}</h2>
@@ -27,21 +43,6 @@
     </div>
   </section>
 
-  <!-- Latest Blog Posts Section -->
-  <section class="blog-section latest-posts">
-    <h2>{{ i18n "news" }}</h2>
-    <div class="post-list">
-      {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
-        <div class="post-item">
-          <a href="{{ .Permalink }}">
-            {{ $image := .Params.image | default "/images/news.webp" }}
-            <img src="{{ $image }}" alt="{{ .Title }}">
-            <div class="post-title">{{ .Title }}</div>
-          </a>
-        </div>
-      {{ end }}
-    </div>
-  </section>
 
 </div>
 
