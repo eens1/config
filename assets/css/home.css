@@ -6,12 +6,6 @@
   margin-bottom: 3rem;
 }
 
-.home .blog-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #cccccc;
-}
-
 .home .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
