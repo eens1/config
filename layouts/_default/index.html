@@ -27,9 +27,7 @@
 </div>
 
 <div class="home">
- <!-- Featured Posts Section -->
   <section class="blog-section featured-posts">
-    <h2>{{ i18n "sections" }}</h2>
     <div class="post-list">
       {{ range .Site.Params.featuredPosts }}
         {{ with $.Site.GetPage . }}
