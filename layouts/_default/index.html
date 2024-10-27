@@ -1,8 +1,7 @@
 {{ define "main" }}
 
-<div class="home">
-  <!-- Latest Blog Posts Section -->
 <!--
+<div class="home">
   <section class="blog-section latest-posts">
     <h2>{{ i18n "news" }}</h2>
     <div class="post-list">
@@ -21,6 +20,11 @@
 
 </div>
 
+<div class="content">
+<article>
+{{ .Content }}
+</article>
+</div>
 
 <div class="home">
  <!-- Featured Posts Section -->
@@ -40,12 +44,6 @@
       {{ end }}
     </div>
   </section>
-</div>
-
-<div class="content">
-<article>
-{{ .Content }}
-</article>
 </div>
 
 <h2>{{ i18n "index" }}</h2>
