@@ -5,6 +5,9 @@
   align-items: center;
   color: #ddd;
 }
+.navbar .logo {
+   margin-bottom: 10px;
+}
 .navbar .logo a {
    font-size: 20px;
    font-weight: bold;
