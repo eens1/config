@@ -1,90 +1,71 @@
-
 /* General Styles */
 .navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #121212;
-  color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ddd;
 }
-
 .navbar .logo {
-  margin-bottom: 10px;
+   margin-bottom: 10px;
 }
-
 .navbar .logo a {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00d1b2;
-  text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
 }
-
 .navbar .logo a:hover {
-  color: #00ffcc;
-  text-decoration: none;
+   text-decoration: none;
 }
 
-.banner img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.logo img {
+  width: 100%;
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-between; /* Spread items evenly across the width */
-  align-items: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%; /* Use the full width of the container */
+  padding-left: 0px;
+   margin: 0px;
 }
 
 .nav-links li {
-  flex: 1; /* Distribute items evenly across the width */
-  text-align: center; /* Center text within each item */
-  position: relative;
+  margin-left: 1.5rem;
+  position: relative; /* Required for dropdown positioning */
 }
 
 .nav-links a {
   color: #ddd;
-  text-decoration: none; /* Remove underline */
-  font-size: 1.2rem;
-  padding: 10px;
-  border-radius: 5px;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 7px 0; /* Uniform padding for menu items */
+  display: block;
+  width: 100%;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 .nav-links a.active {
   font-weight: bold;
-  background-color: #00d1b2;
-  color: #121212;
+  color: #fff;
 }
 
 .nav-links a:hover {
-  color: #00ffcc;
-  background-color: rgba(0, 209, 178, 0.2); /* Subtle highlight effect */
+  color: #fff;
+  text-decoration: underline; /* Underline on hover */
 }
 
-/* Dropdown Menu */
+/* Refined Dropdown Menu Styles */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #1f1f1f;
-  border-radius: 5px;
+  background-color: rgb(20,20,20);
   list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px 0; /* Refined padding */
   z-index: 1000;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 .dropdown-menu li {
@@ -93,15 +74,16 @@
 
 .dropdown-menu a {
   color: #ddd;
-  padding: 10px 20px;
+  text-decoration: none;
+  padding: 7px 15px; /* Uniform padding for submenu items */
   display: block;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
+  text-align: left; /* Left align submenu text */
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 .dropdown-menu a:hover {
-  color: #00ffcc;
-  background-color: rgba(0, 209, 178, 0.2); /* Subtle highlight effect */
+  color: #fff;
+  text-decoration: underline; /* Underline on hover */
 }
 
 /* Hamburger Menu */
@@ -120,34 +102,30 @@
 
 @media (max-width: 800px) {
   .navbar {
-    align-items: flex-start;
+    align-items: flex-start; /* Align items left */
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
+    padding: 0;
     background-color: #121212;
-    padding: 10px 0;
-    margin: 0;
+  }
+
+  .nav-links li {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
   }
 
   .nav-links.active {
     display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-    margin: 0;
+    margin-top: 10px;
   }
 
   .nav-links a {
-    padding: 10px 20px;
-  }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
+    padding: 10px 20px; /* Even padding for all links */
   }
 
   .hamburger {
@@ -157,13 +135,31 @@
     right: 20px;
   }
 
-  .dropdown:hover .dropdown-menu {
+  /* Dropdown for mobile */
+  .dropdown-menu {
+    position: static;
     display: none;
+    flex-direction: column;
+    padding: 0; /* Remove extra padding */
+    margin-left: 0; /* Left aligned submenus */
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-links.active .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 30px; /* Extra padding-left for small screens */
   }
 }
 
+/* Large Screen - Reduced Space Between Submenus */
 @media (min-width: 801px) {
   .dropdown-menu a {
-    padding: 10px 20px;
+    padding: 7px 15px; /* Reduced padding between submenu items */
   }
 }
