@@ -17,6 +17,7 @@ social:
 [markup]
 defaultMarkdownHandler = "goldmark"
 
-[goldmark]
-[extensions]
-footnote = true
+[markup.goldmark]
+  [markup.goldmark.extensions]
+    footnote = true
+    linkify = true
