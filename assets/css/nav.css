@@ -75,7 +75,7 @@
 .dropdown-menu a {
   color: #ddd;
   text-decoration: none;
-  padding: 7px 15px; /* Uniform padding for submenu items */
+  padding: 0px;
   display: block;
   text-align: left; /* Left align submenu text */
   transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
