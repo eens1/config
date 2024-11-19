@@ -64,8 +64,8 @@
   left: 0;
   background-color: rgb(20,20,20);
   list-style: none;
+  padding: 10px 0; /* Refined padding */
   z-index: 1000;
-  padding: 0px 0px 10px 0px;
 }
 
 .dropdown-menu li {
