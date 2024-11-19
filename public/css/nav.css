@@ -64,21 +64,21 @@
   left: 0;
   background-color: rgb(20,20,20);
   list-style: none;
-  padding: 10px 0; /* Refined padding */
   z-index: 1000;
+  padding: 10px 20px 0px 0px;
 }
 
 .dropdown-menu li {
-  padding: 0;
+  padding: 0px 0px 0px 0px;
 }
 
 .dropdown-menu a {
   color: #ddd;
   text-decoration: none;
-  padding: 7px 15px; /* Uniform padding for submenu items */
   display: block;
   text-align: left; /* Left align submenu text */
   transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  padding: 0px 0px 0px 0px;
 }
 
 .dropdown-menu a:hover {
@@ -160,6 +160,6 @@
 /* Large Screen - Reduced Space Between Submenus */
 @media (min-width: 801px) {
   .dropdown-menu a {
-    padding: 7px 15px; /* Reduced padding between submenu items */
+    padding: 0px 0px 10px 0px; /* Reduced padding between submenu items */
   }
 }

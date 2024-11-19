@@ -6,7 +6,44 @@ paginate: 20
 paginatePath: "page"
 ignoreFiles:
   - "(?i)/\\.hide/$"
+
+# Configuration for Hugo using Goldmark with all extensions
 markup:
   goldmark:
     renderer:
       unsafe: true
+    duplicateResourceFiles: false
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      extras:
+        delete:
+          enable: true
+        insert:
+          enable: true
+        mark:
+          enable: true
+        subscript:
+          enable: true
+        superscript:
+          enable: true
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - - "$$"
+              - "$$"
+            - - "\\["
+              - "\\]"
+          inline:
+            - - "$"
+              - "$"
+            - - "\\("
+              - "\\)"
+  
+params:
+  math: true  # Enable math support (optional)
