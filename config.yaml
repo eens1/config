@@ -10,8 +10,6 @@ ignoreFiles:
 social:
   twitter: "BroMatthewCap"
 
-markup:
-  defaultMarkdownHandler: goldmark
 
 
 
