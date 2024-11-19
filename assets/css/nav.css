@@ -65,7 +65,7 @@
   background-color: rgb(20,20,20);
   list-style: none;
   z-index: 1000;
-  padding: 0px 0px 0px 0px;
+  padding: 10px 20px 0px 0px;
 }
 
 .dropdown-menu li {
@@ -160,6 +160,6 @@
 /* Large Screen - Reduced Space Between Submenus */
 @media (min-width: 801px) {
   .dropdown-menu a {
-    padding: 0px 0px 0px 0px; /* Reduced padding between submenu items */
+    padding: 0px 0px 10px 0px; /* Reduced padding between submenu items */
   }
 }
