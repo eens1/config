@@ -13,3 +13,10 @@ markup:
 
 social:
   twitter: "BroMatthewCap"
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[goldmark]
+[extensions]
+footnote = true
