@@ -10,6 +10,3 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
-social:
-  twitter: "BroMatthewCap"
