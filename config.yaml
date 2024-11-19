@@ -14,10 +14,25 @@ markup:
 social:
   twitter: "BroMatthewCap"
 
-[markup]
-defaultMarkdownHandler = "goldmark"
-
-[markup.goldmark]
-  [markup.goldmark.extensions]
-    footnote = true
-    linkify = true
+markup:
+  goldmark:
+    duplicateResourceFiles: false
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      linkifyProtocol: 'https'
+      strikethrough: true
+      table: true
+      taskList: true
+      extras:
+        delete:
+          enable: false
+        insert:
+          enable: false
+        mark:
+          enable: false
+        subscript:
+          enable: false
+        superscript:
+          enable: false
