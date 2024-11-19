@@ -1,9 +1,27 @@
 baseURL: https://eens-en.netlify.app
 title: "Extra Ecclesia Nulla Salus"
 
-defaultContentLanguageInSubdir: false
+defaultContentLanguageInSubdir: false 
 paginate: 20
 paginatePath: "page"
 ignoreFiles:
   - "(?i)/\\.hide/$"
+
+markup:
+  defaultMarkdownHandler: goldmark
+
+goldmark:
+  extensions:
+    linkify: true  # Enables automatic linking of URLs
+    strikethrough: true  # Enables strikethrough syntax
+    taskList: true  # Enables task lists
+    definitionList: true  # Enables definition lists
+    footnote: true  # Enables footnotes
+    typographer: true  # Enables typographic enhancements
+    cjk:
+      enable: false  # CJK support (set to true if needed)
+      
+  renderer:
+    unsafe: true  # Allows raw HTML in Markdown
+
 
