@@ -110,4 +110,12 @@
   .sidebar:not(.collapsed) {
     transform: translateX(0);
   }
+
+ #sidebar {
+    display: none;
+  }
+  #sidebar.collapsed {
+    display: none;
+  }
+}
 }

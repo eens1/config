@@ -30,41 +30,48 @@
 </div>
 <script>
 
-const sidebar = document.getElementById('sidebar');
-const toggleButton = document.getElementById('toggle-sidebar');
-const sidebarContent = document.querySelector('.sidebar-content');
+document.addEventListener('DOMContentLoaded', function() {
+  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('toggle-sidebar');
+  const sidebarContent = document.querySelector('.sidebar-content');
 
-// Function to set initial sidebar state
-function setInitialSidebarState() {
-  if (window.innerWidth <= 768) {
-    sidebar.classList.add('collapsed');
+  // Function to set sidebar state
+  function setSidebarState() {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.add('collapsed');
+      sidebar.style.display = 'none'; // Ensure it's hidden
+    } else {
+      sidebar.style.display = ''; // Reset display property
+      sidebar.classList.remove('collapsed');
+    }
   }
-}
 
-// Set initial state immediately
-setInitialSidebarState();
+  // Set initial state
+  setSidebarState();
 
-// Sidebar toggle
-toggleButton.addEventListener('click', function () {
-  sidebar.classList.toggle('collapsed');
-});
+  // Sidebar toggle
+  toggleButton.addEventListener('click', function () {
+    sidebar.classList.toggle('collapsed');
+    if (sidebar.classList.contains('collapsed')) {
+      sidebar.style.display = 'none';
+    } else {
+      sidebar.style.display = '';
+    }
+  });
 
-// Handle window resizing
-window.addEventListener('resize', function () {
-  if (window.innerWidth <= 768) {
-    sidebar.classList.add('collapsed');
-  }
-});
+  // Handle window resizing
+  window.addEventListener('resize', setSidebarState);
 
-// Submenu toggle
-document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
-  const submenu = menuItem.nextElementSibling;
-  if (submenu && submenu.classList.contains('submenu')) {
-    menuItem.addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent navigation
-      submenu.classList.toggle('expanded');
-      this.querySelector('.submenu-indicator').classList.toggle('rotated');
-    });
-  }
+  // Submenu toggle
+  document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
+    const submenu = menuItem.nextElementSibling;
+    if (submenu && submenu.classList.contains('submenu')) {
+      menuItem.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent navigation
+        submenu.classList.toggle('expanded');
+        this.querySelector('.submenu-indicator').classList.toggle('rotated');
+      });
+    }
+  });
 });
 </script>
