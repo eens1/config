@@ -1,5 +1,5 @@
 
-<div id="sidebar" class="sidebar"> <!-- Sidebar starts without the collapsed class -->
+<div id="sidebar" class="sidebar">
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
     <ul>
@@ -27,50 +27,38 @@
     </ul>
   </div>
 </div>
-
 <script>
-  // Wait for the DOM to be fully loaded before running the script
-  document.addEventListener('DOMContentLoaded', function () {
-    const sidebar = document.getElementById('sidebar');
-    const toggleButton = document.getElementById('toggle-sidebar');
+  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('toggle-sidebar');
 
-    // Function to check the screen size and adjust the sidebar state
-    function adjustSidebarState() {
-      // Check if the screen is small or large
-      if (window.innerWidth <= 768) {
-        sidebar.classList.add('collapsed');  // Collapse sidebar on small screens
-      } else {
-        // For large screens, ensure sidebar remains as it was (expanded or collapsed)
-        if (!sidebar.classList.contains('collapsed')) {
-          // Make sure it's expanded by removing any collapsed state
-          sidebar.classList.remove('collapsed');
-        }
-      }
+  // Sidebar toggle
+  toggleButton.addEventListener('click', function () {
+    sidebar.classList.toggle('collapsed');
+  });
+
+  // Automatically collapse sidebar on smaller screens
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+  }
+
+  // Handle window resizing (optional)
+  window.addEventListener('resize', function () {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.add('collapsed');
+    } else {
+      sidebar.classList.remove('collapsed');
     }
+  });
 
-    // Run the adjustSidebarState function on page load
-    adjustSidebarState();
-
-    // Sidebar toggle event listener (works on all screen sizes)
-    toggleButton.addEventListener('click', function () {
-      sidebar.classList.toggle('collapsed');  // Toggle collapsed state
-    });
-
-    // Handle window resizing
-    window.addEventListener('resize', function () {
-      adjustSidebarState();  // Re-adjust sidebar state on window resize
-    });
-
-    // Submenu toggle event listeners
-    document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
-      const submenu = menuItem.nextElementSibling;
-      if (submenu && submenu.classList.contains('submenu')) {
-        menuItem.addEventListener('click', function (event) {
-          event.preventDefault(); // Prevent navigation
-          submenu.classList.toggle('expanded');
-          this.querySelector('.submenu-indicator').classList.toggle('rotated');
-        });
-      }
-    });
+  // Submenu toggle
+  document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
+    const submenu = menuItem.nextElementSibling;
+    if (submenu && submenu.classList.contains('submenu')) {
+      menuItem.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent navigation
+        submenu.classList.toggle('expanded');
+        this.querySelector('.submenu-indicator').classList.toggle('rotated');
+      });
+    }
   });
 </script>
