@@ -1,5 +1,5 @@
 
-<div id="sidebar" class="sidebar collapsed">  <!-- Added collapsed class directly here -->
+<div id="sidebar" class="sidebar"> <!-- No collapsed class here initially -->
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
     <ul>
@@ -29,31 +29,34 @@
 </div>
 
 <script>
-  // Ensure the sidebar is collapsed before the page is loaded
+  // Wait for the DOM to be fully loaded before running the script
   document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('toggle-sidebar');
 
-    // Sidebar toggle
+    // Function to check screen size and adjust sidebar state
+    function adjustSidebarState() {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.add('collapsed');  // Collapse sidebar on small screens
+      } else {
+        sidebar.classList.remove('collapsed');  // Keep sidebar open on large screens
+      }
+    }
+
+    // Run the adjustSidebarState function on page load
+    adjustSidebarState();
+
+    // Sidebar toggle event listener (works on all screen sizes)
     toggleButton.addEventListener('click', function () {
       sidebar.classList.toggle('collapsed');
     });
 
-    // Automatically collapse sidebar on smaller screens
-    if (window.innerWidth <= 768) {
-      sidebar.classList.add('collapsed');
-    }
-
     // Handle window resizing
     window.addEventListener('resize', function () {
-      if (window.innerWidth <= 768) {
-        sidebar.classList.add('collapsed');
-      } else {
-        sidebar.classList.remove('collapsed');
-      }
+      adjustSidebarState();  // Re-adjust sidebar state when resizing
     });
 
-    // Submenu toggle
+    // Submenu toggle event listeners
     document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
       const submenu = menuItem.nextElementSibling;
       if (submenu && submenu.classList.contains('submenu')) {
