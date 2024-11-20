@@ -21,7 +21,7 @@
 @media (max-width: 768px) {
   .sidebar-content {
     opacity: 0; /* Make it invisible */
-    transition: opacity .10s ease; /* Smooth transition */
+    transition: opacity .3s ease; /* Smooth transition */
     height: auto; /* Allow height to collapse */
     overflow: hidden; /* Prevent overflow */
     visibility: hidden; /* Hide content */
@@ -29,7 +29,7 @@
 
    .sidebar:not(.collapsed) .sidebar-content {
      opacity: 1; /* Make it visible */
-     transition: opacity .10s ease; /* Smooth transition */
+     transition: opacity .3s ease; /* Smooth transition */
      height: auto; /* Allow height to expand */
      overflow: visible; /* Allow overflow */
      visibility: visible; /* Show content when not collapsed */
