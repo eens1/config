@@ -1,3 +1,4 @@
+
 <div id="sidebar" class="sidebar">
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
@@ -5,13 +6,34 @@
       {{ range .Site.Params.sidebar }}
       <li>
         <a href="{{ .link }}">{{ .title }}</a>
+        {{ if .submenu }}
+        <ul class="submenu">
+          {{ range .submenu }}
+          <li>
+            <a href="{{ .link }}">{{ .title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
       </li>
       {{ end }}
     </ul>
   </div>
 </div>
 <script>
+  // Sidebar toggle
   document.getElementById('toggle-sidebar').addEventListener('click', function () {
     document.getElementById('sidebar').classList.toggle('collapsed');
+  });
+
+  // Submenu toggle
+  document.querySelectorAll('.sidebar-content ul > li > a').forEach(function (menuItem) {
+    menuItem.addEventListener('click', function (event) {
+      const submenu = this.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu')) {
+        event.preventDefault(); // Prevent navigation
+        submenu.classList.toggle('expanded');
+      }
+    });
   });
 </script>

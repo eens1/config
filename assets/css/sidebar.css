@@ -32,6 +32,7 @@
 
 .sidebar-content ul li {
   margin: 15px 0;
+  position: relative;
 }
 
 .sidebar-content ul li a {
@@ -43,6 +44,26 @@
 
 .sidebar-content ul li a:hover {
   color: #ff6347; /* Highlight color */
+}
+
+/* Submenu styles */
+.submenu {
+  display: none;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #ffffff33;
+}
+
+.submenu.expanded {
+  display: block;
+}
+
+.submenu li {
+  margin: 10px 0;
+}
+
+.submenu li a {
+  font-size: 16px;
 }
 
 /* Toggle Button */
