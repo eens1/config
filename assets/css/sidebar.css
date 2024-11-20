@@ -53,13 +53,11 @@
   cursor: pointer;
   font-size: 24px;
   padding: 10px;
-  position: fixed; /* Keep the button fixed */
+  position: absolute;
   top: 10px;
-  left: 10px; /* Always visible on small screens */
-  z-index: 1100; /* Ensure it stays above other elements */
-  border-radius: 5px;
+  right: -50px;
+  border-radius: 5px 0 0 5px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease;
 }
 
 .toggle-button:hover {
@@ -74,10 +72,5 @@
 
   .sidebar:not(.collapsed) {
     transform: translateX(0);
-  }
-
-  /* Adjust toggle button specifically for small screens */
-  .toggle-button {
-    left: 10px;
   }
 }

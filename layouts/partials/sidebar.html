@@ -1,4 +1,3 @@
-
 <div id="sidebar" class="sidebar">
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
@@ -12,25 +11,7 @@
   </div>
 </div>
 <script>
-  const toggleSidebarButton = document.getElementById('toggle-sidebar');
-  const sidebar = document.getElementById('sidebar');
-
-  function updateSidebarState() {
-    if (window.innerWidth <= 768) {
-      sidebar.classList.add('collapsed');
-    } else {
-      sidebar.classList.remove('collapsed');
-    }
-  }
-
-  // Toggle sidebar visibility on button click
-  toggleSidebarButton.addEventListener('click', () => {
-    sidebar.classList.toggle('collapsed');
+  document.getElementById('toggle-sidebar').addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('collapsed');
   });
-
-  // Ensure sidebar state is correct on resize
-  window.addEventListener('resize', updateSidebarState);
-
-  // Initialize sidebar state on page load
-  updateSidebarState();
 </script>
