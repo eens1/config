@@ -1,5 +1,5 @@
 
-<div id="sidebar" class="sidebar"> <!-- No collapsed class here initially -->
+<div id="sidebar" class="sidebar collapsed"> <!-- Set collapsed class here by default for small screens -->
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
     <ul>
@@ -43,7 +43,7 @@
       }
     }
 
-    // Run the adjustSidebarState function on page load
+    // Run the adjustSidebarState function on page load to ensure correct initial state
     adjustSidebarState();
 
     // Sidebar toggle event listener (works on all screen sizes)
