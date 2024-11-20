@@ -1,3 +1,9 @@
+
+/* Add this at the top of your CSS file */
+body.sidebar-collapsed .sidebar {
+  transform: translateX(-100%);
+}
+
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
@@ -16,11 +22,8 @@
 }
 
 .sidebar.collapsed {
-
-opacity: 0;
-  visibility: hidden;
+  transform: translateX(-100%);
 }
-
 
 .sidebar-content {
   flex: 1;
@@ -109,7 +112,7 @@ opacity: 0;
     transform: translateX(-100%);
   }
 
-  .sidebar:not(.collapsed) {
+  body:not(.sidebar-collapsed) .sidebar {
     transform: translateX(0);
   }
 }
