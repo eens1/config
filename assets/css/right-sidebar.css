@@ -1,4 +1,24 @@
 
+/* Sidebar Wrapper */
+.sidebar-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Toggle Button (Left side) */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;  /* Make sure it's above other elements */
+}
+
 /* Right Sidebar Styles */
 .right-sidebar {
     position: fixed;
@@ -12,19 +32,6 @@
     display: block;
     transition: transform 0.3s ease-in-out;
     transform: translateX(0); /* Default visibility on large screens */
-}
-
-/* Sidebar toggle button */
-.toggle-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
 }
 
 /* Sidebar sections */
