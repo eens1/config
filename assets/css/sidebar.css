@@ -1,3 +1,4 @@
+
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
@@ -6,17 +7,17 @@
   width: 300px;
   height: 100%;
   background-color: #1e1e2f;
-  background-color: rgb(30,30,30);
   color: #ffffff;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
 .sidebar.collapsed {
-  transform: translateX(-100%);
+  transform: none;
+  width: 0;
 }
 
 .sidebar-content {
@@ -42,11 +43,11 @@
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px; /* Add spacing between the title and the arrow */
+  gap: 8px;
 }
 
 .sidebar-content ul li a:hover {
-  color: #ff6347; /* Highlight color */
+  color: #ff6347;
 }
 
 /* Submenu styles */
@@ -78,7 +79,7 @@
 }
 
 .submenu-indicator.rotated {
-  transform: rotate(90deg); /* Rotate to indicate expanded submenu */
+  transform: rotate(90deg);
 }
 
 /* Toggle Button */
@@ -94,38 +95,32 @@
   right: -50px;
   border-radius: 5px 0 0 5px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease;
 }
 
 .toggle-button:hover {
-  background: #ff6347; /* Highlight color */
+  background: #ff6347;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .sidebar {
     width: 0;
-    overflow: hidden;
   }
 
   .sidebar:not(.collapsed) {
     width: 300px;
-    overflow: visible;
-  }
-
-  .sidebar-content {
-    display: none;
-  }
-
-  .sidebar:not(.collapsed) .sidebar-content {
-    display: block;
   }
 
   .toggle-button {
-    right: -50px;
-    transition: right 0.3s ease;
+    right: 10px;
+  }
+
+  .sidebar.collapsed .toggle-button {
+    right: 10px;
   }
 
   .sidebar:not(.collapsed) .toggle-button {
-    right: 10px;
+    right: 260px;
   }
 }
