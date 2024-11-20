@@ -103,10 +103,29 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-100%);
+    width: 0;
+    overflow: hidden;
   }
 
   .sidebar:not(.collapsed) {
-    transform: translateX(0);
+    width: 300px;
+    overflow: visible;
+  }
+
+  .sidebar-content {
+    display: none;
+  }
+
+  .sidebar:not(.collapsed) .sidebar-content {
+    display: block;
+  }
+
+  .toggle-button {
+    right: -50px;
+    transition: right 0.3s ease;
+  }
+
+  .sidebar:not(.collapsed) .toggle-button {
+    right: 10px;
   }
 }
