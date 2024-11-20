@@ -106,11 +106,4 @@
    .sidebar-content {
       display: none;
    }
-  .sidebar {
-    transform: translateX(-100%);
-  }
-
-  .sidebar:not(.collapsed) {
-    transform: translateX(0);
-  }
 }
