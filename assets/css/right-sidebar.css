@@ -3,20 +3,21 @@
 .sidebar-wrapper {
     display: flex;
     align-items: flex-start;
+    position: relative;
 }
 
-/* Toggle Button (Left side) */
+/* Toggle Button (Right side, outside the sidebar) */
 .toggle-btn {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;  /* Positioned on the right side */
     background-color: #333;
     color: white;
     border: none;
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
-    z-index: 1000;  /* Make sure it's above other elements */
+    z-index: 1000;  /* Ensure it's above other elements */
 }
 
 /* Right Sidebar Styles */
