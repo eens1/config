@@ -18,16 +18,17 @@
     </div>
 
     <!-- Toggle Button (Right next to the sidebar on its left) -->
-    <button id="toggle-sidebar" class="toggle-btn" aria-label="Toggle Sidebar">☰</button>
+    <button id="toggle-sidebar-right" class="toggle-btn" aria-label="Toggle Right Sidebar">☰</button>
 </div>
 
+<!-- JavaScript for toggling the right sidebar -->
 <script>
-    // Ensure the toggle button is not redeclared
-    const toggleButton = document.getElementById('toggle-sidebar');
-    if (toggleButton) {
+    // Ensure the right sidebar toggle is not redeclared
+    const rightToggleButton = document.getElementById('toggle-sidebar-right');
+    if (rightToggleButton) {
         const rightSidebar = document.getElementById('right-sidebar');
 
-        toggleButton.addEventListener('click', function () {
+        rightToggleButton.addEventListener('click', function () {
             rightSidebar.classList.toggle('show-sidebar');
         });
     }

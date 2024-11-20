@@ -4,11 +4,11 @@
     position: relative;
 }
 
-/* Toggle Button (Positioned to the left of the sidebar) */
+/* Toggle Button (Positioned to the left of the right sidebar) */
 .toggle-btn {
     position: fixed;
     top: 20px;
-    right: 320px;  /* Position to the left of the sidebar (sidebar width + margin) */
+    right: 320px;  /* Positioned to the left of the sidebar (sidebar width + margin) */
     background-color: #333;
     color: white;
     border: none;
