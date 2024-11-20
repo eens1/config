@@ -73,4 +73,12 @@
   .sidebar:not(.collapsed) {
     transform: translateX(0);
   }
+
+  /* Adjust toggle button for small screens */
+  .toggle-button {
+    top: 10px;
+    left: 10px;
+    right: auto;
+    border-radius: 5px;
+  }
 }

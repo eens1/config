@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar">
+<div id="sidebar" class="sidebar collapsed">
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
     <ul>
@@ -11,7 +11,10 @@
   </div>
 </div>
 <script>
-  document.getElementById('toggle-sidebar').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.toggle('collapsed');
+  const toggleSidebarButton = document.getElementById('toggle-sidebar');
+  const sidebar = document.getElementById('sidebar');
+
+  toggleSidebarButton.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
   });
 </script>
