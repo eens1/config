@@ -7,33 +7,33 @@
   width: 300px;
   height: 100%;
   background-color: #1e1e2f;
+  background-color: rgb(30,30,30);
   color: #ffffff;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  transition: transform 0.3s ease, visibility 0.3s ease; /* Include visibility transition */
-  transform: translateX(0); /* Default position for large screens */
-  visibility: visible; /* Initially visible on large screens */
+  transition: transform 0.3s ease;
+  transform: translateX(0); /* Default position */
 }
 
-/* Sidebar collapse logic */
-.sidebar.collapsed {
-  transform: translateX(-100%); /* Move sidebar off-screen when collapsed */
-  visibility: hidden; /* Hide sidebar when collapsed */
-}
-
-/* For small screens */
+/* Initially, on small screens, hide the sidebar */
 @media (max-width: 768px) {
   .sidebar {
-    visibility: hidden; /* Hide sidebar by default */
-    transform: translateX(-100%); /* Move off-screen by default */
+    display: none; /* Hide sidebar by default on small screens */
+  }
+
+  .sidebar.collapsed {
+    display: none; /* Keep it hidden when collapsed */
   }
 
   .sidebar:not(.collapsed) {
-    visibility: visible; /* Show sidebar when it's not collapsed */
-    transform: translateX(0); /* Bring sidebar on-screen when expanded */
+    display: flex; /* Show sidebar when it's expanded */
   }
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
 }
 
 .sidebar-content {
