@@ -1,9 +1,3 @@
-
-/* Add this at the top of your CSS file */
-body.sidebar-collapsed .sidebar {
-  transform: translateX(-100%);
-}
-
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
@@ -112,7 +106,7 @@ body.sidebar-collapsed .sidebar {
     transform: translateX(-100%);
   }
 
-  body:not(.sidebar-collapsed) .sidebar {
+  .sidebar:not(.collapsed) {
     transform: translateX(0);
   }
 }

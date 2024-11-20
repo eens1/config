@@ -27,41 +27,38 @@
     </ul>
   </div>
 </div>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const body = document.body;
-    const sidebar = document.getElementById('sidebar');
-    const toggleButton = document.getElementById('toggle-sidebar');
+  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('toggle-sidebar');
 
-    // Sidebar toggle
-    toggleButton.addEventListener('click', function () {
-      body.classList.toggle('sidebar-collapsed');
-    });
+  // Sidebar toggle
+  toggleButton.addEventListener('click', function () {
+    sidebar.classList.toggle('collapsed');
+  });
 
-    // Handle window resizing
-    function handleResize() {
-      if (window.innerWidth <= 768) {
-        body.classList.add('sidebar-collapsed');
-      } else {
-        body.classList.remove('sidebar-collapsed');
-      }
+  // Automatically collapse sidebar on smaller screens
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+  }
+
+  // Handle window resizing (optional)
+  window.addEventListener('resize', function () {
+    if (window.innerWidth <= 768) {
+      sidebar.classList.add('collapsed');
+    } else {
+      sidebar.classList.remove('collapsed');
     }
+  });
 
-    // Initial check and add event listener for resize
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    // Submenu toggle (keep this part unchanged)
-    document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
-      const submenu = menuItem.nextElementSibling;
-      if (submenu && submenu.classList.contains('submenu')) {
-        menuItem.addEventListener('click', function (event) {
-          event.preventDefault();
-          submenu.classList.toggle('expanded');
-          this.querySelector('.submenu-indicator').classList.toggle('rotated');
-        });
-      }
-    });
+  // Submenu toggle
+  document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
+    const submenu = menuItem.nextElementSibling;
+    if (submenu && submenu.classList.contains('submenu')) {
+      menuItem.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent navigation
+        submenu.classList.toggle('expanded');
+        this.querySelector('.submenu-indicator').classList.toggle('rotated');
+      });
+    }
   });
 </script>
