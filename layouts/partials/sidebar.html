@@ -42,8 +42,10 @@ toggleButton.addEventListener('click', function () {
 function handleSidebarCollapse() {
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed'); // Collapsed on small screens
+    sidebar.style.display = 'none'; // Ensure it's hidden initially
   } else {
     sidebar.classList.remove('collapsed'); // Expanded on large screens
+    sidebar.style.display = 'flex'; // Ensure it’s visible on large screens
   }
 }
 
