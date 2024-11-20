@@ -31,6 +31,7 @@
 <script>
   const sidebar = document.getElementById('sidebar');
   const toggleButton = document.getElementById('toggle-sidebar');
+  const sidebarContent = document.querySelector('.sidebar-content');
 
   // Sidebar toggle
   toggleButton.addEventListener('click', function () {
@@ -39,8 +40,8 @@
 
   // Automatically collapse sidebar on smaller screens
   if (window.innerWidth <= 768) {
-   // sidebar.classList.add('collapsed');
-   sidebar.style.display = 'none';
+    sidebarContent.style.display = 'none';
+   sidebar.classList.add('collapsed');
   }
 
   // Handle window resizing (optional)
