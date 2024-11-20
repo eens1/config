@@ -1,16 +1,14 @@
 
 /* Sidebar Wrapper */
 .sidebar-wrapper {
-    display: flex;
-    align-items: flex-start;
     position: relative;
 }
 
-/* Toggle Button (Right side, outside the sidebar) */
+/* Toggle Button (Positioned to the left of the sidebar) */
 .toggle-btn {
     position: fixed;
     top: 20px;
-    right: 20px;  /* Positioned on the right side */
+    right: 320px;  /* Position to the left of the sidebar (sidebar width + margin) */
     background-color: #333;
     color: white;
     border: none;
@@ -70,5 +68,10 @@
 
     .right-sidebar.show-sidebar {
         transform: translateX(0); /* Show sidebar when toggled */
+    }
+
+    /* Move the toggle button to the left on small screens */
+    .toggle-btn {
+        right: 20px;  /* Adjust positioning on small screens */
     }
 }
