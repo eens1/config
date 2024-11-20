@@ -1,4 +1,16 @@
 
+/* Initial state for sidebar - hidden by default */
+.sidebar {
+  visibility: hidden;
+}
+
+/* Make sidebar visible by default on larger screens */
+@media (min-width: 769px) {
+  .sidebar {
+    visibility: visible;
+  }
+}
+
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
@@ -103,12 +115,12 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
 
- #sidebar {
-    display: none;
+  .sidebar:not(.collapsed) {
+    transform: translateX(0);
   }
-  #sidebar.collapsed {
-    display: none;
-  }
-}
 }
