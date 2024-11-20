@@ -1,5 +1,4 @@
 
-
 <div id="sidebar" class="sidebar">
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
@@ -28,6 +27,7 @@
     </ul>
   </div>
 </div>
+
 <script>
   const sidebar = document.getElementById('sidebar');
   const toggleButton = document.getElementById('toggle-sidebar');
@@ -42,7 +42,7 @@
     sidebar.classList.add('collapsed');
   }
 
-  // Handle window resizing (optional)
+  // Handle window resizing
   window.addEventListener('resize', function () {
     if (window.innerWidth <= 768) {
       sidebar.classList.add('collapsed');
