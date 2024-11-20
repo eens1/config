@@ -17,7 +17,6 @@
 
 .sidebar.collapsed {
   transform: translateX(-100%);
-  width: 0px;
 }
 
 .sidebar-content {
