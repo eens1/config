@@ -45,21 +45,28 @@
 <body>
 
 <header>
+
+<!--
 {{ $headerPartial := printf "partials/%s/header.html" .Section }}
 {{ if templates.Exists $headerPartial }}
 	{{ partial $headerPartial . }}
 {{ else }}
 	{{ partial "header.html" . }}
 {{ end }}
+-->
+
 </header>
 
 <main>
+
+<!--
 {{ $navPartial := printf "partials/%s/nav.html" .Section }}
 {{ if templates.Exists $navPartial }}
 	{{ partial $navPartial . }}
 {{ else }}
 	{{ partial "nav.html" . }}
 {{ end }}
+-->
 
 {{ block "main" . }}
 <!-- This will be replaced by content from other templates -->
