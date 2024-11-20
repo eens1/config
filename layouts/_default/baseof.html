@@ -53,8 +53,6 @@
 {{ end }}
 </header>
 
-{{ partial "sidebar.html" . }}
-
 <main>
 {{ $navPartial := printf "partials/%s/nav.html" .Section }}
 {{ if templates.Exists $navPartial }}
@@ -68,6 +66,7 @@
 {{ end }}
 </main>
 
+{{ partial "sidebar.html" . }}
 
 <footer>
 {{ $footerPartial := printf "partials/%s/footer.html" .Lang }}
