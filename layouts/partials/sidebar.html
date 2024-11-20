@@ -1,5 +1,5 @@
 
-<div id="sidebar" class="sidebar">
+<div id="sidebar" class="sidebar collapsed">  <!-- Added collapsed class directly here -->
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
     <ul>
@@ -27,38 +27,42 @@
     </ul>
   </div>
 </div>
+
 <script>
-  const sidebar = document.getElementById('sidebar');
-  const toggleButton = document.getElementById('toggle-sidebar');
+  // Ensure the sidebar is collapsed before the page is loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.getElementById('toggle-sidebar');
 
-  // Sidebar toggle
-  toggleButton.addEventListener('click', function () {
-    sidebar.classList.toggle('collapsed');
-  });
+    // Sidebar toggle
+    toggleButton.addEventListener('click', function () {
+      sidebar.classList.toggle('collapsed');
+    });
 
-  // Automatically collapse sidebar on smaller screens
-  if (window.innerWidth <= 768) {
-    sidebar.classList.add('collapsed');
-  }
-
-  // Handle window resizing (optional)
-  window.addEventListener('resize', function () {
+    // Automatically collapse sidebar on smaller screens
     if (window.innerWidth <= 768) {
       sidebar.classList.add('collapsed');
-    } else {
-      sidebar.classList.remove('collapsed');
     }
-  });
 
-  // Submenu toggle
-  document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
-    const submenu = menuItem.nextElementSibling;
-    if (submenu && submenu.classList.contains('submenu')) {
-      menuItem.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent navigation
-        submenu.classList.toggle('expanded');
-        this.querySelector('.submenu-indicator').classList.toggle('rotated');
-      });
-    }
+    // Handle window resizing
+    window.addEventListener('resize', function () {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.add('collapsed');
+      } else {
+        sidebar.classList.remove('collapsed');
+      }
+    });
+
+    // Submenu toggle
+    document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
+      const submenu = menuItem.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu')) {
+        menuItem.addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent navigation
+          submenu.classList.toggle('expanded');
+          this.querySelector('.submenu-indicator').classList.toggle('rotated');
+        });
+      }
+    });
   });
 </script>
