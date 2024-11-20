@@ -21,12 +21,14 @@
     <button id="toggle-sidebar" class="toggle-btn" aria-label="Toggle Sidebar">☰</button>
 </div>
 
-<!-- JavaScript for toggling the sidebar -->
 <script>
+    // Ensure the toggle button is not redeclared
     const toggleButton = document.getElementById('toggle-sidebar');
-    const rightSidebar = document.getElementById('right-sidebar');
+    if (toggleButton) {
+        const rightSidebar = document.getElementById('right-sidebar');
 
-    toggleButton.addEventListener('click', function () {
-        rightSidebar.classList.toggle('show-sidebar');
-    });
+        toggleButton.addEventListener('click', function () {
+            rightSidebar.classList.toggle('show-sidebar');
+        });
+    }
 </script>
