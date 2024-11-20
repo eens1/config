@@ -1,4 +1,3 @@
-
 <div id="sidebar" class="sidebar">
   <button id="toggle-sidebar" class="toggle-button">☰</button>
   <div class="sidebar-content">
@@ -27,38 +26,39 @@
     </ul>
   </div>
 </div>
-<script>
-  const sidebar = document.getElementById('sidebar');
-  const toggleButton = document.getElementById('toggle-sidebar');
 
-  // Sidebar toggle
-  toggleButton.addEventListener('click', function () {
-    sidebar.classList.toggle('collapsed');
-  });
 
-  // Automatically collapse sidebar on smaller screens
+const sidebar = document.getElementById('sidebar');
+const toggleButton = document.getElementById('toggle-sidebar');
+
+// Sidebar toggle
+toggleButton.addEventListener('click', function () {
+  sidebar.classList.toggle('collapsed');
+});
+
+// Automatically collapse sidebar on smaller screens
+function handleSidebarCollapse() {
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
+  } else {
+    sidebar.classList.remove('collapsed');
   }
+}
 
-  // Handle window resizing (optional)
-  window.addEventListener('resize', function () {
-    if (window.innerWidth <= 768) {
-      sidebar.classList.add('collapsed');
-    } else {
-      sidebar.classList.remove('collapsed');
-    }
-  });
+// Run once on page load to set the correct state immediately
+handleSidebarCollapse();
 
-  // Submenu toggle
-  document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
-    const submenu = menuItem.nextElementSibling;
-    if (submenu && submenu.classList.contains('submenu')) {
-      menuItem.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent navigation
-        submenu.classList.toggle('expanded');
-        this.querySelector('.submenu-indicator').classList.toggle('rotated');
-      });
-    }
-  });
-</script>
+// Handle window resizing
+window.addEventListener('resize', handleSidebarCollapse);
+
+// Submenu toggle
+document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
+  const submenu = menuItem.nextElementSibling;
+  if (submenu && submenu.classList.contains('submenu')) {
+    menuItem.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent navigation
+      submenu.classList.toggle('expanded');
+      this.querySelector('.submenu-indicator').classList.toggle('rotated');
+    });
+  }
+});
