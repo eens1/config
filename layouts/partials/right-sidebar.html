@@ -1,0 +1,31 @@
+
+<!-- Right Sidebar (with toggle) -->
+<div id="right-sidebar" class="right-sidebar">
+    <button id="toggle-sidebar" class="toggle-btn" aria-label="Toggle Sidebar">☰</button>
+    <div class="sidebar-content">
+        <div class="sidebar-section">
+            <h3 class="section-title">Section 1</h3>
+            <ul>
+                <li><a href="/link1">Item 1</a></li>
+                <li><a href="/link2">Item 2</a></li>
+                <li><a href="/link3">Item 3</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3 class="section-title">Section 2</h3>
+            <ul>
+                <li><a href="/link4">Item 4</a></li>
+                <li><a href="/link5">Item 5</a></li>
+                <li><a href="/link6">Item 6</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    const toggleButton = document.getElementById('toggle-sidebar');
+    const rightSidebar = document.getElementById('right-sidebar');
+
+    toggleButton.addEventListener('click', function () {
+        rightSidebar.classList.toggle('show-sidebar');
+    });
+</script>
