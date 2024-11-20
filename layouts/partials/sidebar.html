@@ -34,17 +34,15 @@ const sidebar = document.getElementById('sidebar');
 const toggleButton = document.getElementById('toggle-sidebar');
 const sidebarContent = document.querySelector('.sidebar-content');
 
-// Function to check and set sidebar state
-function setSidebarState() {
+// Function to set initial sidebar state
+function setInitialSidebarState() {
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
-  } else {
-    sidebar.classList.remove('collapsed');
   }
 }
 
-// Set initial state on page load
-setSidebarState();
+// Set initial state immediately
+setInitialSidebarState();
 
 // Sidebar toggle
 toggleButton.addEventListener('click', function () {
@@ -52,7 +50,11 @@ toggleButton.addEventListener('click', function () {
 });
 
 // Handle window resizing
-window.addEventListener('resize', setSidebarState);
+window.addEventListener('resize', function () {
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+  }
+});
 
 // Submenu toggle
 document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
