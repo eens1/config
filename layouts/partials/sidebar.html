@@ -5,7 +5,12 @@
     <ul>
       {{ range .Site.Params.sidebar }}
       <li>
-        <a href="{{ .link }}">{{ .title }}</a>
+        <a href="{{ .link }}">
+          {{ .title }}
+          {{ if .submenu }}
+          <span class="submenu-indicator">▶</span>
+          {{ end }}
+        </a>
         {{ if .submenu }}
         <ul class="submenu">
           {{ range .submenu }}
@@ -28,12 +33,13 @@
 
   // Submenu toggle
   document.querySelectorAll('.sidebar-content ul > li > a').forEach(function (menuItem) {
-    menuItem.addEventListener('click', function (event) {
-      const submenu = this.nextElementSibling;
-      if (submenu && submenu.classList.contains('submenu')) {
+    const submenu = menuItem.nextElementSibling;
+    if (submenu && submenu.classList.contains('submenu')) {
+      menuItem.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent navigation
         submenu.classList.toggle('expanded');
-      }
-    });
+        this.querySelector('.submenu-indicator').classList.toggle('rotated');
+      });
+    }
   });
 </script>

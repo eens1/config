@@ -40,6 +40,9 @@
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar-content ul li a:hover {
@@ -64,6 +67,17 @@
 
 .submenu li a {
   font-size: 16px;
+}
+
+/* Submenu indicator styles */
+.submenu-indicator {
+  font-size: 14px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.submenu-indicator.rotated {
+  transform: rotate(90deg); /* Rotate to indicate expanded submenu */
 }
 
 /* Toggle Button */
