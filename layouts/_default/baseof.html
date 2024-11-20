@@ -66,6 +66,8 @@
 {{ end }}
 </main>
 
+{{ partial "sidebar.html" . }}
+
 <footer>
 {{ $footerPartial := printf "partials/%s/footer.html" .Lang }}
 {{ if templates.Exists $footerPartial }}

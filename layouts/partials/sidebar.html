@@ -1,0 +1,17 @@
+<div id="sidebar" class="sidebar">
+  <button id="toggle-sidebar" class="toggle-button">☰</button>
+  <div class="sidebar-content">
+    <ul>
+      {{ range .Site.Params.sidebar }}
+      <li>
+        <a href="{{ .link }}">{{ .title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+<script>
+  document.getElementById('toggle-sidebar').addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+  });
+</script>
