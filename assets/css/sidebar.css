@@ -16,8 +16,11 @@
 }
 
 .sidebar.collapsed {
-  transform: translateX(-100%);
+
+opacity: 0;
+  visibility: hidden;
 }
+
 
 .sidebar-content {
   flex: 1;
