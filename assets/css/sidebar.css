@@ -41,8 +41,8 @@
   font-size: 18px;
   transition: color 0.3s ease;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 8px; /* Add spacing between the title and the arrow */
 }
 
 .sidebar-content ul li a:hover {

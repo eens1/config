@@ -5,7 +5,9 @@
     <ul>
       {{ range .Site.Params.sidebar }}
       <li>
-        <a href="{{ .link }}">
+        <a 
+          href="{{ if .submenu }}#{{ else }}{{ .link }}{{ end }}" 
+          class="{{ if .submenu }}has-submenu{{ end }}">
           {{ .title }}
           {{ if .submenu }}
           <span class="submenu-indicator">▶</span>
@@ -45,6 +47,18 @@
       sidebar.classList.add('collapsed');
     } else {
       sidebar.classList.remove('collapsed');
+    }
+  });
+
+  // Submenu toggle
+  document.querySelectorAll('.sidebar-content ul > li > a.has-submenu').forEach(function (menuItem) {
+    const submenu = menuItem.nextElementSibling;
+    if (submenu && submenu.classList.contains('submenu')) {
+      menuItem.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent navigation
+        submenu.classList.toggle('expanded');
+        this.querySelector('.submenu-indicator').classList.toggle('rotated');
+      });
     }
   });
 </script>
