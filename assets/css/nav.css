@@ -1,3 +1,4 @@
+
 /* General Styles */
 .navbar {
   display: flex;
@@ -10,7 +11,7 @@
   display: flex;
   list-style: none;
   padding-left: 0px;
-   margin: 10px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .nav-links li:not(:first-child) {
@@ -45,25 +46,26 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgb(20,20,20);
+  top: 100%; /* Ensure the submenu starts directly below the parent */
+  left: 0; /* Align submenu with the parent menu item */
+  background-color: rgb(20, 20, 20);
   list-style: none;
   z-index: 1000;
-  padding: 10px 20px 0px 0px;
+  padding: 10px 0; /* Adjust padding for proper spacing */
+  min-width: 200px; /* Set a consistent width for submenus */
 }
 
 .dropdown-menu li {
-  padding: 0px 0px 0px 0px;
+  padding: 0;
 }
 
 .dropdown-menu a {
   color: #ddd;
   text-decoration: none;
   display: block;
-  text-align: left; /* Left align submenu text */
+  text-align: left; /* Left-align submenu text */
   transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-  padding: 0px 0px 0px 0px;
+  padding: 10px 20px; /* Adjust padding for spacing */
 }
 
 .dropdown-menu a:hover {
@@ -85,6 +87,7 @@
   margin: 4px 0;
 }
 
+/* Responsive Design for Mobile */
 @media (max-width: 800px) {
   .navbar {
     align-items: flex-start; /* Align items left */
@@ -125,8 +128,9 @@
     position: static;
     display: none;
     flex-direction: column;
-    padding: 0; /* Remove extra padding */
-    margin-left: 0; /* Left aligned submenus */
+    padding: 0;
+    margin-left: 0; /* Align submenus left for mobile */
+    width: 100%; /* Full-width dropdown for mobile */
   }
 
   .dropdown:hover .dropdown-menu {
@@ -145,6 +149,6 @@
 /* Large Screen - Reduced Space Between Submenus */
 @media (min-width: 800px) {
   .dropdown-menu a {
-    padding: 0px 0px 10px 0px; /* Reduced padding between submenu items */
+    padding: 10px 20px; /* Consistent padding for desktop submenus */
   }
 }
