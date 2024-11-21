@@ -1,41 +1,37 @@
+
+/* Breadcrumb Navigation Styles */
 .breadcrumb {
-  background-color: rgb(30,30,30);
-  padding: 10px 20px;
-  border-radius: 5px;
-   margin: 20px 0px 0px 0px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ccc; /* Light gray text for the dark theme */
+    margin: 20px 0;
+    padding: 0;
 }
 
-.breadcrumb ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+.breadcrumb-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
 }
 
-.breadcrumb li {
-  display: inline;
-  font-size: 16px;
+.breadcrumb-item {
+    display: inline;
 }
 
-.breadcrumb li:not(:last-child)::after {
-  content: "›";
-  margin: 0 10px;
-  color: #666;
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #aaa; /* Slightly dimmed text for non-active links */
+    transition: color 0.2s;
 }
 
-.breadcrumb a {
-  color: #b3b3b3;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.breadcrumb-item a:hover {
+    color: #fff; /* Bright white for hover effect */
 }
 
-.breadcrumb a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.breadcrumb li:last-child a {
-  color: #4a90e2;
-  pointer-events: none;
+.breadcrumb-item a.current {
+    text-decoration: underline; /* Underline only the current item */
+    font-weight: bold;
+    color: #fff; /* Bright white for the active item */
 }
