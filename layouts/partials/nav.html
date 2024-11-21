@@ -1,0 +1,49 @@
+<nav class="navbar">
+
+<div class="logo">
+<a href="https://eens.netlify.app">
+(&tau;) Extra Ecclesiam Nulla Salus
+</a>
+</div>
+
+<div class="banner">
+<img src="/images/banner.png"/>
+</div>
+
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <ul class="nav-links">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ if not .HasChildren }} <!-- If there are no submenus -->
+        <li>
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+            {{ with .Pre }}{{ . | safeHTML }}{{ end }}
+            {{ .Name }}
+          </a>
+        </li>
+      {{ else }} <!-- If there are submenus -->
+        <li class="dropdown">
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+            {{ with .Pre }}{{ . | safeHTML }}{{ end }}
+            {{ .Name }}
+          </a>
+          <ul class="dropdown-menu">
+            {{ range .Children }}
+              <li>
+                <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  
+</nav>
