@@ -27,7 +27,7 @@
    margin: 10px 0px 0px 0px;
 }
 
-.nav-links li {
+.nav-links li:not(:first-child) {
   margin-left: 1.5rem;
   position: relative; /* Required for dropdown positioning */
 }
