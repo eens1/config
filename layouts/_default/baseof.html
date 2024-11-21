@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -42,21 +41,11 @@
 <body>
 
 <header>
-{{ $headerPartial := printf "partials/%s/header.html" .Section }}
-{{ if templates.Exists $headerPartial }}
-	{{ partial $headerPartial . }}
-{{ else }}
-	{{ partial "header.html" . }}
-{{ end }}
+{{ partial "header.html" . }}
 </header>
 
 <main>
-{{ $navPartial := printf "partials/%s/nav.html" .Section }}
-{{ if templates.Exists $navPartial }}
-	{{ partial $navPartial . }}
-{{ else }}
-	{{ partial "nav.html" . }}
-{{ end }}
+{{ partial "nav.html" . }}
 
 {{ block "main" . }}
 <!-- This will be replaced by content from other templates -->
@@ -64,24 +53,19 @@
 </main>
 
 <footer>
-{{ $footerPartial := printf "partials/%s/footer.html" .Lang }}
-{{ if templates.Exists $footerPartial }}
-	{{ partial $footerPartial . }}
-{{ else }}
-	{{ partial "footer.html" . }}
-{{ end }}
+{{ partial "footer.html" . }}
 </footer>
 
 <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
+if (window.netlifyIdentity) {
+window.netlifyIdentity.on("init", (user) => {
+if (!user) {
+window.netlifyIdentity.on("login", () => {
+document.location.href = "/admin/";
+});
+}
+});
+}
 </script>
 
 </body>
