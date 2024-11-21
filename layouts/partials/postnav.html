@@ -1,20 +1,22 @@
+<nav class="breadcrumb">
+<ol>
 
-<nav class="breadcrumb" aria-label="Breadcrumb">
-    <ul class="breadcrumb-list">
-        <!-- Loop through the sections of the current post -->
-        {{ $sections := .Sections }}
-        {{ range $index, $section := $sections }}
-            <li class="breadcrumb-item">
-                <a href="{{ $section.Permalink }}" 
-                   class="{{ if eq $section . }}current{{ end }}">
-                    {{ $section.Title }}
-                </a>
-            </li>
-        {{ end }}
+{{ $url := .RelPermalink }}
+{{ $urlParts := split $url "/" }}
 
-        <!-- Add the current post title -->
-        <li class="breadcrumb-item">
-            <a href="#" class="current">{{ .Title }}</a>
-        </li>
-    </ul>
+{{ range $index, $element := $urlParts }}
+   {{ if ne $element "" }}
+      <a href="{{ delimit (first (add $index 1) $urlParts) "/" }}/">
+      <li>
+      {{ if eq $element $.Site.Language.Lang }}
+         {{ i18n "home" }}
+      {{ else }}
+         {{ humanize $element }}
+      {{ end }}
+      </a>
+      </li>
+   {{ end }}
+{{ end }}
+
+</ol>
 </nav>
