@@ -45,3 +45,5 @@ markup:
             - - "\\("
               - "\\)"
   
+params:
+  math: true  # Enable math support (optional)

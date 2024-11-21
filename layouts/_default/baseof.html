@@ -42,7 +42,7 @@
 <body>
 
 <header>
-{{ partial "nav.html" . }}
+
 </header>
 
 <main>
@@ -50,6 +50,10 @@
 {{ block "main" . }}
 <!-- This will be replaced by content from other templates -->
 {{ end }}
+</main>
+
+{{ partial "sidebar.html" . }}
+{{ partial "right-sidebar.html" . }}
 
 <footer>
 {{ $footerPartial := printf "partials/%s/footer.html" .Lang }}
@@ -59,7 +63,6 @@
 	{{ partial "footer.html" . }}
 {{ end }}
 </footer>
-</main>
 
 <script>
   if (window.netlifyIdentity) {
