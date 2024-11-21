@@ -1,24 +1,9 @@
-
 /* General Styles */
 .navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #ddd;
-}
-.navbar .logo {
-   margin-bottom: 10px;
-}
-.navbar .logo a {
-   font-size: 20px;
-   font-weight: bold;
-}
-.navbar .logo a:hover {
-   text-decoration: none;
-}
-
-.logo img {
-  width: 100%;
 }
 
 .nav-links {
