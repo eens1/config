@@ -5,9 +5,9 @@
         {{ $sections := .Sections }}
         {{ range $index, $section := $sections }}
             <li class="breadcrumb-item">
-                <a href="{{ .RelPermalink }}" 
-                   class="{{ if eq . $sections.Last }}current{{ end }}">
-                    {{ .Title }}
+                <a href="{{ $section.Permalink }}" 
+                   class="{{ if eq $section . }}current{{ end }}">
+                    {{ $section.Title }}
                 </a>
             </li>
         {{ end }}
