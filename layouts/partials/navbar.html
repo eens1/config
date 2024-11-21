@@ -1,67 +1,77 @@
 
-<nav class="bg-gray-900 text-white">
-  <div class="max-w-screen-xl mx-auto px-4 flex justify-between items-center h-16">
+<nav class="navbar">
+  <div class="container">
     <!-- Left Section: Logo and Title -->
-    <div class="flex items-center space-x-4">
-      <a href="/" class="flex items-center">
-        <img src="{{ .Site.Params.siteLogo }}" alt="Logo" class="h-8 w-8">
-        <span class="ml-2 text-lg font-semibold">{{ .Site.Params.siteTitle }}</span>
+    <div class="navbar-left">
+      <a href="/" class="logo">
+        <img src="{{ .Site.Params.siteLogo }}" alt="Logo">
+        <span>{{ .Site.Params.siteTitle }}</span>
       </a>
     </div>
 
     <!-- Right Section: Menu -->
-    <div class="hidden md:flex items-center space-x-4">
-      {{- range .Site.Params.menu }}
-        <div class="relative group">
-          <a href="{{ .url }}" class="hover:text-gray-300">{{ .name }}</a>
-          {{ if .submenu }}
-            <!-- Dropdown Menu -->
-            <div class="absolute left-0 mt-2 bg-gray-800 rounded shadow-lg hidden group-hover:block">
-              {{- range .submenu }}
-                <a href="{{ .url }}" class="block px-4 py-2 hover:bg-gray-700">{{ .name }}</a>
-              {{- end }}
-            </div>
-          {{ end }}
-        </div>
-      {{- end }}
-      <!-- Social Links -->
-      <a href="{{ .Site.Params.socialLinks.twitter }}" target="_blank">
-        <img src="/images/twitter-icon.svg" alt="Twitter" class="h-6 w-6">
-      </a>
-      <a href="{{ .Site.Params.socialLinks.youtube }}" target="_blank">
-        <img src="/images/youtube-icon.svg" alt="YouTube" class="h-6 w-6">
-      </a>
+    <div class="navbar-right">
+      <ul class="menu">
+        {{- range .Site.Params.menu }}
+          <li class="menu-item {{ if .submenu }}has-submenu{{ end }}">
+            <a href="{{ .url }}">{{ .name }}</a>
+            {{ if .submenu }}
+              <ul class="submenu">
+                {{- range .submenu }}
+                  <li><a href="{{ .url }}">{{ .name }}</a></li>
+                {{- end }}
+              </ul>
+            {{ end }}
+          </li>
+        {{- end }}
+        <!-- Social Links -->
+        <li>
+          <a href="{{ .Site.Params.socialLinks.twitter }}" target="_blank">
+            <img src="/images/twitter-icon.svg" alt="Twitter">
+          </a>
+        </li>
+        <li>
+          <a href="{{ .Site.Params.socialLinks.youtube }}" target="_blank">
+            <img src="/images/youtube-icon.svg" alt="YouTube">
+          </a>
+        </li>
+      </ul>
+      <!-- Hamburger Icon -->
+      <button class="hamburger" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-
-    <!-- Hamburger Menu for Small Screens -->
-    <button id="menu-toggle" class="md:hidden focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden bg-gray-800 md:hidden">
-    {{- range .Site.Params.menu }}
-      <div class="border-b border-gray-700">
-        <a href="{{ .url }}" class="block px-4 py-2 hover:bg-gray-700">{{ .name }}</a>
-        {{ if .submenu }}
-          {{- range .submenu }}
-            <a href="{{ .url }}" class="block pl-8 py-1 hover:bg-gray-700">{{ .name }}</a>
-          {{- end }}
-        {{ end }}
-      </div>
-    {{- end }}
-    <!-- Social Links in Mobile Menu -->
-    <div class="flex space-x-4 px-4 py-2">
-      <a href="{{ .Site.Params.socialLinks.twitter }}" target="_blank">
-        <img src="/images/twitter-icon.svg" alt="Twitter" class="h-6 w-6">
-      </a>
-      <a href="{{ .Site.Params.socialLinks.youtube }}" target="_blank">
-        <img src="/images/youtube-icon.svg" alt="YouTube" class="h-6 w-6">
-      </a>
-    </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      {{- range .Site.Params.menu }}
+        <li class="{{ if .submenu }}has-submenu{{ end }}">
+          <a href="{{ .url }}">{{ .name }}</a>
+          {{ if .submenu }}
+            <ul>
+              {{- range .submenu }}
+                <li><a href="{{ .url }}">{{ .name }}</a></li>
+              {{- end }}
+            </ul>
+          {{ end }}
+        </li>
+      {{- end }}
+      <!-- Social Links in Mobile Menu -->
+      <li>
+        <a href="{{ .Site.Params.socialLinks.twitter }}" target="_blank">
+          <img src="/images/twitter-icon.svg" alt="Twitter">
+        </a>
+      </li>
+      <li>
+        <a href="{{ .Site.Params.socialLinks.youtube }}" target="_blank">
+          <img src="/images/youtube-icon.svg" alt="YouTube">
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -71,6 +81,6 @@
   const mobileMenu = document.getElementById('mobile-menu');
 
   menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('active');
   });
 </script>
