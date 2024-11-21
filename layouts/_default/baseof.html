@@ -53,8 +53,6 @@
 {{ end }}
 </header>
 
-{{ partial "navbar.html" . }}
-
 <main>
 {{ $navPartial := printf "partials/%s/nav.html" .Section }}
 {{ if templates.Exists $navPartial }}
