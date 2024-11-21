@@ -27,38 +27,26 @@
     </ul>
   </div>
 </div>
-
 <script>
   const sidebar = document.getElementById('sidebar');
   const toggleButton = document.getElementById('toggle-sidebar');
-  const sidebarContent = document.querySelector('.sidebar-content');
 
   // Sidebar toggle
   toggleButton.addEventListener('click', function () {
     sidebar.classList.toggle('collapsed');
-
-    // Toggle visibility of sidebar content
-    if (sidebar.classList.contains('collapsed')) {
-      sidebarContent.style.visibility = 'hidden';
-    } else {
-      sidebarContent.style.visibility = 'visible';
-    }
   });
 
   // Automatically collapse sidebar on smaller screens
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
-    sidebarContent.style.visibility = 'hidden'; // Set visibility to hidden initially
   }
 
-  // Handle window resizing
+  // Handle window resizing (optional)
   window.addEventListener('resize', function () {
     if (window.innerWidth <= 768) {
       sidebar.classList.add('collapsed');
-      sidebarContent.style.visibility = 'hidden'; // Set visibility to hidden
     } else {
       sidebar.classList.remove('collapsed');
-      sidebarContent.style.visibility = 'visible'; // Set visibility to visible
     }
   });
 
