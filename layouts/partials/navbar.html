@@ -1,0 +1,24 @@
+
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+        <img src="/path/to/logo.png" alt="Site Logo" style="height: 40px;"> <!-- Site logo -->
+        Your Site Title
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto"> <!-- Aligns menu items to the right -->
+            {{ range .Site.Menus.main }}
+            <li class="nav-item {{ if eq $.Page.RelPermalink .URL }}active{{ end }}">
+                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/yourusername" target="_blank">
+                    <img src="/path/to/twitter-logo.png" alt="Twitter" style="height: 24px;"> <!-- Twitter logo -->
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
