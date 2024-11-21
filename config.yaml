@@ -46,4 +46,9 @@ markup:
               - "\\)"
   
 params:
-  math: true  # Enable math support (optional)
+  math: true
+  siteLogo: "/images/logo.png"
+  siteTitle: "My Website"
+  socialLinks:
+    twitter: "https://twitter.com/yourhandle"
+    youtube: "https://youtube.com/yourchannel"

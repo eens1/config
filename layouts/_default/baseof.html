@@ -27,6 +27,7 @@
 <!-- External Libraries -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css" rel="stylesheet">
 
 {{ end }}
 
@@ -52,6 +53,8 @@
 	{{ partial "header.html" . }}
 {{ end }}
 </header>
+
+{{ partial "navbar.html" . }}
 
 <main>
 {{ $navPartial := printf "partials/%s/nav.html" .Section }}
