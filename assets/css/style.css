@@ -1,4 +1,5 @@
 @import url('https://fonts.bunny.net/css?family=nunito:300,400,600,700');
+@import url(https://fonts.bunny.net/css?family=fira-code:300,400,500,600,700);
 
 body {
 max-width: 800px;
@@ -7,7 +8,7 @@ padding: 70px 10px 0px 10px;
 background-color: rgb(10,10,10);
 color: white;
 line-height: 1.3;
-font-family: 'Nunito', sans-serif;
+font-family: 'Fira Code', 'Nunito', sans-serif;
 font-size: 18px;
 }
 
