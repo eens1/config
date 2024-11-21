@@ -88,6 +88,7 @@
 
 /* Toggle Button */
 .toggle-button {
+   display: none;
    background:#1e1e2f;
    color:#ffffff;
    border:none;
@@ -113,5 +114,8 @@
 
    .sidebar:not(.collapsed) { 
        transform: translateX(0); 
+   }
+   .toggle-button {
+      display: block;
    }
 }
