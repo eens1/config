@@ -75,7 +75,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     background-color: var(--header-bg);
-    padding: 1rem 0;
+    padding: 0px 0px 0px 10px;
   }
 
   .nav-menu.active {
