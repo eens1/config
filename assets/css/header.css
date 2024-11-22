@@ -80,4 +80,8 @@ nav ul li a:hover {
   nav ul li {
     margin: 0.5rem 0;
   }
+
+  .site-title {
+   margin: auto;
+  }
 }
