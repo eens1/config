@@ -1,12 +1,14 @@
 
 .breadcrumb-nav {
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  .breadcrumb-item {
-    color: white;
-    text-decoration: none;
-  }
-  .breadcrumb-item:hover {
-    text-decoration: underline;
-  }
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.breadcrumb-item {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-item:hover {
+  text-decoration: underline;
+}

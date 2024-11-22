@@ -1,10 +1,10 @@
+
 <nav class="breadcrumb-nav">
   {{ $currentPage := . }}
   {{ $pages := slice }}
   {{ range $currentPage.Ancestors.Reverse }}
     {{ $pages = $pages | append . }}
   {{ end }}
-  {{ $pages = $pages | append $currentPage }}
 
   {{ range $index, $page := $pages }}
     {{ if $index }} / {{ end }}
