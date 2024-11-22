@@ -61,7 +61,7 @@ nav ul li a:hover {
 
 .hamburger span {
   width: 40px;
-  height: 5px;
+  height: 4px;
   background-color: var(--text-color);
   margin: 4px 0;
   transition: 0.4s;
