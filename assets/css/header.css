@@ -67,6 +67,16 @@ nav ul li a:hover {
     display: flex;
   }
 
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-title {
+    margin-bottom: 1rem;
+  }
+
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -79,20 +89,8 @@ nav ul li a:hover {
     display: flex;
   }
 
-  nav {
-    position: relative;
-  }
-
   nav ul li {
     margin: 0.5rem 0;
-  }
-
-  .site-title {
-    margin: auto;
-  }
-
-  /* Add this to push content down */
-  .content {
-    margin-top: 60px; /* Adjust this value based on your header height */
+    text-align: center;
   }
 }
