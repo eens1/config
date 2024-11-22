@@ -1,3 +1,4 @@
+
 {{ $pages := .Pages }}
 {{ $sortedPages := sort $pages "File.Path" }}
 
@@ -5,7 +6,7 @@
 {{ range $sortedPages }}
   {{ $filename := .File.LogicalName }}
   {{ $parentDir := path.Base .File.Dir }}
-  
+
   {{ if eq $filename "_index.md" }}
     {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "permalink" .Permalink) }}
   {{ else }}
@@ -19,9 +20,9 @@
 {{ range $sortedCustom }}
    <div class="post-item">
    <li>
-   <a href="{{ .permalink | relURL }}">{{ $page.Title }}</a>
+   <a href="{{ .permalink | relURL }}">{{ .page.Title }}</a>
    </li>
-   <div>{{ .page.Params.Summary }}</div>
+   <div>{{ .page.Params.Summary | default "No summary available." }}</div>
    </div>
 {{ end }}
 </ul>
