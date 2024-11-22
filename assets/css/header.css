@@ -71,7 +71,7 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     width: 100%;
     background-color: var(--header-bg);
