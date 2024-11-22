@@ -1,13 +1,13 @@
 {{ define "main" }}
 
 <ul class="quick-links">
-    {{ range .Site.Params.quickLinks }}
-        <li>
-            <a href="{{ .url }}">
-                {{ .title }}
-            </a>
-        </li>
-    {{ end }}
+{{ range .Site.Params.quickLinks }}
+   <li>
+   <a href="{{ .url }}">
+   {{ .title }}
+   </a>
+   </li>
+{{ end }}
 </ul>
 
 <div class="content">
