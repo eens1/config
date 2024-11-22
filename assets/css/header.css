@@ -4,6 +4,11 @@
   --accent-color: #4a90e2;
 }
 
+header {
+padding: 10px 10px 10px 10px;
+background-color: rgb(10,10,10);
+}
+
 .container {
   margin: 0 auto;
 }
