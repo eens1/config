@@ -15,7 +15,7 @@ padding: 10px 15px 10px 15px;
 
 .site-title {
 display: flex;
-align-items: content;
+align-items: center;
 }
 
 .site-title img {
