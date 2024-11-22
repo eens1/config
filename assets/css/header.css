@@ -13,7 +13,7 @@ padding: 10px 15px 10px 15px;
   align-items: center;
 }
 
-.site-title, .site-title a {
+.site-title a {
 display: flex;
 align-items: center;
 }
