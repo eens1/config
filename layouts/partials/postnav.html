@@ -1,22 +1,13 @@
-<nav class="breadcrumb">
-<ol>
+<nav class="breadcrumb-nav">
+  {{ $currentPage := . }}
+  {{ $pages := slice }}
+  {{ range $currentPage.Ancestors.Reverse }}
+    {{ $pages = $pages | append . }}
+  {{ end }}
+  {{ $pages = $pages | append $currentPage }}
 
-{{ $url := .RelPermalink }}
-{{ $urlParts := split $url "/" }}
-
-{{ range $index, $element := $urlParts }}
-   {{ if ne $element "" }}
-      <a href="{{ delimit (first (add $index 1) $urlParts) "/" }}/">
-      <li>
-      {{ if eq $element $.Site.Language.Lang }}
-         {{ i18n "home" }}
-      {{ else }}
-         {{ humanize $element }}
-      {{ end }}
-      </a>
-      </li>
-   {{ end }}
-{{ end }}
-
-</ol>
+  {{ range $index, $page := $pages }}
+    {{ if $index }} / {{ end }}
+    <a href="{{ .RelPermalink }}" class="breadcrumb-item">{{ .Title }}</a>
+  {{ end }}
 </nav>
