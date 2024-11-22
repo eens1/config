@@ -1,10 +1,10 @@
 :root {
   --accent-color: #4a90e2;
-  --header-bg: #1c1c1e;
+  --header-bg-color: #1c1c1e;
 }
 
 header {
-background-color: var(--header-bg);
+background-color: var(--header-bg-color);
 }
 
 .container {
@@ -43,7 +43,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--accent-color);
+  color: var(--link-color);
 }
 
 .hamburger {
@@ -72,7 +72,7 @@ nav ul li a:hover {
     top: 50px;
     left: 0;
     width: 100%;
-    background-color: var(--header-bg);
+    background-color: var(--header-bg-color);
     padding: 0px 0px 0px 10px;
   }
 
