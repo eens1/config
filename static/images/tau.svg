@@ -24,9 +24,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="1"
-     inkscape:cx="262.49999"
-     inkscape:cy="190.99999"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="198.34345"
+     inkscape:cy="190.21172"
      inkscape:window-width="1598"
      inkscape:window-height="898"
      inkscape:window-x="0"
@@ -43,7 +43,7 @@
      y="0" />
   <g
      id="g6"
-     transform="matrix(1.181798,0,0,1.1332484,334.53076,19.534474)">
+     transform="matrix(1.181798,0,0,1.1332484,-36.699055,-30.922779)">
     <g
        id="g3"
        transform="matrix(1.3560393,0,0,0.89218275,-49.459819,60.98819)">
@@ -75,18 +75,25 @@
   <text
      xml:space="preserve"
      style="font-size:428.641px;fill:#070000;fill-opacity:1;stroke-width:35.7203"
-     x="61.096127"
-     y="364.56119"
+     x="158.40895"
+     y="780.85168"
      id="text3"
      transform="scale(1.0416036,0.96005813)"><tspan
        sodipodi:role="line"
        id="tspan3"
-       x="61.096127"
-       y="364.56119"
+       x="158.40895"
+       y="780.85168"
        style="stroke-width:35.7203">Τ</tspan><tspan
        sodipodi:role="line"
-       x="61.096127"
-       y="900.36243"
+       x="158.40895"
+       y="1316.653"
        style="stroke-width:35.7203"
        id="tspan4" /></text>
+  <rect
+     style="fill:#070000;stroke-width:0.939974"
+     id="rect1"
+     width="251.47066"
+     height="44.235085"
+     x="75.707695"
+     y="101.67726" />
 </svg>
