@@ -1,4 +1,3 @@
-
 {{ $pages := .Pages }}
 {{ $sortedPages := sort $pages "File.Path" }}
 
@@ -18,11 +17,12 @@
 
 <ul>
 {{ range $sortedCustom }}
+{{ $page := .page }}
    <div class="post-item">
    <li>
-   <a href="{{ .permalink | relURL }}">{{ $page.Title }}</a>
+   <a href="{{ .permalink }}">{{ $page.Title }}</a>
    </li>
-   <div>{{ .page.Params.Summary }}</div>
+   <div>{{ $page.Params.Summary }}</div>
    </div>
 {{ end }}
 </ul>
