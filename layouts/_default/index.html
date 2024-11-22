@@ -6,7 +6,7 @@
         <div class="quick-links-container">
             {{ range sort .Site.Params.quickLinks ".order" }}
                 <div class="quick-links-group">
-                    <div class"links-title">{{ .title }}</div>
+                    <div class="links-title">{{ .title }}</div>
                     <ul>
                         {{ range .links }}
                             <li><a href="{{ .url }}">{{ .title }}</a></li>
