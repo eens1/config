@@ -2,7 +2,6 @@
 
 
 <div class="quick-links">
-    {{ if isset .Site.Params "quickLinks" }}
         <div class="quick-links-container">
             {{ range sort .Site.Params.quickLinks ".order" }}
                 <div class="quick-links-group">
@@ -15,7 +14,6 @@
                 </div>
             {{ end }}
         </div>
-    {{ end }}
 </div>
 
 <div class="content">
