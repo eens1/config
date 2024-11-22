@@ -18,8 +18,7 @@ font-weight: bold;
 }
 
 .quick-links ul {
-    list-style-type: none; /* Remove bullet points from lists */
-    padding: 0; /* Remove default padding */
+    padding: 10px 0px 0px 0px;
     margin: 5px 0px 0px 0px;
 }
 
