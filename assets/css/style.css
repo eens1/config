@@ -18,6 +18,10 @@ font-family: 'Nunito', sans-serif;
 font-size: 18px;
 }
 
+h1, h2, h3, h4, h5 {
+color: var(--header-text-color);
+}
+
 img {
 display: block;
 width: 100%;
