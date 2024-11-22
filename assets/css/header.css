@@ -13,11 +13,6 @@ padding: 10px 15px 10px 15px;
   align-items: center;
 }
 
-.site-title a {
-display: flex;
-align-items: center;
-}
-
 .site-title img {
 width: 35px;
 margin-right: 5px;
@@ -25,6 +20,8 @@ border-radius: 3px;
 }
 
 .site-title a {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -99,7 +96,7 @@ nav ul li a:hover {
    margin: auto;
   }
 
-  .site-title a {
+  .site-title span {
   display: none;
   }
 
