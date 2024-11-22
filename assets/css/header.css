@@ -70,7 +70,6 @@ nav ul li a:hover {
   .nav-menu {
     display: none;
     flex-direction: column;
-    position: static;
     top: 60px;
     left: 0;
     width: 100%;
