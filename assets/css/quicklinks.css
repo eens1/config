@@ -1,0 +1,30 @@
+.quick-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1e1e2f; /* Dark background */
+  border-radius: 10px;
+}
+
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.quick-link i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.quick-link:hover {
+  transform: translateY(-5px);
+  background-color: #29293d; /* Slightly lighter hover */
+  padding: 10px;
+  border-radius: 8px;
+}
