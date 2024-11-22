@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #4a90e2;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -14,7 +20,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 nav ul {
@@ -30,11 +36,11 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 nav ul li a:hover {
-  color: white;
+  color: var(--accent-color);
 }
 
 .hamburger {
