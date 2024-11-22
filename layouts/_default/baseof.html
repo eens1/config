@@ -11,10 +11,16 @@
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-<!-- Correct CSS loading -->
+<!-- Load style.css first -->
+{{ $style := resources.Get "css/style.css" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+<!-- Load other CSS files -->
 {{ $cssFiles := (resources.Match "css/*.css") | default (resources.Match "github.com/eens1/config/css/*.css") }}
 {{ range $cssFiles }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ if ne .Name "style.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
 {{ end }}
 
 <!-- Correct JS loading -->
