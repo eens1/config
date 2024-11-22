@@ -1,21 +1,19 @@
 {{ define "main" }}
 
+
 <div class="quick-links">
-    <table>
-        <tbody>
-            {{ range sort .Site.Params.quickLinks ".order" }}
-                <tr>
-                    <td data-label="{{ .title }}">
-                        <ul>
-                            {{ range .links }}
-                                <li><a href="{{ .url }}">{{ .title }}</a></li>
-                            {{ end }}
-                        </ul>
-                    </td>
-                </tr>
-            {{ end }}
-        </tbody>
-    </table>
+    <div class="quick-links-container">
+        {{ range sort .Site.Params.quickLinks ".order" }}
+            <div class="quick-links-group">
+                <h3>{{ .title }}</h3>
+                <ul>
+                    {{ range .links }}
+                        <li><a href="{{ .url }}">{{ .title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    </div>
 </div>
 
 <div class="content">
