@@ -1,0 +1,54 @@
+
+/* Basic table styling */
+.quick-links table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.quick-links th, .quick-links td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.quick-links th {
+    background-color: #f2f2f2;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .quick-links table, 
+    .quick-links thead, 
+    .quick-links tbody, 
+    .quick-links th, 
+    .quick-links td, 
+    .quick-links tr {
+        display: block;
+    }
+
+    .quick-links thead tr {
+        display: none; /* Hide the header on small screens */
+    }
+
+    .quick-links tr {
+        margin-bottom: 15px; /* Add space between rows */
+        border: 1px solid #ddd; /* Add border for better visibility */
+    }
+
+    .quick-links td {
+        text-align: right; /* Align text to the right for better readability */
+        position: relative; /* Position relative for pseudo-elements */
+        padding-left: 50%; /* Create space for labels */
+    }
+
+    .quick-links td::before {
+        content: attr(data-label); /* Use data-label attribute for headers */
+        position: absolute;
+        left: 10px; /* Position label on the left */
+        width: calc(50% - 20px); /* Adjust width */
+        padding-right: 10px; /* Space between label and content */
+        white-space: nowrap; /* Prevent wrapping */
+        font-weight: bold; /* Make label bold */
+    }
+}

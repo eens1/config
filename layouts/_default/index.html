@@ -1,28 +1,22 @@
 {{ define "main" }}
 
-
-<table>
-    <thead>
-        <tr>
-            {{ range $groupName, $group := .Site.Params.quickLinks }}
-                <th>{{ $group.title }}</th>
+<div class="quick-links">
+    <table>
+        <tbody>
+            {{ range sort .Site.Params.quickLinks ".order" }}
+                <tr>
+                    <td data-label="{{ .title }}">
+                        <ul>
+                            {{ range .links }}
+                                <li><a href="{{ .url }}">{{ .title }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </td>
+                </tr>
             {{ end }}
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            {{ range $groupName, $group := .Site.Params.quickLinks }}
-                <td>
-                    <ul>
-                        {{ range $group.links }}
-                            <li><a href="{{ .url }}">{{ .title }}</a></li>
-                        {{ end }}
-                    </ul>
-                </td>
-            {{ end }}
-        </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
 
 <div class="content">
 <article>
