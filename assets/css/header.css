@@ -83,7 +83,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     background-color: var(--header-bg-color);
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
   }
 
   .nav-menu.active {
@@ -101,4 +101,8 @@ nav ul li a:hover {
   .site-title a {
   display: none;
   }
+
+   .site-title img {
+   margin: 0px;
+   }
 }
