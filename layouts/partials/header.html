@@ -1,19 +1,19 @@
-  <div class="container">
-    <div class="header-content">
-      <div class="site-title">
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-      </div>
-      <nav>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="nav-menu">
-          {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
-    </div>
-  </div>
+<div class="container">
+ <div class="header-content">
+   <div class="site-title">
+     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+   </div>
+   <nav>
+     <div class="hamburger">
+       <span></span>
+       <span></span>
+       <span></span>
+     </div>
+     <ul class="nav-menu">
+       {{ range .Site.Menus.main }}
+         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+       {{ end }}
+     </ul>
+   </nav>
+ </div>
+</div>
