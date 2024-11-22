@@ -2,11 +2,12 @@
   --bg-color: #1a1a1a;
   --text-color: #ffffff;
   --accent-color: #4a90e2;
+  --header-bg: #1c1c1e;
 }
 
 header {
 background-color: rgb(30,30,30);
-background-color: #1c1c1e;
+background-color: var(--header-bg);
 }
 
 .container {
@@ -74,7 +75,6 @@ nav ul li a:hover {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #2c2c2c;
     padding: 1rem 0;
   }
 
