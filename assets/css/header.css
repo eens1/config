@@ -13,8 +13,13 @@ padding: 10px 15px 10px 15px;
   align-items: center;
 }
 
+.site-title {
+display: flex;
+align-items: content;
+}
+
 .site-title img {
-width: 50px;
+width: 18px;
 }
 
 .site-title a {
