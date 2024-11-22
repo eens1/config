@@ -1,8 +1,8 @@
 @import url('https://fonts.bunny.net/css?family=nunito:300,400,600,700');
 
 :root {
---text-color: #00FFFF;
---link-color: #FFFF5A;
+--text-color: #FFFF5A;
+--link-color: #00FFFF;
 --bg-color: black;
 }
 
