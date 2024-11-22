@@ -31,6 +31,10 @@ border-radius: 3px;
   color: var(--text-color);
 }
 
+.site-title a:hover {
+  text-decoration: none;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
