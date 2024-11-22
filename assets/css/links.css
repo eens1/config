@@ -20,6 +20,7 @@ font-weight: bold;
 .quick-links ul {
     list-style-type: none; /* Remove bullet points from lists */
     padding: 0; /* Remove default padding */
+    margin: 5px 0px 0px 0px;
 }
 
 .quick-links li {
