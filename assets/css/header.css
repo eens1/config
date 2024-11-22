@@ -75,6 +75,7 @@ nav ul li a:hover {
     top: 60px;
     left: 0;
     width: 100%;
+    background-color: var(--header-bg);
     padding: 1rem 0;
   }
 
