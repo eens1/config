@@ -5,11 +5,11 @@
 }
 
 header {
-padding: 10px 10px 10px 10px;
 background-color: rgb(10,10,10);
 }
 
 .container {
+padding: 10px 10px 10px 10px;
   margin: 0 auto;
 }
 
