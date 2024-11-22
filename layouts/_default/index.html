@@ -1,21 +1,20 @@
 {{ define "main" }}
 
 
-
 <table>
     <thead>
         <tr>
-            {{ range $groupName, $links := .Site.Params.quickLinks }}
-                <th>{{ $groupName | humanize }}</th>
+            {{ range $groupName, $group := .Site.Params.quickLinks }}
+                <th>{{ $group.title }}</th>
             {{ end }}
         </tr>
     </thead>
     <tbody>
         <tr>
-            {{ range $groupName, $links := .Site.Params.quickLinks }}
+            {{ range $groupName, $group := .Site.Params.quickLinks }}
                 <td>
                     <ul>
-                        {{ range $links }}
+                        {{ range $group.links }}
                             <li><a href="{{ .url }}">{{ .title }}</a></li>
                         {{ end }}
                     </ul>
