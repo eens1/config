@@ -106,23 +106,3 @@ nav ul li a:hover {
 }
 
 
-/* Add this to your header.css */
-
-/* General styles for menu items */
-.nav-menu li {
-  position: relative; /* Allows for pseudo-elements */
-}
-
-/* Styles for the language section */
-.language-menu {
-  background-color: rgba(255, 255, 255, 0.1); /* Light dark background */
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Styles for the social media section */
-.social-menu {
-  background-color: rgba(255, 0, 0, 0.1); /* Different shade for social media */
-  padding: 10px;
-  border-radius: 5px;
-}
