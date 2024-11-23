@@ -4,9 +4,3 @@ paginatePath: "page"
 ignoreFiles:
   - "(?i)/\\.hide/$"
 
-# Configuration for Hugo using Goldmark with all extensions
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    renderer:
-      unsafe: true
