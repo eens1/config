@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-
+<div class="home">
 <div class="quick-links">
     {{ if .Site.Params.quickLinks }}
         <div class="quick-links-container">
@@ -28,4 +28,5 @@
 
 {{ partial "listposts.html" . }}
 
+</div>
 {{ end }}
