@@ -4,3 +4,5 @@ paginatePath: "page"
 ignoreFiles:
   - "(?i)/\\.hide/$"
 
+social:
+  twitter: "@BroMatthewCap"
