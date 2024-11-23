@@ -49,8 +49,11 @@ text-decoration: underline;
 
 main {
 max-width: 800px;
-min-height: 500px;
 margin: auto;
+}
+
+main .content {
+min-height: 500px;
 }
 
 footer {
