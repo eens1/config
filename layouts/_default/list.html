@@ -1,12 +1,12 @@
 {{ define "main" }}
 
+{{ partial "x.html" . }}
+
 <div class="content">
 
 {{ partial "postnav.html" . }}
 
 <h1>{{ .Title }}</h1>
-
-{{ partial "x.html" . }}
 
 <article>
 {{ .Content }}
