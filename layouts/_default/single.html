@@ -5,11 +5,7 @@
 <h1>{{ .Title }}</h1>
 <article>
 
-<div id="sharing">
-<a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Summary }}&via={{ .Site.Social.twitter }}" class="twitter" aria-label="Share on Twitter">
-        Share on Twitter
-    </a>
-</div>
+{{< x >}}
 
 {{ .Content }}
 </article>
