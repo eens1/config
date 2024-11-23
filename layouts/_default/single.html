@@ -1,3 +1,4 @@
+
 {{ define "main" }}
 
 <div class="content">
@@ -5,7 +6,7 @@
     <h1>{{ .Title }}</h1>
     <article>
         {{ .Content }}
-        {{< x permalink=.Permalink summary=.Summary >}}
+        {{< x permalink=.Permalink summary=.Summary >}} <!-- Correctly calling the shortcode -->
     </article>
 </div>
 
