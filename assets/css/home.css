@@ -1,9 +1,5 @@
 .quick-links {
-  margin: 10px;
-  background-color: rgb(30,30,30);
-  padding: 10px;
-  border-radius: 5px;
-  width: 300px;
+  margin: 20px 0px 20px 0px;
 }
 
 .quick-links-container {
@@ -13,7 +9,11 @@
 }
 
 .quick-links-group {
-    margin: 10px; /* Reduced space between groups */
+  margin: 10px;
+  background-color: rgb(30,30,30);
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
 }
 
 .quick-links ul {
