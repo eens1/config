@@ -27,3 +27,9 @@ list-style: inside;
 margin-bottom: 2px;
 }
 
+@media screen and (max-width: 800px) {
+.quick-links {
+margin: 10px 0px 10px 0px;
+}
+
+}
