@@ -4,9 +4,11 @@
 <div class="content">
     {{ partial "postnav.html" . }}
     <h1>{{ .Title }}</h1>
+
+{{< partial x.html . >}}
+
     <article>
         {{ .Content }}
-        {{< x permalink=.Permalink summary=.Summary >}} <!-- Correctly calling the shortcode -->
     </article>
 </div>
 
