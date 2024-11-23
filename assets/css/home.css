@@ -1,3 +1,7 @@
+.home .content {
+width: 100%;
+}
+
 .home .quick-links {
   margin: 20px 0px 20px 0px;
 }
