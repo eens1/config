@@ -1,5 +1,5 @@
 <div id="sharing">
-    <a href="http://twitter.com/share?url={{ .Permalink | urlize }}&text={{ .Summary | plainify | urlquery }}&via={{ .Site.Social.twitter }}" class="twitter" aria-label="Share on Twitter">
+    <a href="http://twitter.com/share?url={{ .Permalink | urlize }}&text={{ .Params.tweet | urlquery }}" class="twitter" aria-label="Share on Twitter">
         Share on Twitter
     </a>
 </div>
