@@ -14,9 +14,18 @@
           <span></span>
           <span></span>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu language-menu">
           {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li> <!-- Include Pre here -->
+            {{ if or (eq .Name "English") (eq .Name "Italiano") }}
+              <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+            {{ end }}
+          {{ end }}
+        </ul>
+        <ul class="nav-menu social-menu">
+          {{ range .Site.Menus.main }}
+            {{ if or (eq .Name "YouTube") (eq .Name "Twitter") }}
+              <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+            {{ end }}
           {{ end }}
         </ul>
       </nav>
