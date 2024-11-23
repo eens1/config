@@ -1,24 +1,24 @@
 <header>
-  <div class="container">
-    <div class="header-content">
-      <div class="site-title">
-        <a href="/">
-           <img src="/images/tau.jpg">
-           <span>{{ .Site.Title }}</span>
-        </a>
-      </div>
-      <nav>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="nav-menu">
-          {{ range .Site.Menus.main }}
-            <li><a target="_blank" href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li> <!-- Include Pre here -->
-          {{ end }}
-        </ul>
-      </nav>
-    </div>
+<div class="container">
+<div class="header-content">
+<div class="site-title">
+  <a href="/">
+     <img src="/images/tau.jpg">
+     <span>{{ .Site.Title }}</span>
+  </a>
+</div>
+<nav>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+  <ul class="nav-menu">
+    {{ range .Site.Menus.main }}
+      <li><a target="_blank" href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
+</div>
+</div>
 </header>
