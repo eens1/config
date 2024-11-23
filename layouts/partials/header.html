@@ -15,7 +15,7 @@
         </div>
         <ul class="nav-menu">
           {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li> <!-- Include Pre here -->
+            <li><a target="_blank" href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li> <!-- Include Pre here -->
           {{ end }}
         </ul>
       </nav>
