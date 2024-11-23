@@ -1,18 +1,14 @@
-.home .content {
-max-width: 100%;
-}
-
-.home .quick-links {
+.quick-links {
   margin: 20px 0px 20px 0px;
 }
 
-.home .quick-links-container {
+.quick-links-container {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: flex-start; /* Align items to the start */
 }
 
-.home .quick-links-group {
+.quick-links-group {
   margin: 10px;
   background-color: rgb(30,30,30);
   padding: 10px;
@@ -20,7 +16,7 @@ max-width: 100%;
   width: 300px;
 }
 
-.home .quick-links ul {
+.quick-links ul {
     padding: 10px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     border-top: 1px solid;
