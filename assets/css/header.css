@@ -95,6 +95,9 @@ nav ul li a:hover {
   .site-title {
    margin: auto;
   }
+  .site-title a {
+   margin-left: 40px;
+   }
 
   .site-title span {
   display: none;
