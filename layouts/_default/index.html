@@ -1,7 +1,5 @@
 {{ define "main" }}
 
-<div class="home">
-<div class="content">
 <div class="quick-links">
     {{ if .Site.Params.quickLinks }}
         <div class="quick-links-container">
@@ -19,13 +17,17 @@
     {{ end }}
 </div>
 
+<div class="content">
+
 <article>
 {{ .Content }}
 </article>
 
 <h2>{{ i18n "index" }}</h2>
+
 {{ partial "listposts.html" . }}
 
 </div>
+
 </div>
 {{ end }}
