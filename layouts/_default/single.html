@@ -1,14 +1,12 @@
 {{ define "main" }}
 
 <div class="content">
-{{ partial "postnav.html" . }}
-<h1>{{ .Title }}</h1>
-<article>
-
-{{< x summary=.Summary permalink=.Permalink >}}
-
-{{ .Content }}
-</article>
+    {{ partial "postnav.html" . }}
+    <h1>{{ .Title }}</h1>
+    <article>
+        {{ .Content }}
+        {{< x permalink=.Permalink summary=.Summary >}}
+    </article>
 </div>
 
 {{ end }}
