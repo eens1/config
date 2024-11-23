@@ -6,7 +6,7 @@
 
 <h1>{{ .Title }}</h1>
 
-{{< x summary="{{ .Summary }}" permalink="{{ .Permalink }} >}}
+{{< x summary=.Summary permalink=.Permalink >}}
 
 <article>
 {{ .Content }}
