@@ -6,7 +6,7 @@
 
 <div class="latest-posts-container">
   {{ $posts := where (where .Site.Pages "Type" "blog") "Section" "blog" }}
-  {{ $latestPosts := first 5 (sort $posts "Date" "desc") }}
+  {{ $latestPosts := first 10 (sort $posts "Date" "desc") }}
   {{ range $latestPosts }}
   <div class="post-item">
     <a href="{{ .Permalink }}">
