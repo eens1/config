@@ -47,15 +47,12 @@ margin: 10px 0px 10px 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    background-color: #121212;
     padding: 16px;
-    border-radius: 8px;
   }
   .post-item {
     flex: 1 1 calc(50% - 16px);
     text-align: center;
     color: #ffffff;
-    border: 1px solid #2c2c2c;
     border-radius: 8px;
     overflow: hidden;
     background-color: #1e1e1e;
