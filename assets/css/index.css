@@ -58,8 +58,6 @@ width: 270px;
 height: 300px;
 }
 .home .post-item img {
-width: 100%;
-height: auto;
 display: block;
 border-bottom: 1px solid #2c2c2c;
 height: 300px;
@@ -72,11 +70,10 @@ padding: 10px;
 }
 .home .post-item a {
 display: block;
-color: #1e90ff;
 text-decoration: none;
 overflow: hidden;
 height: 200px;
 }
 .home .post-item a:hover {
-text-decoration: underline;
+text-decoration: none;
 }
