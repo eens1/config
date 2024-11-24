@@ -1,5 +1,36 @@
 {{ define "main" }}
 
+
+
+<div class="home-heading">{{ i18n "latestBlog" }}</div>
+
+<div class="latest-posts-container">
+  {{ $posts := where (where .Site.Pages "Type" "blog") "Section" "blog" }}
+  {{ $latestPosts := first 5 (sort $posts "Date" "desc") }}
+  {{ range $latestPosts }}
+  <div class="post-item">
+    {{ with .Params.image }}
+    <a href="{{ .Permalink }}">
+      <img class="post-image" src="{{ . }}" alt="{{ $.Title }}">
+    </a>
+    {{ end }}
+    <h3 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+  </div>
+  {{ end }}
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <div class="home-heading">{{ i18n "quickLinks" }}</div>
 
 <div class="quick-links">
