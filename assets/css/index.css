@@ -55,6 +55,7 @@ border-radius: 8px;
 overflow: hidden;
 background-color: #1e1e1e;
 width: 270px;
+height: 300px;
 }
 .home .post-item img {
 width: 100%;
@@ -73,6 +74,7 @@ display: block;
 color: #1e90ff;
 text-decoration: none;
 overflow: hidden;
+height: 200px;
 }
 .home .post-item a:hover {
 text-decoration: underline;
