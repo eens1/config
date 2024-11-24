@@ -43,9 +43,7 @@ margin: 10px 0px 10px 0px;
 
 
 
-
-
-.latest-posts-container {
+ .latest-posts-container {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
