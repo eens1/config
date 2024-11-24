@@ -72,8 +72,8 @@ margin: 8px 0;
 display: block;
 color: #1e90ff;
 text-decoration: none;
-height: 200px;
 overflow: hidden;
+height: 200px;
 }
 .home .post-item a:hover {
 text-decoration: underline;
