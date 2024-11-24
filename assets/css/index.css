@@ -73,7 +73,6 @@ display: block;
 color: #1e90ff;
 text-decoration: none;
 overflow: hidden;
-height: 200px;
 }
 .home .post-item a:hover {
 text-decoration: underline;
