@@ -34,15 +34,10 @@ margin-bottom: 2px;
 }
 
 @media screen and (max-width: 850px) {
-.home .quick-links {
-margin: 10px 0px 10px 0px;
+   .home .quick-links {
+   margin: 10px 0px 10px 0px;
+   }
 }
-.home .quick-links-group {
-flex: 1 1 100%;
-}
-
-}
-
 
 
 
@@ -77,9 +72,4 @@ flex: 1 1 100%;
 }
 .home .post-item a:hover {
  text-decoration: underline;
-}
-@media (max-width: 850px) {
- .post-item {
-   flex: 1 1 100%;
- }
 }
