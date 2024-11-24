@@ -6,21 +6,21 @@
 
 
 
-<div class="latest-posts-container" style="display: flex; flex-wrap: wrap; gap: 16px; background-color: #121212; padding: 16px; border-radius: 8px;">
+<div class="latest-posts-container">
   {{ $posts := where (where .Site.Pages "Type" "blog") "Section" "blog" }}
   {{ $filteredPosts := where $posts "File.Path" "not in" "_index.md" }}
   {{ $latestPosts := first 5 (sort $filteredPosts "Date" "desc") }}
   {{ range $latestPosts }}
-  <div class="post-item" style="flex: 1 1 calc(50% - 16px); text-align: center; color: #ffffff; border: 1px solid #2c2c2c; border-radius: 8px; overflow: hidden; background-color: #1e1e1e;">
-    <a href="{{ .Permalink }}" style="text-decoration: none;">
+  <div class="post-item">
+    <a href="{{ .Permalink }}">
       {{ with .Params.image }}
-      <img src="{{ . }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block; border-bottom: 1px solid #2c2c2c;">
+      <img class="post-image" src="{{ . }}" alt="{{ .Title }}">
       {{ else }}
-      <img src="/images/default-thumbnail.jpg" alt="{{ .Title }}" style="width: 100%; height: auto; display: block; border-bottom: 1px solid #2c2c2c;">
+      <img class="post-image" src="/images/default-thumbnail.jpg" alt="{{ .Title }}">
       {{ end }}
     </a>
-    <h3 style="font-size: 16px; margin: 8px 0;">
-      <a href="{{ .Permalink }}" style="color: #1e90ff; text-decoration: none;">{{ .Title }}</a>
+    <h3 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h3>
   </div>
   {{ end }}
