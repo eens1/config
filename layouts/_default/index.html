@@ -1,8 +1,8 @@
 {{ define "main" }}
 
+<div class="home">
 
-
-<div class="home-heading">{{ i18n "latestBlog" }}</div>
+<div class="heading">{{ i18n "latestBlog" }}</div>
 
 
 <div class="latest-posts-container">
@@ -26,13 +26,7 @@
 
 
 
-
-
-
-
-
-
-<div class="home-heading">{{ i18n "quickLinks" }}</div>
+<div class="heading">{{ i18n "quickLinks" }}</div>
 
 <div class="quick-links">
     {{ if .Site.Params.quickLinks }}
@@ -56,6 +50,8 @@
 <article>
 {{ .Content }}
 </article>
+
+</div>
 
 <h2>{{ i18n "index" }}</h2>
 
