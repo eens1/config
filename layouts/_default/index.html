@@ -4,17 +4,14 @@
 
 <div class="heading">{{ i18n "latestBlog" }}</div>
 
-
-
 <div class="latest-posts-container">
   {{ $posts := where (where .Site.Pages "Type" "blog") "Section" "blog" }}
-  {{ $filteredPosts := where $posts "File.Path" "not in" "_index.md" }}
-  {{ $latestPosts := first 5 (sort $filteredPosts "Date" "desc") }}
+  {{ $latestPosts := first 10 (sort $posts "Date" "desc") }}
   {{ range $latestPosts }}
   <div class="post-item">
     <a href="{{ .Permalink }}">
       {{ with .Params.image }}
-      <img class="post-image" src="{{ . }}" alt="{{ .Title }}">
+      <img class="post-image" src="{{ . }}" alt="{{ $.Title }}">
       {{ else }}
       <img class="post-image" src="/images/default-thumbnail.jpg" alt="{{ .Title }}">
       {{ end }}
@@ -25,7 +22,6 @@
   </div>
   {{ end }}
 </div>
-
 
 <div class="heading">{{ i18n "quickLinks" }}</div>
 
