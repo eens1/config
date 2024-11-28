@@ -33,7 +33,7 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-{{ end }}
+<script src="https://unpkg.com/lunr/lunr.js"></script>
 
 <meta name="twitter:card" content="{{ .Params.image | absURL }}" />
 <meta name="twitter:site" content="@BroMatthewCap" />
@@ -42,6 +42,7 @@
 <meta name="twitter:description" content="{{ .Summary }}" />
 <meta name="twitter:image" content="{{ .Params.image | absURL }}" />
 
+{{ end }}
 </head>
 
 <body>
