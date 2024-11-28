@@ -46,11 +46,12 @@
     {{ end }}
 </div>
 
+
 <div class="homepage-dark-section">
   <div class="text-block-wrapper">
     {{- range .Site.Params.homepage_blocks }}
       <div class="text-block">
-        {{ .text }}
+        {{ .text | markdownify }}
       </div>
     {{- end }}
   </div>
