@@ -22,6 +22,10 @@ border-radius: 5px;
 width: 270px;
 }
 
+.home .quick-links-group .title {
+color: var(--text-color)
+}
+
 .home .quick-links ul {
 padding: 10px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
