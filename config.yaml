@@ -7,8 +7,3 @@ ignoreFiles:
 social:
   twitter: "@BroMatthewOFMC"
 
-outputs:
-   home:
-      - HTML
-      - RSS
-      - JSON
