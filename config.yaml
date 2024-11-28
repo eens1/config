@@ -8,7 +8,7 @@ social:
   twitter: "@BroMatthewOFMC"
 
 outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
+   home:
+      - HTML
+      - RSS
+      - JSON
