@@ -22,7 +22,7 @@ border-radius: 5px;
 width: 270px;
 }
 
-.home .quick-links-group .title {
+.home .quick-links-group .title a {
 color: var(--text-color)
 }
 
