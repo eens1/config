@@ -48,7 +48,6 @@ margin: 10px 0px 10px 0px;
 .home .latest-posts-container {
 display: flex;
 flex-wrap: wrap;
-gap: 20px;
 padding: 10px;
 justify-content: center;
 }
@@ -60,6 +59,7 @@ overflow: hidden;
 background-color: #1e1e1e;
 width: 270px;
 height: 300px;
+margin: 10px;
 }
 .home .post-item img {
 display: block;
