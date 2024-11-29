@@ -4,9 +4,6 @@ paginatePath: "page"
 ignoreFiles:
   - "(?i)/\\.hide/$"
 
-social:
-  x: "@BroMatthewOFMC"
-
 outputs:
   home:
     - HTML
