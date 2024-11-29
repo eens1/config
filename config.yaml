@@ -5,7 +5,7 @@ ignoreFiles:
   - "(?i)/\\.hide/$"
 
 social:
-  twitter: "@BroMatthewOFMC"
+  x: "@BroMatthewOFMC"
 
 outputs:
   home:
