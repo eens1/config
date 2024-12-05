@@ -23,7 +23,7 @@
    <li>
       <a href="{{ .permalink | relURL }}">{{ .page.Title }}</a>
       {{ with .page.Params.summary }}
-         <div>{{ . }}</div>
+         <div>{{ . | markdownify }}</div>
       {{ end }}
    </li>
    </div>
