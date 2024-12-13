@@ -6,11 +6,13 @@
 --bg-color: black;
 --header-bg-color: #1c1c1e;
 --small-font: 14px;
---pagefind-ui-primary: #eeeeee;
+
+--pagefind-ui-scale: 1;
+--pagefind-ui-primary: #ffffff;
 --pagefind-ui-text: #eeeeee;
---pagefind-ui-background: #152028;
---pagefind-ui-border: #152028;
---pagefind-ui-tag: #152028;
+--pagefind-ui-background: #333333;
+--pagefind-ui-border: #555555;
+--pagefind-ui-tag: #555555;
 }
 
 body {
