@@ -38,6 +38,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  z-index: 1000;
 }
 
 nav ul li {
@@ -58,7 +59,6 @@ nav ul li a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 1000;
 }
 
 .hamburger span {
