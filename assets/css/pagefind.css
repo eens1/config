@@ -5,3 +5,9 @@
 --pagefind-ui-border: #152028;
 --pagefind-ui-tag: #152028;
 }
+
+#search {
+max-width: 500px;
+margin: 10px auto 0px;
+border: solid 2px;
+border-radius: 5px;
