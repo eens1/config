@@ -12,6 +12,9 @@
 
 <link rel="canonical" href="{{ with .Params.external_url }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}" />
 
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
 <!-- Load style.css first -->
 {{ $style := resources.Get "css/style.css" }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
