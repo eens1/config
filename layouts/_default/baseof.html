@@ -55,6 +55,13 @@
 
 <main>
 
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
+
 {{ block "main" . }}
 <!-- This will be replaced by content from other templates -->
 {{ end }}
