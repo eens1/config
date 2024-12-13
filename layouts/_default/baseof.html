@@ -9,7 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{{ .Site.Title }}</title>
 <link rel="icon" type="image/png" href="/images/favicon.png" />
-<link rel="canonical" href="{{ .Permalink }}" />
+
+<link rel="canonical" href="{{ with .Params.external_url }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}" />
 
 <!-- Load style.css first -->
 {{ $style := resources.Get "css/style.css" }}
