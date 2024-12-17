@@ -21,3 +21,16 @@ background-color: black;
 border: 0px;
 border-radius: 50px;
 }
+
+.pagefind-ui__drawer {
+background: black;
+border: 2px solid grey;
+margin: 20px auto;
+padding: 10px;
+}
+
+
+.pagefind-ui__search-clear {
+border-radius: 50px;
+text-align: center;
+padding: 10px;
