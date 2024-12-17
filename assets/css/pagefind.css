@@ -15,9 +15,9 @@
 #search {
 max-width: 600px;
 margin: 20px auto 0px;
-border: 2px solid var(--search-border-color);
 }
 
 #search input {
 color: var(--text-color);
+border: 2px solid var(--search-border-color);
 }
