@@ -159,3 +159,68 @@ text-decoration: none;
 .homepage-dark-section .text-block em {
   font-style: italic;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Dark Theme Styles for Featured Boxes */
+.featured-boxes {
+  background-color: #2e2e2e;
+  padding: 50px 0;
+}
+
+.featured-boxes .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-boxes .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.featured-boxes .box {
+  background-color: #3a3a3a;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.featured-boxes .box:hover {
+  background-color: #4a4a4a;
+}
+
+.featured-boxes .box .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.featured-boxes .box h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.featured-boxes .box p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Optional: Add responsive behavior */
+@media (max-width: 768px) {
+  .featured-boxes .col-md-3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
