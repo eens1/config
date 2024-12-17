@@ -13,7 +13,7 @@
 
 [data-theme="dark"] {
 --text-color: #E1E132;
---search-border: #5F5F00;
+--search-border: grey;
 --link-color: #00FFFF;
 --bg-color: black;
 --header-bg-color: black;
