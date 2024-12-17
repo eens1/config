@@ -16,14 +16,14 @@ padding: 15px;
 }
 
 [data-theme="dark"] .site-title img {
-background-color: transparent;
+background-color: var(--text-color);
 }
 
 .site-title img {
 width: 35px;
 margin-right: 7px;
 border-radius: 3px;
-background-color: var(--text-color);
+background-color: transparent;
 }
 
 .site-title a {
