@@ -2,7 +2,7 @@
 --pagefind-ui-primary: #eeeeee;
 --pagefind-ui-text: #eeeeee;
 --pagefind-ui-background: black;
---pagefind-ui-border: grey;
+--pagefind-ui-border: #152028;
 --pagefind-ui-tag: #152028;
 }
 
@@ -22,6 +22,8 @@ border-radius: 50px;
 }
 
 .pagefind-ui__drawer {
+background: black;
+border: 2px solid grey;
 margin: 20px auto;
 padding: 10px;
 }
