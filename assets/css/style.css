@@ -4,9 +4,8 @@
 --text-color: black;
 --search-border: #5F5F00;
 --link-color: #00FFFF;
---bg-color: white;
---header-bg-color: #1c1c1e;
---header-bg-color: black;
+--bg-color: #FFFDD0;
+--header-bg-color: #FFFDD0;
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
 }
@@ -16,7 +15,6 @@
 --search-border: #5F5F00;
 --link-color: #00FFFF;
 --bg-color: black;
---header-bg-color: #1c1c1e;
 --header-bg-color: black;
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
