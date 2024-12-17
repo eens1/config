@@ -19,7 +19,7 @@ justify-content: center;
 
 .home .quick-links-group {
 margin: 10px;
-background-color: rgb(30,30,30);
+background-color: var(--light-bg-color);
 padding: 10px;
 border-radius: 5px;
 width: 270px;
