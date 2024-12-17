@@ -12,6 +12,9 @@
 --pagefind-ui-font: var(--font-family);
 }
 
+#search {
+max-width: 600px;
+}
 
 /*
 #search {
