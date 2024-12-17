@@ -2,6 +2,8 @@ header {
 background-color: var(--header-bg-color);
 }
 
+
+
 .container {
 padding: 15px;
   margin: 0 auto;
@@ -11,6 +13,10 @@ padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+[data-theme="dark"] .site-title img {
+background-color: transparent;
 }
 
 .site-title img {
