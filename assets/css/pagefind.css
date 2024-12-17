@@ -15,6 +15,7 @@
 #search {
 max-width: 600px;
 margin: 20px auto 0px;
+border: 2px solid var(--search-border-color);
 }
 
 #search input {
