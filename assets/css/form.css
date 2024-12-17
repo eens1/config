@@ -23,6 +23,7 @@ textarea {
   border-radius: 4px;
   background-color: var(--light-bg-color); /* Dark background for inputs */
   color: var(--text-color); /* Light text color for inputs */
+  transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
