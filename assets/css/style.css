@@ -1,6 +1,6 @@
 @import url('https://fonts.bunny.net/css?family=nunito:300,400,600,700');
 
-[data-theme="dark"] {
+:root {
 --font-size: 18px; 
 --text-color: #E1E132;
 --light-text-color: #A5A500;
