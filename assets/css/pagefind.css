@@ -10,6 +10,12 @@
 --pagefind-ui-image-border-radius: 8px;
 --pagefind-ui-image-box-ratio: 3 / 2;
 --pagefind-ui-font: sans-serif;
+
+--pagefind-ui-primary: #eeeeee;
+--pagefind-ui-text: #eeeeee;
+--pagefind-ui-background: #152028;
+--pagefind-ui-border: #152028;
+--pagefind-ui-tag: #152028;
 }
 
 /*
