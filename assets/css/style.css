@@ -3,6 +3,7 @@
 :root {
 --font-size: 18px; 
 --text-color: black;
+--light-text-color: grey;
 --search-border-color: black;
 --link-color: blue;
 --bg-color: #FFFDD0;

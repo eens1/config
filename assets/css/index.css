@@ -196,20 +196,20 @@ text-decoration: none;
 /* Icon styles */
 .featured-box .icon {
   font-size: 40px;
-  color: #fff;  /* White icon color */
+  color: var(--text-color);  /* White icon color */
   margin-bottom: 10px;
 }
 
 /* Title styles */
 .featured-box h3 {
-  color: #fff;  /* White text for the title */
+  color: var(--text-color);  /* White text for the title */
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 /* Description styles */
 .featured-box p {
-  color: #ddd;  /* Light grey text for the description */
+  color: var(--light-text-color);  /* Light grey text for the description */
   font-size: 1em;
 }
 
@@ -217,6 +217,9 @@ text-decoration: none;
 .featured-box:hover {
   /*transform: translateY(-5px);*/
   border-color: #fff;  /* Highlight border on hover */
+}
+.featured-box:hover a {
+text-decoration: none;
 }
 
 /* Mobile responsive styles */
