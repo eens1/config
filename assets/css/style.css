@@ -1,5 +1,19 @@
 @import url('https://fonts.bunny.net/css?family=nunito:300,400,600,700');
 
+[data-theme="dark"] {
+--font-size: 18px; 
+--text-color: #E1E132;
+--light-text-color: #A5A500;
+--search-border-color: grey;
+--link-color: #00FFFF;
+--bg-color: black;
+--light-bg-color: rgb(30,30,30);
+--header-bg-color: black;
+--small-font: 14px;
+--font-family: 'Nunito', sans-serif;
+--logo-bg-color: var(--text-color);
+}
+
 [data-theme="light"] {
 --font-size: 18px; 
 --text-color: black;
@@ -12,19 +26,6 @@
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
 --light-bg-color: var(--light-bg-color);
-}
-
-[data-theme="dark"] {
---text-color: #E1E132;
---light-text-color: #A5A500;
---search-border-color: grey;
---link-color: #00FFFF;
---bg-color: black;
---light-bg-color: rgb(30,30,30);
---header-bg-color: black;
---small-font: 14px;
---font-family: 'Nunito', sans-serif;
---logo-bg-color: var(--text-color);
 }
 
 body {
