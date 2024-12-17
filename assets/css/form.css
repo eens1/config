@@ -25,6 +25,7 @@ textarea {
   color: var(--text-color); /* Light text color for inputs */
   border: 0px;
   font-size: var(--font-size);
+  font-family: var(--font-family);
 }
 
 input[type="text"]:focus,
