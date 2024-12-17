@@ -8,6 +8,7 @@
 --header-bg-color: #1c1c1e;
 --header-bg-color: black;
 --small-font: 14px;
+--font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -16,7 +17,7 @@ margin: 0px 0px 0px 0px;
 background-color: var(--bg-color);
 color: var(--text-color);
 line-height: 1.4;
-font-family: 'Nunito', sans-serif;
+font-family: var(--font-family);
 font-size: 18px;
 }
 
