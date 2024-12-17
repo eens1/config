@@ -3,11 +3,12 @@
 :root {
 --text-color: black;
 --search-border: #5F5F00;
---link-color: #00FFFF;
+--link-color: blue;
 --bg-color: #FFFDD0;
 --header-bg-color: #FFFDD0;
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
+--logo-background: transparent;
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
 --header-bg-color: black;
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
+--logo-background: var(--text-color);
 }
 
 body {
