@@ -105,7 +105,7 @@ text-decoration: none;
 
 /* Individual text blocks */
 .homepage-dark-section .text-block {
-  background-color: #2a2a2a; /* Slightly lighter dark box */
+  background-color: var(--light-bg-color); /* Slightly lighter dark box */
   border-radius: 8px;
   padding: 1rem;
   flex: 1 1 calc(33.333% - 1rem); /* Responsive three columns */
