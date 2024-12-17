@@ -1,5 +1,5 @@
 :root {
---pagefind-ui-primary: black;
+--pagefind-ui-primary: var(--text-color);
 --pagefind-ui-text: var(--text-color);
 --pagefind-ui-background: var(--bg-color);
 --pagefind-ui-border: #152028;
