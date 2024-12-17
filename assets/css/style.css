@@ -21,7 +21,7 @@
 --header-bg-color: black;
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
---logo-background: var(--text-color);
+--logo-bg-color: var(--text-color);
 }
 
 body {
