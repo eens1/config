@@ -6,9 +6,9 @@
 --link-color: blue;
 --bg-color: #FFFDD0;
 --header-bg-color: #FFFDD0;
+--logo-bg-color: transparent;
 --small-font: 14px;
 --font-family: 'Nunito', sans-serif;
---logo-background: transparent;
 }
 
 [data-theme="dark"] {
