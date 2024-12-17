@@ -216,7 +216,7 @@ text-decoration: none;
 /* Hover effect */
 .featured-box:hover {
   /*transform: translateY(-5px);*/
-  border-color: #fff;  /* Highlight border on hover */
+  border-color: var(--link-color);  /* Highlight border on hover */
 }
 .featured-box:hover a {
 text-decoration: none;
