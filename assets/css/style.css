@@ -16,6 +16,7 @@
 
 [data-theme="dark"] {
 --text-color: #E1E132;
+--light-text-color: #A5A500;
 --search-border-color: grey;
 --link-color: #00FFFF;
 --bg-color: black;
