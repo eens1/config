@@ -7,6 +7,9 @@ text-align: center;
 font-weight: bold;
 margin-top: 20px;
 }
+.home .heading a {
+color: var(--text-color);
+}
 
 .home .quick-links-container {
 display: flex;
