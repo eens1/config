@@ -1,5 +1,5 @@
 :root {
---pagefind-ui-primary: #eeeeee;
+--pagefind-ui-primary: black;
 --pagefind-ui-text: var(--text-color);
 --pagefind-ui-background: #152028;
 --pagefind-ui-border: #152028;
@@ -11,6 +11,7 @@
 --pagefind-ui-image-box-ratio: 3 / 2;
 --pagefind-ui-font: var(--font-family);
 }
+
 
 /*
 #search {
