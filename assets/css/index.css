@@ -59,7 +59,7 @@ text-align: center;
 color: #ffffff;
 border-radius: 8px;
 overflow: hidden;
-background-color: #1e1e1e;
+background-color: var(--light-bg-color);
 width: 270px;
 height: 300px;
 margin: 10px;
