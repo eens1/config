@@ -1,7 +1,7 @@
 :root {
 --pagefind-ui-primary: #eeeeee;
 --pagefind-ui-text: #eeeeee;
---pagefind-ui-background: black;
+--pagefind-ui-background: transparent;
 --pagefind-ui-border: #152028;
 --pagefind-ui-tag: #152028;
 }
