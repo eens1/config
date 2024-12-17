@@ -23,7 +23,7 @@ textarea {
   border-radius: 4px;
   background-color: var(--light-bg-color); /* Dark background for inputs */
   color: var(--text-color); /* Light text color for inputs */
-  border: 0px;
+  border: 2px solid var(--text-color);
   font-size: var(--font-size);
   font-family: var(--font-family);
 }
