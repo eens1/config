@@ -252,8 +252,8 @@ text-decoration: none;
 
 
 
-/* Container for the featured boxes */
-.featured-boxes {
+/* Container for the list boxes */
+.list-boxes {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -261,7 +261,7 @@ text-decoration: none;
 }
 
 /* Individual box styles */
-.featured-box {
+.list-box {
   background-color: transparent;
   border: 2px solid var(--border-color);
   border-radius: 8px;
@@ -271,7 +271,7 @@ text-decoration: none;
   cursor: pointer;
 }
 
-.featured-box a {
+.list-box a {
   text-decoration: none;
   color: inherit;
   display: block;
@@ -280,37 +280,36 @@ text-decoration: none;
 }
 
 /* Icon styles */
-.featured-box .icon {
+.list-box .icon {
   font-size: 40px;
   color: var(--text-color);  /* White icon color */
   margin-bottom: 10px;
 }
 
 /* Title styles */
-.featured-box h3 {
+.list-box h3 {
   color: var(--text-color);  /* White text for the title */
   font-size: 1.2em;
-  margin: 0px;
 }
 
 /* Description styles */
-.featured-box p {
+.list-box p {
   color: var(--light-text-color);  /* Light grey text for the description */
   font-size: 1em;
 }
 
 /* Hover effect */
-.featured-box:hover {
+.list-box:hover {
   border-color: var(--light-text-color);  /* Highlight border on hover */
 }
 
-.featured-box:hover a {
+.list-box:hover a {
   text-decoration: none;
 }
 
 /* Mobile responsive styles */
 @media (max-width: 850px) {
-  .featured-box {
+  .list-box {
     width: 100%;
   }
 }

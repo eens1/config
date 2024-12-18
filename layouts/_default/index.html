@@ -46,9 +46,9 @@
 
 {{ $sortedCustom := sort $customSort "sortKey" }}
 
-<div class="featured-boxes">
+<div class="list-boxes">
   {{ range $sortedCustom }}
-    <div class="featured-box">
+    <div class="list-box">
       <a href="{{ .permalink | relURL }}" class="box-link">
         <div class="icon">
           <i class="{{ .page.Params.icon }}"></i> <!-- Icon from frontmatter -->
