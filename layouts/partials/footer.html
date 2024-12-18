@@ -11,14 +11,28 @@
     {{- $folders := readDir $contentDir -}}
     <div class="footer-columns">
       {{- range $folders }}
-        {{- if .IsDir }}
+        {{- if and (.IsDir) (not (strings.HasSuffix .Name ".hide")) }}
+          {{- $indexFile := (print $contentDir "/" .Name "/_index.md") -}}
+          {{- if fileExists $indexFile }}
+            {{- $indexContent := readFile $indexFile | transform.Unmarshal -}}
+            {{- $title := $indexContent.title | default (.Name | title) -}}
+          {{- else }}
+            {{- $title := .Name | title -}}
+          {{- end }}
           <div class="footer-column">
-            <h4>{{ .Name | title }}</h4>
+            <h4>{{ $title }}</h4>
             <ul>
               {{- $subfolders := readDir (print $contentDir "/" .Name) -}}
               {{- range $subfolders }}
-                {{- if .IsDir }}
-                  <li><a href="{{ "/" | relURL }}{{ .Name }}">{{ .Name | humanize }}</a></li>
+                {{- if and (.IsDir) (not (strings.HasSuffix .Name ".hide")) }}
+                  {{- $subIndexFile := (print $contentDir "/" .Name "/" .Name "/_index.md") -}}
+                  {{- if fileExists $subIndexFile }}
+                    {{- $subIndexContent := readFile $subIndexFile | transform.Unmarshal -}}
+                    {{- $subTitle := $subIndexContent.title | default (.Name | humanize) -}}
+                  {{- else }}
+                    {{- $subTitle := .Name | humanize -}}
+                  {{- end }}
+                  <li><a href="{{ "/" | relURL }}{{ .Name }}">{{ $subTitle }}</a></li>
                 {{- end }}
               {{- end }}
             </ul>
