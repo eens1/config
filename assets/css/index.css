@@ -31,7 +31,11 @@ margin: 10px;
 padding: 10px;
 border-radius: 5px;
 width: 270px;
-border: var(--border);
+border: 2px solid var(--border-color);
+}
+
+.home .quick-links-group:hover {
+border: 2px solid var(--light-text-color);
 }
 
 .home .quick-links-group .title a {
@@ -185,7 +189,7 @@ text-decoration: none;
 /* Individual box styles */
 .featured-box {
   background-color: transparent;
-  border: var(--border);
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   padding: 15px;
   width: 250px;  /* Fixed width for boxes */
