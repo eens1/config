@@ -205,7 +205,7 @@ text-decoration: none;
 }
 
 /* Icon styles */
-.featured-box .icon {
+.featured-box .icon, .featured-box .icon img {
   font-size: 40px;
   color: var(--text-color);  /* White icon color */
   margin-bottom: 10px;
