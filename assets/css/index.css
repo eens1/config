@@ -290,7 +290,6 @@ text-decoration: none;
 .featured-box h3 {
   color: var(--text-color);  /* White text for the title */
   font-size: 1.2em;
-  margin-bottom: 10px;
 }
 
 /* Description styles */
