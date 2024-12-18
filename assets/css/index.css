@@ -1,9 +1,10 @@
 .home .citation {
 max-width: 600px;
-margin: auto;
+margin: 50px auto 30px;
 text-align: center;
 font-size: 25px;
 font-style: italic;
+font-weight: bold;
 }
 
 .home .quick-links {
