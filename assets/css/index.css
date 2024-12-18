@@ -8,7 +8,7 @@ font-weight: bold;
 }
 
 .home .quick-links {
-margin: 0px 10px 10px 10px;
+margin: 20px 10px 10px 10px;
 }
 
 .home .heading {
@@ -55,13 +55,6 @@ list-style: inside;
 .home .home .quick-links li {
 margin-bottom: 2px;
 }
-
-@media screen and (max-width: 850px) {
-.home .quick-links {
-margin: 10px 0px 10px 0px;
-}
-}
-
 
 
 .home .latest-posts-container {
