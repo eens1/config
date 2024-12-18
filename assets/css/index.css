@@ -28,10 +28,10 @@ justify-content: center;
 
 .home .quick-links-group {
 margin: 10px;
-background-color: var(--light-bg-color);
 padding: 10px;
 border-radius: 5px;
 width: 270px;
+border: var(--border);
 }
 
 .home .quick-links-group .title a {
@@ -185,7 +185,7 @@ text-decoration: none;
 /* Individual box styles */
 .featured-box {
   background-color: transparent;
-  border: 2px solid #444;  /* Dark border */
+  border: var(--border);
   border-radius: 8px;
   padding: 15px;
   width: 250px;  /* Fixed width for boxes */
