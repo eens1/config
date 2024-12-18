@@ -9,47 +9,6 @@
 </div>
 
 
-{{ define "main" }}
-<section class="container">
-  <div class="grid">
-    <!-- Include top-level folders (sections) -->
-    {{ range .Site.Sections }}
-    <div class="box">
-      {{ if .Params.icon }}
-      <div class="icon">
-        <i class="fas {{ .Params.icon }}"></i>
-      </div>
-      {{ end }}
-      <h3 class="title">{{ .Title }}</h3>
-      {{ if .Params.description }}
-      <p class="description">{{ .Params.description }}</p>
-      {{ end }}
-      <a href="{{ .Permalink }}" class="read-more">Read More</a>
-    </div>
-    {{ end }}
-    
-    <!-- Include top-level files -->
-    {{ range .Site.RegularPages }}
-    {{ if eq (len (strings.Split .File.Path "/")) 2 }} <!-- Only process top-level files -->
-    <div class="box">
-      {{ if .Params.icon }}
-      <div class="icon">
-        <i class="fas {{ .Params.icon }}"></i>
-      </div>
-      {{ end }}
-      <h3 class="title">{{ .Title }}</h3>
-      {{ if .Params.description }}
-      <p class="description">{{ .Params.description }}</p>
-      {{ end }}
-      <a href="{{ .Permalink }}" class="read-more">Read More</a>
-    </div>
-    {{ end }}
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-
-
 <div class="featured-boxes">
   {{ range .Site.Params.featured_boxes }}
     <div class="featured-box">
