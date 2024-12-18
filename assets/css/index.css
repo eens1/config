@@ -239,10 +239,8 @@ text-decoration: none;
 }
 
 /* Mobile responsive styles */
-@media (max-width: 768px) {
-  .featured-box {
+@media (max-width: 850px) {
+  .featured-box, .home .quick-links-group {
     width: 100%;
-    max-width: 300px;  /* Ensure it doesn't stretch too wide on smaller screens */
-    margin: 10px 0;
   }
 }
