@@ -3,3 +3,28 @@
 {{ i18n "footerRef" | safeHTML }}
 </p>
 {{ end }}
+
+
+<footer class="footer dark-theme">
+  <div class="footer-container">
+    {{- $contentDir := "content" -}}
+    {{- $folders := readDir $contentDir -}}
+    <div class="footer-columns">
+      {{- range $folders }}
+        {{- if .IsDir }}
+          <div class="footer-column">
+            <h4>{{ .Name | title }}</h4>
+            <ul>
+              {{- $subfolders := readDir (print $contentDir "/" .Name) -}}
+              {{- range $subfolders }}
+                {{- if .IsDir }}
+                  <li><a href="{{ "/" | relURL }}{{ .Name }}">{{ .Name | humanize }}</a></li>
+                {{- end }}
+              {{- end }}
+            </ul>
+          </div>
+        {{- end }}
+      {{- end }}
+    </div>
+  </div>
+</footer>
