@@ -38,6 +38,10 @@ border: 2px solid var(--border-color);
 border: 2px solid var(--light-text-color);
 }
 
+.home .quick-links-group .title {
+font-weight: bold;
+font-size: 20px;
+}
 .home .quick-links-group .title a {
 color: var(--text-color)
 }
@@ -45,7 +49,6 @@ color: var(--text-color)
 .home .quick-links ul {
 padding: 10px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
-border-top: 1px solid;
 list-style: inside;
 }
 
