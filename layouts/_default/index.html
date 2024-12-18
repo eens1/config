@@ -9,6 +9,7 @@
 </div>
 
 
+{{ define "main" }}
 <section class="container">
   <div class="grid">
     <!-- Include top-level folders (sections) -->
@@ -29,7 +30,7 @@
     
     <!-- Include top-level files -->
     {{ range .Site.RegularPages }}
-    {{ if eq (len (strings.Split .File.Path "/")) 2 }} <!-- Ensure it’s a top-level file -->
+    {{ if eq (len (strings.Split .File.Path "/")) 2 }} <!-- Only process top-level files -->
     <div class="box">
       {{ if .Params.icon }}
       <div class="icon">
@@ -46,6 +47,7 @@
     {{ end }}
   </div>
 </section>
+{{ end }}
 
 
 <div class="featured-boxes">
