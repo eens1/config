@@ -45,15 +45,18 @@
 <meta name="twitter:description" content="{{ .Summary }}" />
 <meta name="twitter:image" content="{{ .Params.image | absURL }}" />
 
+
 <script>
 (function() {
-const savedTheme = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const theme = savedTheme || (prefersDark ? "dark" : "light");
-document.documentElement.setAttribute("data-theme", theme);
+    const savedTheme = localStorage.getItem("theme");
+
+    // If the user has no saved preference, default to dark
+    const theme = savedTheme || "dark";
+
+    // Apply the theme
+    document.documentElement.setAttribute("data-theme", theme);
 })();
 </script>
-
 
 {{ end }}
 
