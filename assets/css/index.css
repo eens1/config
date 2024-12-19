@@ -206,7 +206,7 @@ text-decoration: none;
 
 /* Icon styles */
 .featured-box .icon {
-  margin: auto;
+  margin: 20px auto 0px;
   width: 60px;
 }
 
