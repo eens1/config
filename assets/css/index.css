@@ -207,7 +207,9 @@ text-decoration: none;
 /* Icon styles */
 .featured-box .icon {
   margin: 20px auto 0px;
-  height: 60px;
+}
+.featured-box .icon svg {
+   height: 50px;
 }
 
 /* Title styles */
