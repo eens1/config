@@ -33,11 +33,6 @@
   <script src="{{ .RelPermalink }}" defer></script>
 {{ end }}
 
-<!-- External Libraries -->
-<!--
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
--->
-
 <meta name="twitter:card" content="{{ .Params.image | absURL }}" />
 <meta name="twitter:site" content="@BroMatthewCap" />
 <meta name="twitter:creator" content="@BroMatthewCap" />
@@ -83,20 +78,6 @@
 </footer>
 
 </main>
-
-<!--
-<script>
-if (window.netlifyIdentity) {
-window.netlifyIdentity.on("init", (user) => {
-if (!user) {
-window.netlifyIdentity.on("login", () => {
-document.location.href = "/admin/";
-});
-}
-});
-}
-</script>
--->
 
 </body>
 </html>
