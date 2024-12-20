@@ -19,7 +19,7 @@
           <li>
             <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
               {{ if .Icon }}
-                {{ partial .Icon . }}
+                {{ partial (print .Icon ".html") . }}
               {{ end }}
               {{ .Name }}
             </a>
