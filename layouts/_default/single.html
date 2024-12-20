@@ -4,16 +4,18 @@
 {{ partial "postnav.html" . }}
 <h1>{{ .Title }}</h1>
 
+{{ partial "x.html" . }}
+
+{{ end }}
+
+<article>
+
 {{ if .Params.toc }}
 <div class="table-of-contents">
     <h3>Table of Contents</h3>
     {{ .TableOfContents }}
 </div>
-{{ end }}
 
-{{ partial "x.html" . }}
-
-<article>
 {{ .Content }}
 </article>
 
