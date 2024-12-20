@@ -1,0 +1,9 @@
+article .toc nav ul {
+display: block;
+list-style-type: circle;
+}
+
+article .toc nav ul li a {
+font-weight: normal;
+color: var(--link-color)
+}
