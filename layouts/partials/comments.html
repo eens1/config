@@ -9,9 +9,17 @@
 ></div>
 </div>
 <script src="https://cusdis.com/js/cusdis.es.js"></script>
+
 <style>
-#cusdis_thread {
-background: transparent !important;
+/* More specific selector */
+.comments #cusdis_thread {
+    background: transparent !important;
+    color: #000; /* Change text color for better visibility */
 }
+
+.comments #cusdis_thread .cusdis-comment {
+    background: transparent !important; /* Ensures comments have no background */
+}
+
 </style>
 
