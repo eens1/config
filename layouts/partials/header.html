@@ -1,32 +1,26 @@
-
 <header>
-  <div class="container">
-    <div class="header-content">
-      <div class="site-title">
-        <a href="/">
-          <img src="/images/logo.png" alt="{{ .Site.Title }}">
-          <span>{{ .Site.Title }}</span>
-        </a>
-      </div>
-      <nav>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="nav-menu">
-          {{ range .Site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
-              {{ with .Params.icon }}
-                {{ partial (printf "icons/%s.html" .) . }}
-              {{ end }}
-              {{ .Name }}
-            </a>
-          </li>
-          {{ end }}
-        </ul>
-      </nav>
-    </div>
+<div class="container">
+<div class="header-content">
+<div class="site-title">
+  <a href="/">
+     <img src="/images/logo.png">
+     <span>{{ .Site.Title }}</span>
+  </a>
+</div>
+<nav>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+  <ul class="nav-menu">
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>{{ .Pre }}{{ .Name }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
+</div>
+</div>
 </header>
