@@ -6,8 +6,6 @@
 
 {{ partial "x.html" . }}
 
-{{ end }}
-
 <article>
 
 {{ if .Params.toc }}
@@ -15,6 +13,7 @@
     <h3>Table of Contents</h3>
     {{ .TableOfContents }}
 </div>
+{{ end }}
 
 {{ .Content }}
 </article>
