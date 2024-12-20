@@ -1,6 +1,6 @@
 article .toc nav ul {
 display: block;
-list-style-type: disk;
+list-style-type: disc;
 }
 
 article .toc nav ul li a {
