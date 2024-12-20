@@ -1,0 +1,17 @@
+
+.toc {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.toc a {
+  color: #333;
+  text-decoration: none;
+}
