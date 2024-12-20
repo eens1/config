@@ -10,16 +10,10 @@
 
 <article>
 {{ .Content }}
+</article>
 
 {{ partial "listposts.html" . }}
 
-</article>
-
-{{ if ne .Params.comments false }}
-{{ partial "comments.html" . }}
-{{ end }}
-
 </div>
-
 {{ end }}
 
