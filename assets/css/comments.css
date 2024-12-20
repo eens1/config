@@ -1,3 +1,5 @@
+#cusdis_thread textarea, #cusdis_thread input {
+color: var(--text-color);
+}
 #cusdis_thread {
-
 }
