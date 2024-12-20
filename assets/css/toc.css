@@ -1,17 +1,29 @@
 
-.toc {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 20px;
+.table-of-contents {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
-.toc ul {
-  list-style-type: none;
-  padding-left: 20px;
+.table-of-contents ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
 }
 
-.toc a {
-  color: #333;
-  text-decoration: none;
+.table-of-contents ul ul {
+    list-style-type: circle;
+}
+
+.table-of-contents a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: #007bff;
+    text-decoration: underline;
 }
