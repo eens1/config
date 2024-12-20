@@ -18,7 +18,7 @@
           {{ range .Site.Menus.main }}
           <li>
             <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
-              {{ with .Icon }}
+              {{ with .icon }}
                 {{ partial (print . ".html") . }}
               {{ end }}
               {{ .Name }}
