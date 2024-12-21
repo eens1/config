@@ -4,35 +4,35 @@
     <ul id="videoList"></ul>
 
     <script>
-        async function fetchLatestVideos() {
-            const username = 'vaticancatholic-dimond'; // Hardcode the username here
-            const url = `https://www.youtube.com/user/${username}/videos`;
+async function fetchLatestVideos() {
+    const username = 'vaticancatholic-dimond';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Public proxy server
+    const targetUrl = `https://www.youtube.com/user/${username}/videos`;
 
-            try {
-                const response = await fetch(url);
-                const text = await response.text();
+    try {
+        const response = await fetch(proxyUrl + targetUrl);
+        const text = await response.text();
 
-                // Parse the HTML to extract video details
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const videos = Array.from(doc.querySelectorAll('a#video-title'));
+        // Parse the HTML to extract video details
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        const videos = Array.from(doc.querySelectorAll('a#video-title'));
 
-                // Display the first 5 videos
-                const videoList = document.getElementById('videoList');
-                videoList.innerHTML = ''; // Clear previous results
+        const videoList = document.getElementById('videoList');
+        videoList.innerHTML = ''; // Clear previous results
 
-                videos.slice(0, 5).forEach(video => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<a href="https://www.youtube.com${video.getAttribute('href')}" target="_blank">${video.textContent.trim()}</a>`;
-                    videoList.appendChild(li);
-                });
+        videos.slice(0, 5).forEach(video => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="https://www.youtube.com${video.getAttribute('href')}" target="_blank">${video.textContent.trim()}</a>`;
+            videoList.appendChild(li);
+        });
 
-                if (videos.length === 0) {
-                    alert('No videos found or invalid username.');
-                }
-            } catch (error) {
-                console.error('Error fetching videos:', error);
-                alert('An error occurred while fetching videos.');
-            }
+        if (videos.length === 0) {
+            alert('No videos found or invalid username.');
         }
+    } catch (error) {
+        console.error('Error fetching videos:', error);
+        alert('An error occurred while fetching videos.');
+    }
+}
     </script>
