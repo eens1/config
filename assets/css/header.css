@@ -14,7 +14,7 @@ padding: 15px;
 }
 
 .site-title img {
-width: 35px;
+width: 30px;
 margin-right: 7px;
 border-radius: 3px;
 background-color: var(--logo-bg-color);
@@ -24,7 +24,7 @@ border: 2px solid black;
 .site-title a {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
   color: var(--text-color);
