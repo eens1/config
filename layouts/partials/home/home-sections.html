@@ -1,17 +1,16 @@
-
- {{ range .Site.Params.homepage_sections }}
+  {{ range .Site.Params.homepage_sections }}
   <section id="{{ .id }}" class="homepage-section">
     <div class="section-header">
       <h2>{{ .headline }}</h2>
       <p>{{ .description }}</p>
-      <a href="/{{ .content_type }}" class="explore-button">{{ .button_text }}</a>
+      <a href="#" class="explore-button">{{ .button_text }}</a>
     </div>
     <div class="section-content grid">
-      {{ $sectionContent := where .Site.Pages "Section" .content_type }}
-      {{ range $sectionContent }}
-      <a href="{{ .RelPermalink }}" class="box">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-        <h3>{{ .Title }}</h3>
+      {{ range .posts }}
+      {{ $post := .Site.GetPage . }}
+      <a href="{{ $post.RelPermalink }}" class="box">
+        <img src="{{ $post.Params.image }}" alt="{{ $post.Title }}">
+        <h3>{{ $post.Title }}</h3>
       </a>
       {{ end }}
     </div>
