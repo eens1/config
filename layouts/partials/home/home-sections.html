@@ -1,18 +1,19 @@
-  {{ range .Site.Params.homepage_sections }}
-  <section id="{{ .id }}" class="homepage-section">
-    <div class="section-header">
-      <h2>{{ .headline }}</h2>
-      <p>{{ .description }}</p>
-      <a href="#" class="explore-button">{{ .button_text }}</a>
-    </div>
-    <div class="section-content grid">
-      {{ range .posts }}
-      {{ $post := .Site.GetPage . }}
-      <a href="{{ $post.RelPermalink }}" class="box">
-        <img src="{{ $post.Params.image }}" alt="{{ $post.Title }}">
-        <h3>{{ $post.Title }}</h3>
-      </a>
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
+
+{{ range .Params.homepage_sections }}
+<section id="{{ .id }}" class="homepage-section">
+  <div class="section-header">
+    <h2>{{ .headline }}</h2>
+    <p>{{ .description }}</p>
+    <a href="#" class="explore-button">{{ .button_text }}</a>
+  </div>
+  <div class="section-content grid">
+    {{ range .posts }}
+    {{ $post := $.Site.GetPage . }}
+    <a href="{{ $post.RelPermalink }}" class="box">
+      <img src="{{ $post.Params.image }}" alt="{{ $post.Title }}">
+      <h3>{{ $post.Title }}</h3>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
