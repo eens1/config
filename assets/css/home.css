@@ -266,10 +266,8 @@ body.dark-theme {
   display: block;
   width: calc(25% - 1rem);
   text-align: center;
-  background-color: #2a2a2a;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .box:hover {
