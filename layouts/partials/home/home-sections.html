@@ -1,0 +1,19 @@
+
+ {{ range .Site.Params.homepage_sections }}
+  <section id="{{ .id }}" class="homepage-section">
+    <div class="section-header">
+      <h2>{{ .headline }}</h2>
+      <p>{{ .description }}</p>
+      <a href="/{{ .content_type }}" class="explore-button">{{ .button_text }}</a>
+    </div>
+    <div class="section-content grid">
+      {{ $sectionContent := where .Site.Pages "Section" .content_type }}
+      {{ range $sectionContent }}
+      <a href="{{ .RelPermalink }}" class="box">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        <h3>{{ .Title }}</h3>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
