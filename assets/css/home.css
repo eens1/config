@@ -238,6 +238,7 @@ text-decoration: none;
 .explore-button {
   display: block;
   padding: 0.5rem 1rem;
+  margin: 0px 0px 20px 0px;
   color: #ffffff;
   background-color: #3a3a3a;
   text-decoration: none;
