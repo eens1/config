@@ -238,7 +238,7 @@ text-decoration: none;
 .explore-button {
   display: block;
   padding: 0.5rem 1rem;
-  margin: 0px 0px 20px 0px;
+  margin: 0px auto 20px;
   color: #ffffff;
   background-color: #3a3a3a;
   text-decoration: none;
@@ -282,7 +282,7 @@ text-decoration: none;
   margin: 0;
   padding: 1rem;
   font-size: 1rem;
-  background-color: #3a3a3a;
+  background-color: rgb(30,30,30);
 }
 
 /* Mobile Responsiveness */
