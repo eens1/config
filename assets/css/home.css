@@ -268,8 +268,8 @@ text-decoration: none;
   overflow: hidden;
 }
 
-.box:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.box:hover a {
+text-decoration: none;
 }
 
 .box img {
@@ -287,6 +287,6 @@ text-decoration: none;
 
 @media (max-width: 850px) {
   .box {
-    max-width: 100%; /* Stack boxes vertically on small screens */
+    max-width: 100%; 
   }
 }
