@@ -274,7 +274,6 @@ text-decoration: none;
 }
 
 .box h3 {
-text-decoration: none;
   margin: 0;
   padding: 1rem;
   background-color: rgb(30,30,30);
@@ -283,6 +282,5 @@ text-decoration: none;
 
 @media (max-width: 850px) {
   .box {
-    max-width: 100%; 
   }
 }
