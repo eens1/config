@@ -268,7 +268,7 @@ text-decoration: none;
   overflow: hidden;
 }
 
-.box:hover a {
+.box:hover h3 {
 text-decoration: none;
 }
 
