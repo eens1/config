@@ -285,28 +285,8 @@ text-decoration: none;
   min-height: 100px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .box {
-    width: calc(50% - 1rem); /* 2 boxes per row on tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .box {
-    width: 100%; /* Stack boxes vertically on small screens */
-  }
-
-  .section-header h2 {
-    font-size: 1.5rem; /* Slightly smaller headings for mobile */
-  }
-
-  .section-header p {
-    font-size: 0.9rem;
-  }
-
-  .explore-button {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem; /* Smaller buttons on mobile */
+    max-width: 100%; /* Stack boxes vertically on small screens */
   }
 }
