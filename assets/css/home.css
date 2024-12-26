@@ -247,6 +247,7 @@ text-decoration: none;
 }
 
 .explore-button:hover {
+  text-decoration: none;
   background-color: #505050;
 }
 
