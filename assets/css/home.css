@@ -279,8 +279,8 @@ text-decoration: none;
 .box h3 {
   margin: 0;
   padding: 1rem;
-  font-size: 1rem;
   background-color: rgb(30,30,30);
+  min-height: 100px;
 }
 
 /* Mobile Responsiveness */
