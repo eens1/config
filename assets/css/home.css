@@ -138,15 +138,12 @@ text-decoration: none;
 }
 
 .featured-box .image img {
-  height: 100%;
-  width: auto; /* Maintain aspect ratio */
+  width: 100%;
   object-fit: cover; /* Ensure image covers the container while preserving aspect ratio */
-  border-radius: 4px; /* Optional: Add slight rounding to the image edges */
 }
 
 /* Rest of the featured box styles */
 .featured-box {
-  background-color: transparent;
   border: 2px solid var(--border-color);
   border-radius: 8px;
   padding: 15px;
