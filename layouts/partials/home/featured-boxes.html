@@ -1,22 +1,3 @@
-<!--
-<div class="featured-boxes">
-  {{ range .Site.Params.featured_boxes }}
-    <div class="featured-box">
-      <a href="{{ .link }}" class="box-link">
-        <div class="icon">
-         {{ partial (printf "%s.html" .icon) . }}
-        </div>
-        <div class="content">
-          <h3>{{ .title }}</h3>
-          <p>{{ .description }}</p>
-        </div>
-      </a>
-    </div>
-  {{ end }}
-</div>
--->
-
-
 <div class="featured-boxes">
   {{ range .Site.Params.featured_boxes }}
     <div class="featured-box">
