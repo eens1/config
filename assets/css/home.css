@@ -141,15 +141,6 @@ margin-bottom: 2px;
   text-decoration: none;
 }
 
-/* Mobile responsive styles */
-@media (max-width: 400px) {
-  .featured-box, .home .quick-links-group {
-    width: 100%;
-  }
-}
-
-
-
 
 
 
