@@ -62,7 +62,6 @@ margin-bottom: 2px;
 
 
 
-
 /* Container for the featured boxes */
 .featured-boxes {
   display: flex;
@@ -127,6 +126,68 @@ text-decoration: none;
     width: 100%;
   }
 }
+
+/* Image container styles */
+.featured-box .image {
+  height: 120px; /* Set a uniform height for all images */
+  width: 100%;
+  overflow: hidden; /* Crop any overflowing parts of the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-box .image img {
+  height: 100%;
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the container while preserving aspect ratio */
+  border-radius: 4px; /* Optional: Add slight rounding to the image edges */
+}
+
+/* Rest of the featured box styles */
+.featured-box {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  width: 260px;  /* Fixed width for boxes */
+  text-align: center;
+  cursor: pointer;
+}
+
+.featured-box .content {
+  margin-top: 10px;
+}
+
+.featured-box h3 {
+  color: var(--text-color);
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.featured-box p {
+  color: var(--light-text-color);
+  font-size: 1em;
+}
+
+/* Hover effect */
+.featured-box:hover {
+  border-color: var(--light-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
