@@ -22,21 +22,24 @@
     <div class="featured-box">
       <a href="{{ .link }}" class="box-link">
         <div class="image">
-          {{ with site.GetPage .link }}
-            {{ with .Params.image }}
-              <img src="{{ . | relURL }}" alt="{{ .Params.title | default "Featured Image" }}">
+          {{ $page := site.GetPage .link }}
+          {{ if $page }}
+            {{ with $page.Params.image }}
+              <img src="{{ . | relURL }}" alt="{{ $page.Params.title | default "Featured Image" }}">
             {{ end }}
           {{ end }}
         </div>
         <div class="content">
-          {{ with site.GetPage .link }}
-            {{ with .Params.title }}
+          {{ $page := site.GetPage .link }}
+          {{ if $page }}
+            {{ with $page.Params.title }}
               <h3>{{ . }}</h3>
             {{ end }}
-            {{ with .Params.description }}
+            {{ with $page.Params.description }}
               <p>{{ . }}</p>
             {{ end }}
           {{ else }}
+            <!-- Fallback to values in featured_boxes if page is not found -->
             {{ with .title }}
               <h3>{{ . }}</h3>
             {{ end }}
