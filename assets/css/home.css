@@ -142,7 +142,7 @@ margin-bottom: 2px;
 }
 
 /* Mobile responsive styles */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .featured-box, .home .quick-links-group {
     width: 100%;
   }
