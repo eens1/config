@@ -110,8 +110,7 @@ margin-bottom: 2px;
 }
 
 .featured-box .image img {
-  width: auto;
-  height: 100%; /* Ensure uniform height for all images */
+  width: 100%;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
