@@ -84,7 +84,7 @@ margin-bottom: 2px;
   border-radius: 8px;
   overflow: hidden; /* Ensures content doesn't overflow the box */
   padding: 0; /* Remove padding for better image alignment */
-  width: 260px; /* Fixed width for boxes */
+  width: 350px; /* Fixed width for boxes */
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease, border-color 0.3s ease;
@@ -140,6 +140,15 @@ margin-bottom: 2px;
 .featured-box:hover a {
   text-decoration: none;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 400px) {
+  .featured-box, .home .quick-links-group {
+    width: 100%;
+  }
+}
+
+
 
 
 
