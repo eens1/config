@@ -24,13 +24,18 @@
         <div class="image">
           {{ with site.GetPage .link }}
             {{ with .Params.image }}
-              <img src="{{ . | relURL }}" alt="{{ $.title }}">
+              <img src="{{ . | relURL }}" alt="{{ .Params.title }}">
             {{ end }}
           {{ end }}
         </div>
         <div class="content">
-          <h3>{{ .title }}</h3>
-          <p>{{ .description }}</p>
+          {{ with site.GetPage .link }}
+            <h3>{{ .Params.title }}</h3>
+            <p>{{ .Params.description }}</p>
+          {{ else }}
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+          {{ end }}
         </div>
       </a>
     </div>
