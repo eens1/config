@@ -24,17 +24,25 @@
         <div class="image">
           {{ with site.GetPage .link }}
             {{ with .Params.image }}
-              <img src="{{ . | relURL }}" alt="{{ .Params.title }}">
+              <img src="{{ . | relURL }}" alt="{{ .Params.title | default "Featured Image" }}">
             {{ end }}
           {{ end }}
         </div>
         <div class="content">
           {{ with site.GetPage .link }}
-            <h3>{{ .Params.title }}</h3>
-            <p>{{ .Params.description }}</p>
+            {{ with .Params.title }}
+              <h3>{{ . }}</h3>
+            {{ end }}
+            {{ with .Params.description }}
+              <p>{{ . }}</p>
+            {{ end }}
           {{ else }}
-            <h3>{{ .title }}</h3>
-            <p>{{ .description }}</p>
+            {{ with .title }}
+              <h3>{{ . }}</h3>
+            {{ end }}
+            {{ with .description }}
+              <p>{{ . }}</p>
+            {{ end }}
           {{ end }}
         </div>
       </a>
