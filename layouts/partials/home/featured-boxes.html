@@ -39,7 +39,9 @@
         </a>
       {{ else }}
         <!-- Optionally handle cases where the page doesn't exist -->
-        <p>Page not found: {{ . }}</p>
+        <div class="content">
+          <p>Page not found: {{ . }}</p>
+        </div>
       {{ end }}
     </div>
   {{ end }}
