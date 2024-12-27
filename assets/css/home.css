@@ -122,12 +122,14 @@ margin-bottom: 2px;
 .featured-box h3 {
   color: var(--text-color); /* White text for the title */
   font-size: 1.2em;
+  text-align: left;
 }
 
 .featured-box p {
   color: var(--light-text-color); /* Light grey text for the description */
   font-size: 1em;
   margin: 0;
+  text-align: left;
 }
 
 /* Hover effect */
