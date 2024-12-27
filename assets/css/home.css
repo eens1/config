@@ -116,13 +116,12 @@ margin-bottom: 2px;
 
 /* Content styles */
 .featured-box .content {
-  padding: 15px;
+  padding: 0px 20px 20px 20px;
 }
 
 .featured-box h3 {
   color: var(--text-color); /* White text for the title */
   font-size: 1.2em;
-  margin-bottom: 10px;
 }
 
 .featured-box p {
