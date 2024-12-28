@@ -16,7 +16,7 @@
 
 
 <div class="featured-boxes">
-  {{ range .Pages }}
+  {{ range .Site.Pages }}
     {{ if .Params.featured }}
       <div class="featured-box">
         <a href="{{ .RelPermalink }}" class="box-link">
