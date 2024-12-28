@@ -22,7 +22,7 @@
         <a href="{{ .RelPermalink }}" class="box-link">
           <div class="image">
             {{ with .Params.image }}
-              <img src="{{ . | relURL }}" alt="">
+              <img src="{{ . | relURL }}" alt="{{ $.Params.title }}">
             {{ end }}
           </div>
           <div class="content">
