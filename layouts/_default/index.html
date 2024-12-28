@@ -12,11 +12,9 @@
 {{ i18n "citation" }}
 </div>
 
-
-
 <div class="featured-boxes">
-  {{ range .Site.AllPages }}  <!-- This will include all pages in /content/ and subdirectories -->
-    {{ if .Params.featured }}  <!-- Only pages with 'featured: true' -->
+  {{ range .Site.AllPages }}
+    {{ if .Params.featured }}
       <div class="featured-box">
         <a href="{{ .RelPermalink }}" class="box-link">
           <div class="image">
@@ -37,7 +35,6 @@
     {{ end }}
   {{ end }}
 </div>
-
 
 </div>
 
