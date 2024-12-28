@@ -38,11 +38,9 @@
 
 
 
-{{- $contentDir := .Site.BaseURL | relURL "/content" -}}
-{{- $contentPages := .Site.RegularPages -}}
 {{- $contentItems := slice -}}
 
-{{- range $contentPages }}
+{{- range .Site.RegularPages }}
   {{- if eq .Section "content" }}
     {{- $contentItem := dict "title" .Title "url" .Permalink -}}
     {{- $contentItems = append $contentItems $contentItem -}}
