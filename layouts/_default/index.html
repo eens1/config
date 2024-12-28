@@ -14,24 +14,24 @@
 
 
 <div class="featured-boxes">
-  {{ range (where .Site.AllPages "Params.featured" true) }}
-    {{ with .Params.title }}
-      <div class="featured-box">
-        <a href="{{ .RelPermalink }}" class="box-link">
-          <div class="image">
-            {{ with .Params.image }}
-              <img src="{{ . | relURL }}" alt="{{ $.Params.title }}">
-            {{ end }}
-          </div>
-          <div class="content">
+  {{ range (sort (where .Site.AllPages "Params.featured" true) ".Params.title") }}
+    <div class="featured-box">
+      <a href="{{ .Permalink }}" class="box-link">
+        <div class="image">
+          {{ with .Params.image }}
+            <img src="{{ . | relURL }}" alt="{{ .Page.Title }}">
+          {{ end }}
+        </div>
+        <div class="content">
+          {{ with .Params.title }}
             <h3>{{ . }}</h3>
-            {{ with .Params.description }}
-              <p>{{ . }}</p>
-            {{ end }}
-          </div>
-        </a>
-      </div>
-    {{ end }}
+          {{ end }}
+          {{ with .Params.description }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </a>
+    </div>
   {{ end }}
 </div>
 
