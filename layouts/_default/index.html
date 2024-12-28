@@ -19,7 +19,7 @@
       <a href="{{ .Permalink }}" class="box-link">
         <div class="image">
           {{ with .Params.image }}
-            <img src="{{ . | relURL }}" alt="{{ .Page.Title }}">
+            <img src="{{ . | relURL }}" alt="{{ $.Page.Title }}">
           {{ end }}
         </div>
         <div class="content">
