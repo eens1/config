@@ -1,8 +1,6 @@
 defaultContentLanguageInSubdir: false 
 paginate: 20
 paginatePath: "page"
-ignoreFiles:
-  - "(?i)/\\.hide/$"
 
 outputs:
   home:
