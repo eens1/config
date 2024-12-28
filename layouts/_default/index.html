@@ -17,35 +17,35 @@
 
 <div class="featured-boxes">
   {{ range .Site.Pages }}
-    {{ if or (.Params.featured) (and .IsSection (index .Files.ByName "_index.md" 0)) }}
-    <div class="featured-box">
-      {{ $page := . }}
-      {{ if and .IsSection (index .Files.ByName "_index.md" 0) }}
-        {{ $page = (index .Files.ByName "_index.md" 0) }}
-      {{ end }}
-      {{ if $page }}
+    {{ if .Params.featured }}
+      <div class="featured-box">
+        {{ $page := . }}
+        {{ if and .IsSection (index .Files.ByName "_index.md" 0) }}
+          {{ $page = (index .Files.ByName "_index.md" 0) }}
+        {{ end }}
         <a href="{{ .RelPermalink }}" class="box-link">
           <div class="image">
             {{ with $page.Params.image }}
               <img src="{{ . | relURL }}" alt="{{ $page.Params.title | default "Featured Image" }}">
+            {{ else }}
+              <!-- Optional placeholder image if none is provided -->
+              <img src="/images/placeholder.jpg" alt="Placeholder Image">
             {{ end }}
           </div>
           <div class="content">
             {{ with $page.Params.title }}
               <h3>{{ . }}</h3>
+            {{ else }}
+              <h3>Untitled</h3>
             {{ end }}
             {{ with $page.Params.description }}
               <p>{{ . }}</p>
+            {{ else }}
+              <p>No description available.</p>
             {{ end }}
           </div>
         </a>
-      {{ else }}
-        <!-- Optionally handle cases where the page doesn't exist -->
-        <div class="content">
-          <p>Page not found: {{ . }}</p>
-        </div>
-      {{ end }}
-    </div>
+      </div>
     {{ end }}
   {{ end }}
 </div>
