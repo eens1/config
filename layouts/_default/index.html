@@ -12,9 +12,10 @@
 {{ i18n "citation" }}
 </div>
 
+
 <div class="featured-boxes">
-  {{ range .Site.AllPages }}
-    {{ if .Params.featured }}
+  {{ range (where .Site.AllPages "Params.featured" true) }}
+    {{ with .Params.title }}
       <div class="featured-box">
         <a href="{{ .RelPermalink }}" class="box-link">
           <div class="image">
@@ -23,9 +24,7 @@
             {{ end }}
           </div>
           <div class="content">
-            {{ with .Params.title }}
-              <h3>{{ . }}</h3>
-            {{ end }}
+            <h3>{{ . }}</h3>
             {{ with .Params.description }}
               <p>{{ . }}</p>
             {{ end }}
@@ -35,7 +34,6 @@
     {{ end }}
   {{ end }}
 </div>
-
 
 <div class="home-index">
 <h3>{{ i18n "index" }}</h3>
