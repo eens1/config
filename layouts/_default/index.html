@@ -19,21 +19,17 @@
   {{ range .Site.Pages }}
     {{ if .Params.featured }}
       <div class="featured-box">
-        {{ $page := . }}
-        {{ if and .IsSection (index .Files.ByName "_index.md" 0) }}
-          {{ $page = (index .Files.ByName "_index.md" 0) }}
-        {{ end }}
         <a href="{{ .RelPermalink }}" class="box-link">
           <div class="image">
-            {{ with $page.Params.image }}
-              <img src="{{ . | relURL }}" alt="{{ $page.Params.title }}">
+            {{ with .Params.image }}
+              <img src="{{ . | relURL }}" alt="{{ .Params.title }}">
             {{ end }}
           </div>
           <div class="content">
-            {{ with $page.Params.title }}
+            {{ with .Params.title }}
               <h3>{{ . }}</h3>
             {{ end }}
-            {{ with $page.Params.description }}
+            {{ with .Params.description }}
               <p>{{ . }}</p>
             {{ end }}
           </div>
