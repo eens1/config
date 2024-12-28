@@ -12,6 +12,38 @@
 {{ i18n "citation" }}
 </div>
 
+
+<div class="featured-boxes">
+  {{ range .Site.AllPages }}  <!-- This will include all pages in /content/ and subdirectories -->
+    {{ if .Params.featured }}  <!-- Only pages with 'featured: true' -->
+      <div class="featured-box">
+        <a href="{{ .RelPermalink }}" class="box-link">
+          <div class="image">
+            {{ with .Params.image }}
+              <img src="{{ . | relURL }}" alt="{{ $.Params.title }}">
+            {{ end }}
+          </div>
+          <div class="content">
+            {{ with .Params.title }}
+              <h3>{{ . }}</h3>
+            {{ else }}
+              <!-- Optional fallback for missing title -->
+              <h3>Untitled</h3>
+            {{ end }}
+            {{ with .Params.description }}
+              <p>{{ . }}</p>
+            {{ else }}
+              <!-- Optional fallback for missing description -->
+              <p>No description available.</p>
+            {{ end }}
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+
 <div class="featured-boxes">
   {{ range .Site.Pages }}
     {{ if .Params.featured }}
