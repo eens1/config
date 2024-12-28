@@ -7,6 +7,9 @@
      <span>{{ .Site.Title }}</span>
   </a>
 </div>
+
+
+
 <nav>
   <div class="hamburger">
     <span></span>
@@ -21,6 +24,34 @@
     {{ end }}
   </ul>
 </nav>
+
+
+
+<nav>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <ul class="nav-menu">
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>{{ .Pre }}{{ .Name }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 </header>
