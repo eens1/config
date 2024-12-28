@@ -12,7 +12,7 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: var(--text-color); /* Light color for labels */
+  color: var(--text-color);
 }
 
 input[type="text"],
@@ -49,5 +49,6 @@ button {
     transition: background-color 0.3s;
     box-sizing: border-box;
     border: 2px solid;
+  font-family: var(--font-family);
 }
 
