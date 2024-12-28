@@ -42,13 +42,12 @@ textarea {
 button {
     padding: 10px;
     background-color: transparent; 
-    color: var(--text-color); /* Button text color */
+    color: var(--text-color);
     border-radius: 4px;
     font-size: var(--font-size);
     cursor: pointer;
     transition: background-color 0.3s;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-
-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+    box-sizing: border-box;
+    border: 2px solid;
 }
+
