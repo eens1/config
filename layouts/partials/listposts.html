@@ -6,12 +6,10 @@
   {{ $filename := .File.LogicalName }}
   {{ $parentDir := path.Base .File.Dir }}
 
-  {{ if not (or (strings.HasSuffix $filename ".hide") (strings.HasSuffix $parentDir ".hide")) }}
-    {{ if eq $filename "_index.md" }}
-      {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "permalink" .Permalink) }}
-    {{ else }}
-      {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "permalink" .Permalink) }}
-    {{ end }}
+  {{ if eq $filename "_index.md" }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "permalink" .Permalink) }}
+  {{ else }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "permalink" .Permalink) }}
   {{ end }}
 {{ end }}
 
