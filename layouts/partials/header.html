@@ -10,22 +10,6 @@
 
 
 
-<nav>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <ul class="nav-menu">
-    {{ range .Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>{{ .Pre }}{{ .Name }}</a>
-      </li>
-    {{ end }}
-  </ul>
-</nav>
-
-
 
 <nav>
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
