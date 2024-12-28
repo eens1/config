@@ -35,10 +35,41 @@
   {{ end }}
 </div>
 
-<div class="home-index">
-<h3>{{ i18n "index" }}</h3>
-{{ partial "listposts.html" . }}
+{{ $pages := .Pages }}
+{{ $sortedPages := sort $pages "File.Path" }}
+
+{{ $customSort := slice }}
+{{ range $sortedPages }}
+  {{ $filename := .File.LogicalName }}
+  {{ $parentDir := path.Base .File.Dir }}
+
+  {{ if not (or (strings.HasSuffix $filename ".hide") (strings.HasSuffix $parentDir ".hide")) }}
+    {{ if eq $filename "_index.md" }}
+      {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "permalink" .Permalink) }}
+    {{ else }}
+      {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "permalink" .Permalink) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $sortedCustom := sort $customSort "sortKey" }}
+
+<div class="list-boxes">
+  {{ range $sortedCustom }}
+    <div class="list-box">
+      <a href="{{ .permalink | relURL }}" class="box-link">
+        <div class="icon">
+          <i class="{{ .page.Params.icon }}"></i> <!-- Icon from frontmatter -->
+        </div>
+        <div class="content">
+          <h3>{{ .page.Title }}</h3> <!-- Title from frontmatter -->
+        </div>
+      </a>
+    </div>
+  {{ end }}
 </div>
+
+
 
 
 </div>
