@@ -21,7 +21,7 @@
 [data-theme="light"] {
 --font-size: 18px; 
 --text-color: black;
---light-text-color: grey;
+--light-text-color: rgb(50,50,50);
 --search-border-color: black;
 --link-color: blue;
 --bg-color: #FFFDD0;
