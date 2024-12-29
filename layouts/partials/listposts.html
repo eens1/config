@@ -22,11 +22,11 @@
    <div class="post-item">
    <li class="{{ if eq .type "video" }}video-item{{ else if eq .type "folder" }}folder-item{{ else }}document-item{{ end }}">
       <a href="{{ .permalink | relURL }}">{{ .page.Title }}</a>
-      <!--
-      {{ with .page.Params.summary }}
-         <div>{{ . | markdownify }}</div>
+      {{ if .page.Params.show_summary }}
+         {{ with .page.Params.summary }}
+            <div>{{ . | markdownify }}</div>
+         {{ end }}
       {{ end }}
-      -->
    </li>
    </div>
 {{ end }}
