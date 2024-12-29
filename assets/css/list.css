@@ -5,3 +5,6 @@
 .document-item::marker {
  content: "📄 "; /* Document bullet icon */
 }
+.folder-item::marker {
+ content: "📂 "; /* Folder bullet icon */
+}

@@ -7,9 +7,11 @@
   {{ $parentDir := path.Base .File.Dir }}
 
   {{ if eq $filename "_index.md" }}
-    {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "permalink" .Permalink) }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $parentDir "type" "folder" "permalink" .Permalink) }}
+  {{ else if .Params.video }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "type" "video" "permalink" .Permalink) }}
   {{ else }}
-    {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "permalink" .Permalink) }}
+    {{ $customSort = $customSort | append (dict "page" . "sortKey" $filename "type" "document" "permalink" .Permalink) }}
   {{ end }}
 {{ end }}
 
@@ -18,7 +20,7 @@
 <ul>
 {{ range $sortedCustom }}
    <div class="post-item">
-   <li class="{{ if .page.Params.video }}video-item{{ else }}document-item{{ end }}">
+   <li class="{{ if eq .type "video" }}video-item{{ else if eq .type "folder" }}folder-item{{ else }}document-item{{ end }}">
       <a href="{{ .permalink | relURL }}">{{ .page.Title }}</a>
       {{ with .page.Params.summary }}
          <div>{{ . | markdownify }}</div>
