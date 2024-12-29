@@ -18,7 +18,7 @@
 <ul>
 {{ range $sortedCustom }}
    <div class="post-item">
-   <li>
+   <li class="{{ if .page.Params.video }}video-item{{ else }}document-item{{ end }}">
       <a href="{{ .permalink | relURL }}">{{ .page.Title }}</a>
       {{ with .page.Params.summary }}
          <div>{{ . | markdownify }}</div>

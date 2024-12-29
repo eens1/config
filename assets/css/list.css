@@ -1,0 +1,7 @@
+/* Example styling for bullet types */
+.video-item::marker {
+ content: "🎥 "; /* Video bullet icon */
+}
+.document-item::marker {
+ content: "📄 "; /* Document bullet icon */
+}
