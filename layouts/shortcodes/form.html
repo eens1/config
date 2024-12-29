@@ -1,5 +1,5 @@
 <form action="https://api.web3forms.com/submit" method="POST">
-	<input type="hidden" name="access_key" value="8f3ff63f-b4ef-4933-a61e-03c140303b40">
+	<input type="hidden" name="access_key" value="{{ .Get "key" }}">
 	<div class="form-group">
    	<label for="name">{{ .Get "name" }}:</label>
 		<input type="text" name="name" required>
