@@ -20,8 +20,10 @@
     {{ range .Site.Menus.main }}
       <li>
         <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
-          {{ if .Pre }}
-            {{ partial .Pre . }}
+          {{ if .Params.pre }}
+            {{ partial .Params.pre . }}
+          {{ else if .Pre }}
+            {{ .Pre | safeHTML }}
           {{ end }}
           {{ .Name }}
         </a>
