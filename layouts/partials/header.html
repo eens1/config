@@ -22,7 +22,7 @@
     <li>
       <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
         {{ if .Params.pre }}
-{{ partial "icons/x.html" . }}
+          {{ partial (printf "icons/%s.html" "x") . }}
         {{ else if .Pre }}
           {{ .Pre | safeHTML }}
         {{ end }}
