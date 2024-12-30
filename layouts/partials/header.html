@@ -19,7 +19,6 @@
     {{ range .Site.Menus.main }}
       <li>
         <a class="gg-youtube" href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
-        {{ .Pre }}{{ .Name }}
         </a>
       </li>
     {{ end }}
