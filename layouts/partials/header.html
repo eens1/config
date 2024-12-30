@@ -9,7 +9,6 @@
   </a>
 </div>
 
-{{ partial "icons/x.html" . }}
 
 <nav>
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -23,7 +22,7 @@
     <li>
       <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
         {{ if .Params.pre }}
-          {{ partial (printf "icons/x.html" .Params.pre) . }}
+{{ partial "icons/x.html" . }}
         {{ else if .Pre }}
           {{ .Pre | safeHTML }}
         {{ end }}
