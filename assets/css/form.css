@@ -51,4 +51,7 @@ button {
     border: 2px solid var(--border-color);
   font-family: var(--font-family);
 }
+button:hover {
+background-color: rgb(50,50,50);
+}
 
