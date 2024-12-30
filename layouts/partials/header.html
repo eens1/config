@@ -1,3 +1,4 @@
+
 <header>
 <div class="container">
 <div class="header-content">
@@ -19,8 +20,8 @@
     {{ range .Site.Menus.main }}
       <li>
         <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
-          {{ if .Pre }}
-            {{ partial .Pre . }}
+          {{ with .Pre }}
+            {{ partial (printf "%s.html" .) . }}
           {{ end }}
           {{ .Name }}
         </a>
