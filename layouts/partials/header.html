@@ -21,7 +21,7 @@
       <li>
         <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
           {{ with .Pre }}
-            {{ partial (printf "%s.html" .) . }}
+            {{ partial (print . ".html") (dict "context" . "params" .Params) }}
           {{ end }}
           {{ .Name }}
         </a>
