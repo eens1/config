@@ -20,7 +20,6 @@
   {{ range .Site.Menus.main }}
     <li>
       <a href="{{ .URL }}" {{ if .Params.target }}target="{{ .Params.target }}"{{ end }}>
-
         {{ if .Params.pre }}
           {{ partial (printf "icons/%s.html" .Params.pre) . }}
         {{ else if .Pre }}
