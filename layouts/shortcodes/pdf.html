@@ -1,0 +1,20 @@
+{{ $pdf := .Get "src" }}
+{{ $height := .Get "height" | default "600px" }}
+
+<style>
+  .pdf-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .pdf-viewer {
+    width: 100%;
+    height: {{ $height }};
+    border: none;
+  }
+</style>
+
+<div class="pdf-container">
+  <iframe class="pdf-viewer" src="{{ $pdf }}#view=FitH&scrollbar=0&toolbar=0&statusbar=0&messages=0&navpanes=0"></iframe>
+</div>
+
