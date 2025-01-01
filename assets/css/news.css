@@ -38,6 +38,7 @@ color: inherit;
 
 .post-title a:hover {
 color: var(--hover-color);
+text-decoration: none;
 }
 
 .post-date {
