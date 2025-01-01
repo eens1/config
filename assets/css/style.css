@@ -2,8 +2,9 @@
 
 :root {
 --font-size: 18px; 
---text-color: #FFFDD0;
+--white-color: #FFFDD0;
 --text-color: #E1E132;
+--hover-color: #ffcc00;
 --light-text-color: #A5A500;
 --search-border-color: grey;
 --link-color: #FF2828;
