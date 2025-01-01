@@ -11,35 +11,6 @@ list-style: none;
 padding: 0;
 }
 
-.news-section .post-item {
-background-color: #292929;
-margin: 1rem 0;
-padding: 1rem;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-transition: transform 0.2s, background-color 0.3s;
-}
-
-.news-section .post-item:hover {
-background-color: #333333;
-}
-
-.news-section .post-title {
-font-size: 1.5rem;
-margin: 0;
-color: var(--white-color);
-}
-
-.news-section .post-title a {
-text-decoration: none;
-color: inherit;
-}
-
-.news-section .post-title a:hover {
-color: var(--hover-color);
-text-decoration: none;
-}
-
 .news-section .post-date {
 margin: 0.5rem 0 0;
 font-size: 0.9rem;
