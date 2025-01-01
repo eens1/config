@@ -1,8 +1,9 @@
 <div class="news-section">
+   {{ $newsPosts := first 10 (where .Site.RegularPages "Params.news" true) }}
    {{ if gt (len $newsPosts) 0 }}
    <h2>{{ i18n "news" }}</h2>
    <ul class="post-list">
-       {{ range first 10 (where .Site.RegularPages "Params.news" true) }}
+       {{ range $newsPosts }}
        <li class="post-item">
            <h3 class="post-title">
                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
