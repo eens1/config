@@ -1,15 +1,13 @@
 <div class="news-section">
    <h2>{{ i18n "news" }}</h2>
    <ul class="post-list">
-       {{ range .Site.RegularPages }}
-       {{ if .Params.news }}
+       {{ range first 10 (where .Site.RegularPages "Params.news" true) }}
        <li class="post-item">
            <h3 class="post-title">
                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
            </h3>
            <p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
        </li>
-       {{ end }}
        {{ end }}
    </ul>
 </div>
