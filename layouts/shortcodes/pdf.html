@@ -1,5 +1,6 @@
 {{ $pdf := .Get "src" }}
 {{ $height := .Get "height" | default "600px" }}
+{{ $page := .Get "page" | default "1" }}
 
 <style>
   .pdf-container {
@@ -15,6 +16,5 @@
 </style>
 
 <div class="pdf-container">
-  <iframe class="pdf-viewer" src="{{ $pdf }}#view=FitH&scrollbar=0&toolbar=0&statusbar=0&messages=0&navpanes=0"></iframe>
+  <iframe class="pdf-viewer" src="{{ $pdf }}#page={{ $page }}&view=FitH&scrollbar=0&toolbar=0&statusbar=0&messages=0&navpanes=0"></iframe>
 </div>
-
