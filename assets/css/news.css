@@ -21,7 +21,6 @@ transition: transform 0.2s, background-color 0.3s;
 }
 
 .post-item:hover {
-transform: translateY(-5px);
 background-color: #333333;
 }
 
