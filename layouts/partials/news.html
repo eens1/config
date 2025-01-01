@@ -74,10 +74,8 @@
     </style>
 
     <div class="container">
-        <h1>Welcome to Our Site</h1>
-        
         <div class="news-section">
-            <h2>Latest News</h2>
+            <h2>{{ i18n "news" }}</h2>
             <ul class="post-list">
                 {{ range .Site.RegularPages }}
                 {{ if .Params.news }}
