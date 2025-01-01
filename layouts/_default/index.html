@@ -12,7 +12,9 @@
 {{ i18n "citation" }}
 </div>
 
+<div>
 {{ partial "listposts.html" . }}
+</div>
 
 <div class="featured-boxes">
   {{ range (sort (where .Site.AllPages "Params.featured" true) ".Params.title") }}
