@@ -1,66 +1,15 @@
-    <style>
-         .news-section {
-            max-width: 700px;
-            margin: 0px auto 40px;
-         }
-        .news-section h2 {
-            margin-bottom: 1rem;
-        }
-
-        .post-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .post-item {
-            background-color: #292929;
-            margin: 1rem 0;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s, background-color 0.3s;
-        }
-
-        .post-item:hover {
-            transform: translateY(-5px);
-            background-color: #333333;
-        }
-
-        .post-title {
-            font-size: 1.5rem;
-            margin: 0;
-            color: var(--white-color);
-        }
-
-        .post-title a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .post-title a:hover {
-            color: var(--hover-color);
-        }
-
-        .post-date {
-            margin: 0.5rem 0 0;
-            font-size: 0.9rem;
-            color: var(--light-text-color);
-        }
-
-    </style>
-
-        <div class="news-section">
-            <h2>{{ i18n "news" }}</h2>
-            <ul class="post-list">
-                {{ range .Site.RegularPages }}
-                {{ if .Params.news }}
-                <li class="post-item">
-                    <h3 class="post-title">
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </h3>
-                    <p class="post-date">Published on {{ .Date.Format "January 2, 2006" }}</p>
-                </li>
-                {{ end }}
-                {{ end }}
-            </ul>
-        </div>
+<div class="news-section">
+   <h2>{{ i18n "news" }}</h2>
+   <ul class="post-list">
+       {{ range .Site.RegularPages }}
+       {{ if .Params.news }}
+       <li class="post-item">
+           <h3 class="post-title">
+               <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+           </h3>
+           <p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
+       </li>
+       {{ end }}
+       {{ end }}
+   </ul>
+</div>
