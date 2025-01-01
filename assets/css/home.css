@@ -13,7 +13,8 @@ font-weight: bold;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin: 0px 0px 20px 0px;
+  margin: 0px auto 20px;
+  max-width: 1200px;
 }
 
 /* Individual box styles */
